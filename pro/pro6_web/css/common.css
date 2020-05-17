@@ -1,0 +1,190 @@
+body,html{
+	font-size: 12px;
+	color: 666;
+	font-family: Microsoft YaHei,Heiti SC,tahoma,arial;
+	background: #F0F3EF;
+}
+/*宽度*/
+.w100{
+	width: 100%;
+}
+.w1190{
+	width: 1190px;
+	margin: 0 auto;
+}
+.w1000{
+	width: 1000px;
+	margin: 0 auto;
+}
+.w1210{
+	width: 1210px;
+	margin: 0 auto;
+}
+
+/*浮动*/
+.fr{
+	float: right;
+}
+.fl{
+	float: left;
+}
+
+/*鼠标滑过透明度*/
+.hopa:hover{
+	opacity: 0.9;
+	transition: all .2s ease;
+}
+
+/*footer*/
+.sloganbox{
+	height: 42px;
+	margin: 40px auto 30px auto;
+}
+.sloganbox li{
+	width: 25%;
+	text-align: center;
+	float: left;
+}
+.sloganbox li img{
+	display: block;
+	width: 36px;
+	height: 42px;
+	float: left;
+	margin-left: 35px;
+}
+.sloganbox li p{
+	color: #444;
+	font-size: 18px;
+	line-height: 42px;
+	font-weight: bold;
+	margin-left: 10px;
+	float: left;
+}
+
+.footerhr{
+	height: 1px;
+	color: #DEDEDE;
+}
+
+.footernav{
+	height: 200px;
+	border-bottom: 1px solid #E1E1E1;
+}
+.footernav-list{
+	width: 1000px;
+}
+.footernav-list dl{
+	width: 200px;
+}
+.footernav-list dl dt{
+	font-size: 14px;
+	color: #666666;
+	line-height: 28px;
+	font-weight: bold;
+}
+.footernav-list dl dd a{
+	color: #666666;
+	line-height: 24px;
+}
+.footernav-list dl dd a:hover{
+	color: #E33333;	
+}
+.mapbox{
+	width: 190px;
+}
+.mapbox p:first-child{
+	font-size: 14px;
+	color: #666666;
+	line-height: 28px;
+	font-weight: bold;
+	text-align: center;
+}
+.mapbox p:nth-child(2){
+	color: #666666;
+	line-height: 20px;
+}
+.mapbox a{
+	float: right;
+	color: #666666;
+	line-height: 24px;
+}
+.mapbox a:hover{
+	color: #E33333;	
+}
+.mapbox .iconfont{
+	font-size: 12px;
+}
+
+.footer{
+
+}
+.footerlink{
+	width: 845px;
+	margin: 20px auto;
+}
+.footerlink li{
+	float: left;
+}
+.footerlink li a{
+	color: #666;
+	margin: 0 13px;
+}
+.footerlink li span{
+	width: 1px;
+	height: 10px;
+	background: #666;
+	display: block;
+	margin-top: 4px;
+}
+.footerlink li a:hover{
+	color: #E4393C;
+	text-decoration: underline;
+}
+.footer>p{
+	color: #666;
+	text-align: center;
+	margin: 10px auto;
+}
+.otherinfo{
+	width: 885px;
+	margin: 0 auto;
+}
+.otherinfo p{
+	width: 885px;
+	text-align: center;
+	height: 22px;
+	line-height: 22px;
+}
+.otherinfo a{
+	color: #999999;
+	margin: 0 10px;
+}
+.otherinfo span{
+	width: 1px;
+	height: 10px;
+	background: #999;
+	margin-top: 4px;
+	display: inline-block;
+}
+.otherinfo a:hover{
+	color: #c81623;
+}
+.otherinfo img{
+	display: inline-block;
+	margin: 4px 4px 0 0;
+}
+
+.footertip{
+	width: 540px;
+	height: 32px;
+	margin: 40px auto;
+}
+.footertip li{
+	width: 103px;
+	height: 32px;
+	float: left;
+	margin-right: 6px;
+}
+.footertip li:last-child{
+	margin-right: 0;
+}

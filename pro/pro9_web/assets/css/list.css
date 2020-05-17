@@ -1,0 +1,218 @@
+/*购物车*/
+.buycar{
+	position: relative;
+	z-index:1000;
+}
+.buycar-title{
+	position: relative;
+	width: 120px;
+	height: 40px;
+	background: #FF6700;
+	text-align: center;
+	z-index: 6;
+}
+.buycar-title a{
+	color: #fff;
+}
+.buycar-content{
+	position: absolute;
+	top:40px;
+	right: 0px;
+	width: 300px;
+	background: #fff;
+	box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+	display: none;
+	z-index:5;
+}
+.buycar:hover .buycar-title{
+	background: #FFF;
+}
+.buycar:hover .buycar-title>a{
+	color: #FF6700;
+}
+.buycar:hover .buycar-title>a:hover{
+	color: #FF6700;
+}
+.buycar:hover .buycar-content{
+	display: block;
+}
+
+/*nav样式*/
+.nav{
+	margin-left: 65px;
+}
+/*banner样式*/
+.banner1{
+	width: 100%;
+}
+.banner1 img{
+	display: block;
+	width: 100%;
+}
+
+/*列表板块样式*/
+.con-list{
+
+}
+.con-list-title{
+	font-size: 20px;
+	color: #333;
+	font-weight: normal;
+	margin-top: 25px;
+}
+.con-list-main{
+	width: 1226px;
+	height: 436px;
+	background: #FFFFFF;
+	margin-top: 15px;
+}
+
+.con-list-main .fl{
+	width: 853px;
+}
+.con-list-main .fl img{
+	width: 100%;
+	height: 436px;
+	display: block;
+}
+.con-list-main .fr{
+	width: 250px;
+	height: 300px;
+	margin: 75px 65px 0 0;
+}
+.con-list-main .fr h1{
+	font-size: 30px;
+	line-height: 50px;
+	color: #333;
+	font-weight: normal;
+}
+.con-list-des{
+	color: #707070;
+	line-height: 24px;
+}
+.con-list-price{
+	display: block;
+	color: #FA6509;
+	font-size: 30px;
+	margin-top: 40px;
+}
+.con-list-price span{
+	font-size: 12px;
+}
+.con-list-price em{
+	font-size: 12px;
+	text-decoration: line-through;
+	color: #707070;
+	padding: 0 3px;
+}
+.con-list-main .fr a{
+	color: #707070;
+	line-height: 24px;
+	display: block;
+	margin-top:120px;
+}
+.con-list-main .fr a:hover{
+	color: #FA6509;
+}
+/*con-list2*/
+.con-list2>.fl{
+	width: 605px; 
+	height: 480px;
+	background: #FFF;
+	margin: 15px 16px 0 0;
+}
+.con-list-main2-img{
+	width: 605px;
+	height: 357px;
+	overflow: hidden;
+}
+.con-list-main2-img img{
+	width: 100%;
+	height: 100%;
+}
+.con-list-main2-text{
+	width: 512px;
+	height: 60px;
+	margin: 30px auto;
+}
+.con-list-main2-text>h2>a{
+	font-size: 22px;
+	line-height: 30px;
+	color: #333;
+	font-weight: normal;
+}
+.con-list-main2-text h2 a>span{
+	font-size: 12px;
+	display: block;
+	color: #707070;
+}
+.con-list-main2-text>p{
+	display: block;
+	color: #FA6509;
+	font-size: 30px;
+	margin-top: 20px;
+}
+.con-list-main2-text>p>span{
+	font-size: 12px;
+}
+.con-list-main2-text>p>em{
+	font-size: 12px;
+	text-decoration: line-through;
+	color: #707070;
+	padding: 0 10px;
+}
+
+/*购物车*/
+.buycar-list{
+	width: 280px;
+	margin: 15px auto 0;
+}
+.buycar-list li{
+	height: 72px;
+	width: 100%;
+	border-bottom:1px solid #E0E0E0;
+	overflow: hidden;
+}
+.buycar-list li > div{
+	width: 55px;
+	height: 55px;
+	margin-top: 10px;
+}
+.buycar-list li > div>img{
+	width: 55px;
+	height: 55px;
+}
+.buycar-list li > p{
+	margin-left: 15px;
+	line-height: 22px!important;
+	width: 130px;
+	margin-top: 10px;
+}
+.buycar-list li > span{
+	display: block;
+	line-height: 22px!important;
+	margin: 10px 10px 0 0;
+	color: #333;
+}
+.buycar-buy{
+	width: 100%;
+	margin: 10px auto 0;
+}
+.buycar-buy .fl{
+	line-height: 20px!important;
+	width: 150px;
+	margin-left: 15px;
+}
+.buycar-buy .fl>span{
+	font-size: 18px;
+	color: #f60!important;
+}
+.buycar-buy .fr{
+	display: block;
+	width: 132px;
+	height: 40px;
+	line-height: 40px;
+	color: #fff;
+	background: #f60;
+	text-align: center;
+}

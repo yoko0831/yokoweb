@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>仿京东商城</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+  <link rel="shortcut icon" href="favicon.ico" />
+  <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+  <link rel="stylesheet" href="css/index.css">
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!-- 展示代码 -->
+  <link rel="stylesheet" href="css/solarized-dark.css">
+  <script src="js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+  <!-- header start -->
+  <header class="container">
+    <div class="row">
+      <div class="col-xs-6 col-lg-3">
+        <a class="logo" href="index.html"><img src="images/logo.png" alt=""></a>
+      </div>
+      <div class="col-xs-6 col-lg-9">
+        <ul class="navbar clearfix">
+          <li><a href="#">About</a></li>
+          <li><a href="index.html" class="active">Work</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- header end -->
+
+  <!-- title start-->
+  <nav class="container-fluid pagenav title">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-8 col-lg-9">
+          <h2>仿京东商城</h2>
+          <div class="titleborder"></div>
+        </div>
+        <div class="col-xs-4 col-lg-3 text-right">
+          <a href="index.html" class="btn-bluea btn-xs" style="margin-top: 20px;">返回</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container pagecontent">
+    <div class="row">
+      <div class="col-lg-12">
+        <p class="introduce">此网站为个人JS特效练习作品，真实模仿京东商城，利用ajax、正则实现账户注册登录，其他特效包含图片懒加载、网页轮播图、瀑布流、放大镜等效果。</p>
+      </div>
+    </div>
+  </div>
+  <!-- title end -->
+  <div class="container main">
+    <div class="row">
+      <div class="col-lg-12 main-img">
+        <img src="images/web6-img1.png" alt="仿京东商城">
+      </div>
+    </div>
+
+    <div class="row page-section">
+      <div class="col-md-12 col-lg-12 main-title">
+        <h3>部分代码展示</h3>
+        <div class="titleborder"></div>
+      </div>
+      <!-- 一段演示代码 start -->
+      <div class="col-lg-12 main-code">
+        <h4>登陆验证</h4>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <pre>
+                  <h3 class="code-title">html</h3>
+                  <code class="html">
+&lt;form action="" method="" class="loginform">
+&lt;ul class="clearfix">
+&lt;li>&lt;input id="username" type="text" name="username" value="" placeholder="邮箱/用户名/已验证手机">&lt;p id="login_n">&lt;/p>&lt;/li>
+&lt;li>&lt;input id="pwd" type="password" name="password" value="" placeholder="密码">&lt;p id="login_p">&lt;/p>&lt;/li>
+&lt;/ul>
+&lt;a href="#" class="forget">忘记密码&lt;/a>
+&lt;button class="login-btn">登 陆&lt;/button>
+&lt;/form>
+                  </code>
+                </pre>
+            </div>
+            <!-- html end -->
+            <div class="col-lg-6">
+              <pre>
+                  <h3 class="code-title">Javascript</h3>
+                  <code class="javascript">
+var username=document.getElementById('username')
+var login_n=document.getElementById('login_n');
+username.onblur=function(){
+  var uname=this.value;
+  Ajax().post('login.php','value='+uname,function(msg){
+    if (msg=='y') {
+      login_n.innerHTML='恭喜!用户名存在,可以登录!'
+      login_n.style.color='green';
+    }else{
+      login_n.innerHTML='对不起,此用户名不存在!'
+      login_n.style.color='red';
+    }
+  });
+}
+                  </code>
+                </pre>
+            </div>
+            <!-- Javascript end -->
+            <div class="col-lg-6">
+              <pre>
+                  <h3 class="code-title">php</h3>
+                  <code class="php">
+// 接收传递来的值
+$value=$_POST['value'];
+// 声明以存在的用户名
+$arr=['李翠花','张菊花','王大锤','葛二蛋'];
+// 判断 传来的值是否已存在
+if(in_array($value,$arr)){
+  echo 'y';// 已存在
+}else{
+  echo "n"; //不存在
+}
+                  </code>
+                </pre>
+            </div>
+            <!-- php end -->
+            <div class="col-lg-6">
+              <pre>
+                  <h3 class="code-title">demo</h3>
+                  <code><img style="width: 360px; margin-top: 7px" src="images/web6-code1.gif" alt=""></code>
+                </pre>
+            </div>
+            <!-- image end -->
+          </div>
+          <!-- row end -->
+        </div>
+        <!-- container end -->
+      </div>
+      <!-- 一段演示代码 end -->
+
+
+      <!-- 一段演示代码 start -->
+      <div class="col-lg-12 main-code">
+        <h4>倒计时</h4>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <pre>
+                  <h3 class="code-title">html</h3>
+                  <code class="html">
+&lt;div class="timebox fl">
+  &lt;h1>京东秒杀&lt;/h1>
+  &lt;p>本场距离结束还剩&lt;/p>
+  &lt;ul class="timelist">
+    &lt;li id="s1">&lt;/li>
+    &lt;li id="s2">&lt;/li>
+    &lt;li id="s3">&lt;/li>
+  &lt;/ul>
+&lt;/div>
+                  </code>
+                </pre>
+            </div>
+            <!-- html end -->
+            <div class="col-lg-6">
+              <pre>
+                  <h3 class="code-title">css</h3>
+                  <code class="css">
+.timebox{
+  width: 190px;
+  height: 275px;
+  background: #E83632;
+  text-align: center;
+}
+.timebox h1{
+  font-size: 34px;
+  color: #fff;
+  font-weight: normal;
+  margin-top: 42px;
+}
+.timebox p{
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 12px;
+}
+.timelist{
+  width: 130px;
+  height: 40px;
+  margin: 20px auto 0;
+}
+.timelist li{
+  width: 40px;
+  height: 40px;
+  float: left;
+  background: url(../image/timebg.gif) repeat-x;
+  margin-right: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+}
+.timelist li:last-child{
+  margin-right: 0;
+}
+                  </code>
+                </pre>
+            </div>
+            <!-- Javascript end -->
+            <div class="col-lg-6">
+              <pre>
+                  <h3 class="code-title">Javascript</h3>
+                  <code class="javascript">
+function toDou(t) {
+  if(t<10) {
+    return t='0'+t;
+  }
+  else {
+    return t;
+  }
+}
+var oS1=document.getElementById('s1');
+var oS2=document.getElementById('s2');
+var oS3=document.getElementById('s3');
+var oDate = new Date();
+oDate.setFullYear(2019, 09, 29);
+oDate.setHours(0, 0, 0, 0);
+function tick() {
+  var oNow=new Date();
+  var s=parseInt((oDate.getTime()-oNow.getTime())/1000);
+  var h=parseInt(s/3600);
+  s%=3600;
+  var m=parseInt(s/60);
+  s%=60;
+  oS1.innerHTML=toDou(h);
+  oS2.innerHTML=toDou(m);
+  oS3.innerHTML=toDou(s);
+}
+var ticktimer=setInterval(tick, 1000);
+tick();
+                  </code>
+                </pre>
+            </div>
+            <!-- php end -->
+            <div class="col-lg-6">
+              <pre>
+                  <h3 class="code-title">demo</h3>
+                  <code><img style="width: 290px; margin-top: 15px" src="images/web6-code2.gif" alt=""></code>
+                </pre>
+            </div>
+            <!-- image end -->
+          </div>
+          <!-- row end -->
+        </div>
+        <!-- container end -->
+      </div>
+      <!-- 一段演示代码 end -->
+
+      <!-- 一段演示代码 start -->
+      <div class="col-lg-12 main-code">
+        <h4>产品瀑布流</h4>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <pre>
+                  <h3 class="code-title">html</h3>
+                  <code class="html">
+&lt;!-- 存放图片容器 -->
+&lt;div id="pbl" class="newpbl clearfix">
+&lt;/div>
+                  </code>
+                </pre>
+            </div>
+            <!-- html end -->
+            <div class="col-lg-6">
+              <pre>
+                  <h3 class="code-title">Javascript</h3>
+                  <code class="javascript">
+var pbl=document.getElementById('pbl');
+window.onscroll=function() {
+  var aHeight=document.documentElement.offsetHeight;
+  var cHeight=document.documentElement.clientHeight||document.body.clientHeight||window.innerHeight;
+  var sHeight=document.documentElement.scrollTop||document.body.scrollTop;
+  if(aHeight-cHeight-300<=sHeight) {
+    Ajax('JSON').get('pbl.php', function(msg) {
+      var str='';
+      for(var i in msg) {
+        str+='&lt;img src="'+msg[i]["pic"]+'" alt=""&gt;';
+      }
+      if(aHeight>=13000) {
+        pbl.innerHTML=pbl.innerHTML;
+      }
+      else {
+        pbl.innerHTML+=str;
+      }
+    });
+  }
+}
+                  </code>
+                </pre>
+            </div>
+            <!-- Javascript end -->
+            <div class="col-lg-6">
+              <pre>
+                  <h3 class="code-title">php</h3>
+                  <code class="php">
+// 定义模拟的数据库
+$data=[
+  ["pic"=>"image/pblpic1.jpg"],
+  ["pic"=>"image/pblpic2.jpg"],
+  ["pic"=>"image/pblpic3.jpg"],
+  ["pic"=>"image/pblpic4.jpg"],
+  ["pic"=>"image/pblpic5.jpg"],
+  ["pic"=>"image/pblpic6.jpg"],
+  ["pic"=>"image/pblpic7.jpg"],
+  ["pic"=>"image/pblpic8.jpg"]
+];
+// 输出请求的数据
+echo json_encode($data);
+                  </code>
+                </pre>
+            </div>
+            <!-- php end -->
+            <div class="col-lg-6">
+              <pre>
+                  <h3 class="code-title">demo</h3>
+                  <code><img style="width: 520px; margin-top: 55px" src="images/web6-code3.png" alt=""></code>
+                </pre>
+            </div>
+            <!-- image end -->
+          </div>
+          <!-- row end -->
+        </div>
+        <!-- container end -->
+      </div>
+      <!-- 一段演示代码 end -->
+
+      <!-- 一段演示代码 start -->
+      <div class="col-lg-12 main-code">
+        <h4>放大镜</h4>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <pre>
+                  <h3 class="code-title">html</h3>
+                  <code class="html">
+&lt;div class="fdjbox">
+  &lt;!-- 小图 -->
+  &lt;div id="small">
+    &lt;img src="image/main/fdjpic1.jpg" alt="" id="small_pic">
+    &lt;div id="move">&lt;/div>
+  &lt;/div>
+  &lt;!-- 大图 -->
+  &lt;div id="big">
+    &lt;img src="image/main/fdjpic1.jpg" alt="" id="big_pic">
+  &lt;/div>
+&lt;/div>
+                  </code>
+                </pre>
+            </div>
+            <!-- html end -->
+            <div class="col-lg-6">
+              <pre>
+                  <h3 class="code-title">css</h3>
+                  <code class="css">
+.fdjbox{
+  width: 352px;
+  height: 500px;
+  position: relative;
+}
+#small{
+  width: 350px;
+  height: 350px;
+  border: 1px solid #EEEEEE;
+  position: absolute;
+  left:0px;
+  top: 0px;
+}
+#small img{
+  width: 100%;
+}
+#move{
+  width: 200px;
+  height: 200px;
+  background:yellow;
+  opacity: 0.6;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+}
+#big{
+  width: 540px;
+  height: 540px;
+  border: 1px solid #EEEEEE;
+  position: absolute;
+  left: 352px;
+  top: 0px;
+  overflow: hidden;
+  display: none;
+  z-index: 99;
+}
+#big img{
+  position: absolute;
+}
+                  </code>
+                </pre>
+            </div>
+            <!-- Javascript end -->
+            <div class="col-lg-6">
+              <pre>
+                  <h3 class="code-title">Javascript</h3>
+                  <code class="javascript">
+$("#small").mousemove(function(e) {
+  $("#move, #big").show();
+  var x=e.pageX-$(this).offset().left-$("#move").width()/2;
+  var y=e.pageY-$(this).offset().top-$("#move").height()/2;
+  if(x<=0) {
+    x=0
+  }
+  else if(x>=$(this).width()-$("#move").width()) {
+    x=$(this).width()-$("#move").width()
+  }
+  if(y<=0) {
+    y=0
+  }
+  else if(y>=$(this).height()-$("#move").height()) {
+    y=$(this).height()-$("#move").height()
+  }
+  $("#move").css( {
+    left: x+'px', top:y+'px'
+  });
+  var scale=$("#big>img").width()/$("#small>img").width();
+  $("#big").scrollTop(y*scale);
+  $("#big").scrollLeft(x*scale);
+}).mouseout(function() {
+  $("#move, #big").hide();
+})
+                  </code>
+                </pre>
+            </div>
+            <!-- javascript end -->
+            <div class="col-lg-6">
+              <pre>
+                  <h3 class="code-title">demo</h3>
+                  <code><img style="width:520px; margin-top: 3px" src="images/web6-code4.gif" alt=""></code>
+                </pre>
+            </div>
+            <!-- image end -->
+          </div>
+          <!-- row end -->
+        </div>
+        <!-- container end -->
+      </div>
+      <!-- 一段演示代码 end -->
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="btn-link"><a href="pro/pro6_web/login.html" target="_blank" class="btn-bluea btn-lg"
+            data-wow-delay="0.8s">查看项目演示</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container page">
+    <div class="row">
+      <div class="col-xs-4 col-lg-4 text-left">
+        <a href="pro15.html"><i class="iconfont icon-cc-arrow-left"></i>Previous</a>
+      </div>
+      <div class="col-xs-4 col-lg-4 text-center">
+        <a href="javascript:;" class="backtop">Back to Top</a>
+      </div>
+      <div class="col-xs-4 col-lg-4 text-right">
+        <a href="pro7.html">Next<i class="iconfont icon-cc-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <p class="col-xs-12 col-lg-4 text-left"><a href="utils/resume.html" target="_blank">Resume</a> |
+          <a href="mailto:yoko0831@hotmail.com">yoko0831@hotmail.com</a></p>
+        <p class="col-xs-12 col-lg-4 text-center"><a target="_blank"
+            href="http://beian.miit.gov.cn">京ICP备19052358号-1</a></p>
+        <p class="col-xs-12 col-lg-4 text-right">© 2020 Yoko Yu All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/page.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

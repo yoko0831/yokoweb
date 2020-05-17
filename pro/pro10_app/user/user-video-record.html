@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="render" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,minimal-ui,user-scalable=no">
+    <meta name="location" content="province=;city=">
+    <meta name="apple-touch-fullscreen" content="no">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta name="applicable-device" content="mobile">
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/maystar.css"/>
+    <link rel="stylesheet" href="../css/idangerous.swiper.css"/>
+    <title>浏览记录</title>
+    <script type="text/javascript" src='../js/zepto.js'></script>
+    <script type="text/javascript" src='../js/rem.js'></script>
+    <script>
+        //点击删除显示checkbox
+        $(function () {
+            var j = 0;
+            $('#delect_btn').click(function () {
+                j++;
+                if (j == 1) {
+                    $('.checkboxBtn +label').css('display', 'block');
+                    $('.footer_fixed').css('display', 'block');
+                    $('#delect_btn').html('取消');
+                } else {
+                    $('.checkboxBtn +label').css('display', 'none');
+                    $('.footer_fixed').css('display', 'none');
+                    $('#delect_btn').html('<img class="top_right_icon3" src="../img/delete_icon1@2x.png">');
+                    $("input[name='checkbox1']").each(function () {
+                        $(this).prop("checked", false);
+                    });
+                    j = 0;
+                }
+            });
+//            全选
+            $("input[name='checkbox1']").click(function () {
+                $("input[name='checkbox1']:checked").length == $("input[name='checkbox1']").length ? $("#checkAll").prop("checked", true) : $("#checkAll").prop("checked", false);
+                $("input[name='checkbox1']:checked").length == $("input[name='checkbox1']").length ? $("#check_all label").html("取消") : $("#check_all label").html("全选");
+            });
+            $("#checkAll").click(function () {
+                $("input[name='checkbox1']").prop("checked", this.checked);
+                if ($(this).prop("checked")) {
+                    $("#check_all label").html("取消")
+                }
+                else {
+                    $("#check_all label").html("全选")
+                }
+            });
+        })
+
+    </script>
+</head>
+<body>
+<div class="wrapper">
+    <header class="topbox clearfix">
+        <a href="../index.html" class="top_left_btn1 fleft"><img src="../img/top_left_icon2@2x.png"></a>
+
+        <div class="top_title"><p>浏览记录</p></div>
+        <a id="delect_btn" class="top_right_btn3 fright"><img class="top_right_icon3"
+                                                                                  src="../img/delete_icon1@2x.png"></a>
+    </header>
+    <!--头部条-->
+    <div class="white"></div>
+    <div class="content">
+        <ul class="video_record_list">
+            <li>
+                <input type="checkbox" name="checkbox1" id="check1" class="checkboxBtn fleft"/>
+                <label for="check1"></label>
+                <img class="fleft" src="../img/videoimg1@2x.png"/>
+                <section class="fleft">
+                    <p>1历史鸦片战争讲堂历史鸦片战争讲堂</p>
+                    <span>由研究院教授讲解高三历史由研究院教授讲解高三历史</span>
+
+                    <p>收藏时间：2017-04-20</p>
+                </section>
+            </li>
+            <!--一个视频-->
+            <li>
+                <input type="checkbox" name="checkbox1" id="check2" class="checkboxBtn fleft"/>
+                <label for="check2"></label>
+                <img class="fleft" src="../img/videoimg2@2x.png"/>
+                <section class="fleft">
+                    <p>2历史鸦片战争讲堂</p>
+                    <span>由研究院教授讲解高三历史</span>
+
+                    <p>收藏时间：2017-04-20</p>
+                </section>
+            </li>
+            <!--一个视频-->
+            <li>
+                <input type="checkbox" name="checkbox1" id="check3" class="checkboxBtn fleft"/>
+                <label for="check3"></label>
+                <img class="fleft" src="../img/videoimg3@2x.png"/>
+                <section class="fleft">
+                    <p>3历史鸦片战争讲堂</p>
+                    <span>由研究院教授讲解高三历史</span>
+
+                    <p>收藏时间：2017-04-20</p>
+                </section>
+            </li>
+            <!--一个视频-->
+            <li>
+                <input type="checkbox" name="checkbox1" id="check4" class="checkboxBtn fleft"/>
+                <label for="check4"></label>
+                <img class="fleft" src="../img/videoimg4@2x.png"/>
+                <section class="fleft">
+                    <p>4历史鸦片战争讲堂</p>
+                    <span>由研究院教授讲解高三历史</span>
+					<p>收藏时间：2017-04-20</p>
+                </section>
+            </li>
+            <!--一个视频-->
+        </ul>
+        <!--视频列表-->
+        <div class="white"></div>
+        <div class="footer_fixed" style="display: none;">
+            <div class="question_btn1 fleft qusetion_gray" id="check_all">
+                <input id="checkAll" type="checkbox"  /><label for="checkAll">全选</label></div>
+            <span class="question_btn_line fleft"></span>
+            <div class="question_btn1 fright qusetion_red">删除</div>
+        </div>
+        <!--底部固定区 试题标答解析-->
+    </div>
+    <!--主内容-->
+</div>
+</body>
+</html>

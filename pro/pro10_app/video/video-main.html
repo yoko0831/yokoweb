@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="render" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,minimal-ui,user-scalable=no">
+    <meta name="location" content="province=;city=">
+    <meta name="apple-touch-fullscreen" content="no">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta name="applicable-device" content="mobile">
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/maystar.css" />
+	<link rel='stylesheet' href='../css/swiper.min.css'>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <title>提高详情页</title>
+    <script type="text/javascript" src='../js/zepto.js'></script>
+	<script src="../js/swiper.min.js"></script>
+	<script type="text/javascript" src='../js/rem.js'></script>
+
+	<script>
+    	window.onload=function(){
+    		//显示提示框
+    		alertbox('share_btn','blackhide3');
+    		$(function(){
+				var oHeight=document.body.scrollHeight;
+				$('.blackhide').css('height',oHeight)
+			})
+    	}
+    	//收藏切换
+    	$(function(){
+    		var k=0;
+    		$('.collect_icon_bg').click(function(){
+    			k++;
+    			if (k==1) {
+    				$(this).addClass('collect_icon_bg2');
+    				$(this).html('已收藏');
+    			} else{
+    				$(this).removeClass('collect_icon_bg2');
+    				$(this).html('未收藏');
+    				k=0
+    			}
+    		})
+    	})
+    	//赞踩
+    	$(function(){
+
+			$(".good_icon").click(function () {
+			var num=$(this).find('span').html()*1;
+			var goodClass=$(this).hasClass("good_icon2");
+				if(goodClass){
+					num--;
+					$(this).removeClass('good_icon2');
+    				$(this).html('<img src="../img/help_icon1@2x.png"/>'+'<span>'+num+'</span>');
+				}
+				else{
+						if($(".bad_icon").hasClass("bad_icon2")==false){
+							num++;
+							$(this).addClass('good_icon2');
+							$(this).html('<img src="../img/help_icon3@2x.png"/>'+'<span>'+num+'</span>');
+					}
+				}
+			});
+			$(".bad_icon").click(function () {
+				var num=$(this).find('span').html()*1;
+				var badClass=$(this).hasClass("bad_icon2");
+				if(badClass){
+					num--;
+					$(this).removeClass('bad_icon2');
+					$(this).html('<img src="../img/help_icon2@2x.png"/>'+'<span>'+num+'</span>');
+				}
+				else{
+					if($(".good_icon").hasClass("good_icon2")==false){
+						num++;
+						$(this).addClass('bad_icon2');
+						$(this).html('<img src="../img/help_icon4@2x.png"/>'+'<span>'+num+'</span>');
+					}
+
+				}
+			})
+
+
+    	})
+    </script>    
+</head>
+<body>
+	<div class="wrapper">
+		<div class="video_main_header clearfix">
+			<a href="video-index.html" class="video_main_header_top_left_btn fleft"><img src="../img/top_left_icon2@2x.png"></a>
+			<a href="javascript:;" class="video_main_header_top_right_btn fright" id="share_btn"><img class="top_right_icon2" src="../img/share_icon1@2x.png">分享</a>
+		</div><!--视频header-->
+		<div class="video_play">
+			<video width="100%" height="100%" src="../vid/高中数学_二次函数及幂函数_二次函数的应用.mp4" controls="controls" poster="../img/videoimg1@2x.png">您的浏览器不支持观看该视频！</video>
+		</div><!--插入视频-->
+		<div class="white" style="height: 2.1rem;"></div>
+		<div class="content">
+			<section class="video_main_content">
+				<p>名师讲解高一数学二次函数讲堂</p>
+				<ul class="clearfix">
+					<li>2017-03-02</li>
+					<li>1428</li>
+					<li id="collect_icon" class="collect_icon_bg">未收藏</li> 
+				</ul>
+				<p>主讲老师:王老师    视频来源:四中网校</p>
+				<article>简介:由研究院教授讲解高三历史由研究院教授讲解高三历史由研究院教授讲解高三历史由研究院教授讲解高三历史由研究院由研究院教授讲解高三历史由研究院教授讲解高三历史</article>
+				<section class="video_main_content_btn clearfix">
+					<div class="fleft clearfix good_icon"><img src="../img/help_icon1@2x.png"/><span>2367</span></div>
+					<div class="fright clearfix bad_icon"><img src="../img/help_icon2@2x.png"/><span>19</span></div>
+				</section><!--赞踩-->
+				<a href="video_report.html" class="report_btn">举报</a>
+			</section><!--介绍文字-->
+			<section class="swiper-container video_main_content2" id="video_list_ul">
+				<div class="video_list_title clearfix">
+					<p class="fleft" style="color:#3492e1;">相关视频</p>
+					<a class="fright" href="javascript:;">更多>></a>
+				</div><!--标题-->
+				<ul class="swiper-wrapper video_list_u1 clearfix" >
+					<li class="swiper-slide">
+						<a href="video-main.html">
+							<img src="../img/videoimg1@2x.png"/>
+							<p>历史鸦片战争讲堂历史鸦片战争讲堂</p>
+						</a>
+					</li><!--一个视频-->
+					<li class="swiper-slide">
+						<a href="video-main.html">
+							<img src="../img/videoimg2@2x.png"/>
+							<p>数学高一函数教程</p>
+						</a>
+					</li><!--一个视频-->
+					<li class="swiper-slide">
+						<a href="video-main.html">
+							<img src="../img/videoimg1@2x.png"/>
+							<p>历史鸦片战争讲堂历史鸦片战争讲堂</p>
+						</a>
+					</li><!--一个视频-->
+					<li class="swiper-slide">
+						<a href="video-main.html">
+							<img src="../img/videoimg2@2x.png"/>
+							<p>数学高一函数教程</p>
+						</a>
+					</li><!--一个视频-->
+				</ul><!--视频列表-->
+
+			</section>
+
+			<!--相关视频-->
+			<section class="video_main_content2">
+				<div class="video_list_title clearfix">
+					<p class="fleft" style="color:#3492e1;">评论（1706条）</p>
+					<a class="fright" href="video-review.html">更多>></a>
+				</div><!--标题-->
+				<ul class="video_review">
+					<li>
+						<section class="clearfix">
+							<img class="fleft" src="../img/userphoto1.png" />
+							<p class="fleft">高老师<br /><span>2017-03-09  12:45</span></p>
+						</section>
+						<article>名师不愧是名师，知识点一针见血！各位同学好好看此视频，好好抓住知识点！</article>
+					</li><!--一条评论-->
+					<li>
+						<section class="clearfix">
+							<img class="fleft" src="../img/userphoto1.png" />
+							<p class="fleft">高老师<br /><span>2017-03-09  12:45</span></p>
+						</section>
+						<article>名师不愧是名师，知识点一针见血！各位同学好好看此视频，好好抓住知识点！</article>
+					</li><!--一条评论-->
+				</ul>
+			</section><!--评论-->
+			<div class="white"></div>
+			<div class="footer_fixed">
+				<input class="fleft video_message_text" type="text" placeholder="来说说你对这节课的收获" />
+				<input class="fright video_message_btn" type="button" />
+			</div><!--底部固定区 发评论-->
+		</div><!--主内容-->
+		<div class="blackhide" id="blackhide3">
+			<div class="share_box">
+				<ul class="clearfix">
+					<li>
+						<a href="javascript:;">
+							<img src="../img/share_logo1@2x.png" />
+							<p>微信</p>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img src="../img/share_logo2@2x.png" />
+							<p>朋友圈</p>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img src="../img/share_logo3@2x.png" />
+							<p>QQ</p>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img src="../img/share_logo4@2x.png" />
+							<p>新浪微博</p>
+						</a>
+					</li>
+				</ul><!--社交框-->
+				<input type="button" class="share_btn" value="取消" />
+			</div>
+		</div><!--分享提示框-->
+	</div>
+</body>
+</html>
+<script>
+//更多视频
+	var mySwiper2 = new Swiper('#video_list_ul', {
+		slidesPerView : 2,
+		slidesPerGroup : 3,
+	})
+
+</script>

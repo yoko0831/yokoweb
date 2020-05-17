@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>进口食品</title>
+<link type="text/css" rel="Stylesheet" href="css/common.css" />
+<link type="text/css" rel="Stylesheet" href="css/css.css" />
+<link type="text/css" rel="stylesheet" href="css/slide.css">
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.d_slidePopup.min.js"></script>
+<script src="js/backtop.js"></script>
+<!--[if lt IE 10]>
+<script type="text/javascript" src="js/PIE.js"></script>
+<![endif]-->
+<script>//让IE支持CSS3
+	$(function() {
+		if (window.PIE) {
+			$('.rounded').each(function() {
+				PIE.attach(this);
+			});
+		}
+	});
+</script>
+</head>
+
+<body>
+<div class="top">
+    <div class="topbox">
+        <a class="toplogo" href="index.html"><img src="images/logo.jpg" /></a>
+        <ul class="topnav">
+            <li><a href="index.html" id="navactive">首页<br /><span>Home</span></a></li>
+            <li><p>|</p></li>
+            <li><a href="aboutus.html">关于我们<br /><span>About Us</span></a></li>
+            <li><p>|</p></li>
+            <li><a href="foodlist.html">进口食品<br /><span>Imported Food</span></a></li>
+            <li><p>|</p></li>
+            <li><a href="comsumptionlist.html">进口日化<br /><span>Imported Comsumption</span></a></li>
+            <li><p>|</p></li>
+            <li><a href="newslist.html">新闻动态<br /><span>News</span></a></li>
+            <li><p>|</p></li>
+            <li><a href="contactus.html">联系我们<br /><span>Contact Us</span></a></li>
+        </ul>
+	</div>
+</div><!--topbox结束-->
+<div class="bannerbox">
+	<div class="ck-slide">
+        <ul class="ck-slide-wrapper">
+            <li>
+            	<a href="javascript:"><img src="images/banner1.jpg" alt=""></a>
+            </li>
+            <li style="display:none">
+                <a href="javascript:"><img src="images/banner2.jpg" alt=""></a>
+            </li>
+        </ul>
+		<a href="javascript:;" class="ctrl-slide ck-prev">上一张</a> 
+        <a href="javascript:;" class="ctrl-slide ck-next">下一张</a>
+        <div class="ck-slidebox">
+            <div class="slideWrap">
+                <ul class="dot-wrap">
+                    <li class="current"><em>1</em></li>
+                    <li><em>2</em></li>
+				</ul>
+            </div>
+        </div>
+	</div>
+	<!-- js -->
+	<script src="js/slide.js"></script>
+	<script>
+		$('.ck-slide').ckSlide({
+			autoPlay: true,//默认为不自动播放，需要时请以此设置
+			dir: 'x',//默认效果淡隐淡出，x为水平移动，y 为垂直滚动
+			interval:3000//默认间隔2000毫秒
+		});
+	</script>
+</div><!--banner结束-->
+<div class="aboutus">
+	<div class="big_title">
+        <p>进口食品</p>
+        <span>Imported Food</span>
+    </div><!--title-->
+    <ul class="nav_list">
+    	<li><p>按分类：</p></li>
+        <li><a href="#">全部产品</a></li>
+        <li><a href="#" id="cur_nav">果汁饮品</a></li>
+        <li><a href="#">奶制品</a></li>
+        <li><a href="#">矿泉水</a></li>
+        <li><a href="#">休闲食品</a></li>
+        <li><a href="#">调味食品</a></li>
+        <li><a href="#">面类食品</a></li>
+        <li><a href="#">冻品</a></li>
+        <li><a href="#">酒水</a></li>
+    </ul><!--分类-->
+    <ul class="nav_list">
+    	<li><p>按品牌：</p></li>
+        <li><a href="#" id="cur_nav">全部品牌</a></li>
+        <li><a href="#">星巴克咖啡</a></li>
+        <li><a href="#">思乐宝饮料</a></li>
+        <li><a href="#">真维果汁</a></li>
+        <li><a href="#">亚利桑那饮料</a></li>
+    </ul><!--分类-->
+    <div class="main_box">
+    	<img src="images/maintop.png" />
+        <div class="main_middle">
+        	<ul class="list_ul">
+                <li>
+                    <a href="foodmain.html">
+                        <div class="listimg"><img src="images/product1.jpg" /></div>
+                        <p>艾美佳香辣味</p>
+                        <span>规格：40g</span>
+                    </a>
+                </li><!--一个产品-->
+                <li>
+                    <a href="foodmain.html">
+                        <div class="listimg"><img src="images/product2.png" /></div>
+                        <p>冰激淋</p>
+                        <span>规格：260g</span>
+                    </a>
+                </li><!--一个产品-->
+                <li>
+                    <a href="foodmain.html">
+                        <div class="listimg"><img src="images/product3.png" /></div>
+                        <p>圣塔玫瑰纯番茄果酱</p>
+                        <span>规格：100g</span>
+                    </a>
+                </li><!--一个产品-->
+                <li>
+                    <a href="foodmain.html">
+                        <div class="listimg"><img src="images/product1.jpg" /></div>
+                        <p>艾美佳香辣味</p>
+                        <span>规格：40g</span>
+                    </a>
+                </li><!--一个产品-->
+                <li>
+                    <a href="foodmain.html">
+                        <div class="listimg"><img src="images/product2.png" /></div>
+                        <p>冰激淋</p>
+                        <span>规格：260g</span>
+                    </a>
+                </li><!--一个产品-->
+                <li>
+                    <a href="foodmain.html">
+                        <div class="listimg"><img src="images/product3.png" /></div>
+                        <p>圣塔玫瑰纯番茄果酱</p>
+                        <span>规格：100g</span>
+                    </a>
+                </li><!--一个产品-->
+            </ul><!--列表结束-->
+            <p class="dashline"></p>
+            <ul class="number_box">
+                <li><a href="#" class="number_box_1">首页</a></li>
+                <li><a href="#" class="number_box_2">上一页</a></li>
+                <li><a href="#" class="number_box_3" id="number_box_cur">1</a></li>
+                <li><a href="#" class="number_box_3">2</a></li>
+                <li>...</li>
+                <li><a href="#" class="number_box_3">5</a></li>
+                <li><a href="#" class="number_box_2">下一页</a></li>
+                <li><a href="#" class="number_box_1">尾页</a></li>
+            </ul><!--分页结束-->
+        </div>
+        <img src="images/maindown.png" />
+	</div><!--中间内容-->
+</div><!--列表-->
+
+
+<iframe src="footer.html" width="100%" height="200" frameborder="0" scrolling="no"></iframe>
+<div id="top"></div>
+</body>
+</html>

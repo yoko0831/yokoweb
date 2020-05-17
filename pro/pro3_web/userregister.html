@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>天津高考报名系统</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link type="text/css" rel="stylesheet" href="css/usercommon.css">
+</head>
+<script type="text/javascript">
+    var Time=15,t;
+    var c=Time
+    function timedCount(){
+        document.getElementById('fsyzm').value="请稍等(" + c + ")";
+        document.getElementById('fsyzm').disabled="disabled";
+        c=c-1;
+        t=setTimeout("timedCount()",1000)
+        if(c<0){
+            c=Time;
+            stopCount();
+            document.getElementById('fsyzm').value="重新发送";
+            document.getElementById('fsyzm').removeAttribute("disabled");
+        }
+    }
+    function stopCount(){
+        clearTimeout(t);
+    }
+</script>
+<body style="background: #eeeeee">
+<div class="enroll-wrap">
+    <div class="header">
+        <h1>天津高考网上报名系统</h1>
+    </div>
+
+    <div class="r-password">
+        <h2>注册</h2>
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <td><span>身份证号第一次录入</span></td>
+                <td><input type="text" placeholder="输入身份证号" class="user-id" size="18" maxlength="18"></td>
+            </tr>
+            <tr>
+                <td><span>身份证号第二次录入</span></td>
+                <td><input type="text" placeholder="第二次输入身份证号" class="user-id" size="18" maxlength="18"></td><td><b class="font-color-red">*与第一次身份证号不符</b></td>
+            </tr>
+            <tr>
+                <td><span>密码</span></td>
+                <td><input type="password" placeholder="输入密码" class="user-id"></td>
+            </tr>
+            <tr>
+                <td><span>确认密码</span></td>
+                <td><input type="password" placeholder="确认密码" class="user-id"></td>
+            </tr>
+            <tr>
+                <td><span>手机号</span></td>
+                <td><input type="tel" placeholder="输入11位手机号" class="user-id" size="11" maxlength="11"></td>
+            </tr>
+            <tr>
+                <td><span>手机验证码</span></td><td><input type="text" placeholder="输入验证码" class="user-yz">
+                <input type="button" id="fsyzm" onclick="timedCount()"  class=" yz-button" value="发送" />
+            </td>
+            <tr>
+                <td></td>
+                <td><a href="rpsuccess2.html" class="a-button">完成</a></td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+
+</body>
+</html>

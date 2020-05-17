@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="stylesheet" href="css/css.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+    <script type="text/javascript" src="js/interfaceURL.js"></script>
+    <script type="text/javascript" src="js/url.js"></script>
+    <style>
+
+        .search-div {
+            width: 100%;
+            height: 80px;
+            background-color: #ffffff;
+
+        }
+
+        .search-div span {
+            display: block;
+            float: left;
+            width: 40px;
+            height: 40px;
+            background-color: #119288;
+            margin-top: 20px;
+            text-align: center;
+
+        }
+
+        .search-div span img {
+            display: inline-block;
+            margin-top: 8px;
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+
+        .search-div input {
+            width: 260px;
+            height: 40px;
+            border: solid 1px #cccccc;
+            float: left;
+            margin-top: 20px;
+            margin-left: 20px;
+            padding: 0 5px;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+
+        }
+
+        .tab {
+            float: left;
+            width: 50%;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+        }
+        .tab tbody{
+            border:none;;
+        }
+         #table1{
+             border-right: 1px solid #dadada;
+         }
+        #table2{
+            border-left: 1px solid #dadada;
+        }
+    </style>
+</head>
+<body class="wrap">
+<div class="wrapper">
+    <div class="header bggreen">
+        <div class="content">
+            <p class="top_title fl"><a href="index.html">欢迎登录体检录入系统</a></p>
+            <ul class="top_nav fr">
+                <li class="fr"><a href="javascript:;">退出</a></li>
+                <li class="fr"><a href="modify.html">修改个人信息</a></li>
+            </ul>
+            <!--头部信息栏-->
+
+        </div>
+    </div>
+    <!-- 上传信息-->
+    <div class="index_main">
+        <div class="search-div">
+            <input type="text" placeholder="输入体检学生考号" id="txtName"><span><img src="images/icon_Searchwhite.png"></span>
+        </div>
+        <table cellspacing="0" cellpadding="0" width="50%" class="tab" id="table1">
+            <thead>
+            <th>考生号</th>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>状态</th>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <table cellspacing="0" cellpadding="0" width="50%" class="tab" id="table2">
+            <thead>
+            <th>考生号</th>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>状态</th>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+</div>
+
+</body>
+</html>
+
+<script>
+    function zt(ksh){
+        var indexdata = JSON.parse(localStorage.getItem("indexdata"));
+        var logindata = JSON.parse(localStorage.getItem("logindata"));
+        var params = {
+            "userid": localStorage.getItem("userid"),
+            "password":localStorage.getItem("password"),
+            "ksh":ksh,
+            "token": logindata.token
+        }
+        var data10 = interfaceUrl("sturesult", params);
+        if (data10.flag == "1") {
+            return "<td class='fontgreen'>未检查<td>"
+        }
+        else if (data10.flag == "2") {
+            return "已检查"
+        }
+       else{
+            return "<td class='fontgreen'>未检查<td>"
+        }
+    }
+    function studentSelect1() {
+        var indexdata = JSON.parse(localStorage.getItem("indexdata"));
+        var logindata = JSON.parse(localStorage.getItem("logindata"));
+        var params = {
+            "userid": localStorage.getItem("userid"),
+            "tjddm": indexdata.data.tjddm,
+            "inserttime": "2017-12-07 15:11:11",//"2017-12-07 15:11:11" logindata.inserttime
+            "token": logindata.token
+        }
+        var json = interfaceUrl("studownload", params);
+        if (json.flag == "1") {
+            var num;
+            var num2;
+//            for (var i in json.data) {
+                num = Math.ceil(json.data.length / 2);//6
+                for (var i = 0; i < num; i++) {
+                    console.log(json.data[i].ksh)
+                    $("#table1 tbody").append("<tr>" +
+                            "<td>" + json.data[i].ksh + "</td>" +
+                            "<td>" + json.data[i].name + "</td>" +
+                            "<td>" + json.data[i].xb + "</td>" +
+                            zt(json.data[i].ksh)+
+                            "</tr>")
+
+                }
+//                num2=json.data.length-num;//6
+//                alert(json.data.length)
+                for (var j = num; j <json.data.length; j++) {
+                    console.log(json.data[j].ksh)
+                    $("#table2 tbody").append("<tr>" +
+                            "<td>" + json.data[j].ksh + "</td>" +
+                            "<td>" + json.data[j].name + "</td>" +
+                            "<td>" + json.data[j].xb + "</td>" +
+                           zt(json.data[j].ksh) +
+                            "</tr>")
+
+                }
+            }
+
+//        }
+        else {
+            alert(json.msg)
+        }
+
+    }
+    studentSelect1()
+    $().ready(function(){
+        $("#txtName").keyup(
+                function(){
+                    $("#table1 tr:gt(0)").hide();
+                    $("#table2 tr:gt(0)").hide();
+                    var $d = $("table tr:gt(0)").filter(":contains('"+$.trim($("#txtName").val())+"')");
+                    $d.show();
+
+
+                }
+        )
+    })
+</script>
+
+

@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+
+
+/*nofavor*/
+.nofavor{width:46.8%;margin:16.5% auto 0 auto;}
+
+
+ 
+ 
+ @media screen and (min-width: 319px) and (max-width : 374px){
+ 	.favor-list dt span{width:0.7rem;height:0.7rem;top:-0.3rem;right:-0.3rem;}
+ 	.favor-list dd{line-height: 90%;}	
+	.favor-list dd small{font-size: 0.85rem;}
+	.favor-list dd p{font-size:0.92rem;}
+	.favor-list dd h2{font-size:1.1rem;}
+
+}

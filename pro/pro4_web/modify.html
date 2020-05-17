@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/css.css"/>
+    <script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+    <script type="text/javascript" src="js/interfaceURL.js" ></script>
+    <script type="text/javascript" src="js/url.js"></script>
+    <script type="text/javascript" src="js/md5.js"></script>
+</head>
+<body class="wrap" onload="index()">
+<div class="wrapper">
+    <div class="header bggreen">
+        <div class="content">
+            <p class="top_title fl"><a href="index.html">欢迎登录体检录入系统</a></p>
+            <ul class="top_nav fr">
+                <li class="fr"><a href="javascript:;">退出</a></li>
+                <li class="fr"><a href="modify.html">修改个人信息</a></li>
+            </ul>
+            <!--头部信息栏-->
+
+        </div>
+    </div>
+
+    <div class="index_main">
+        <h1 class="fontgreen upload-inf">修改个人信息</h1>
+
+        <div class="modify-div">
+         <table cellpadding="0" cellspacing="0" >
+             <tr>
+                 <td>用户ID</td> <td><input type="text" value="" disabled id="userid"></td>
+             </tr>
+             <tr>
+                 <td>用户名称</td> <td><input type="text" value="" id="username"></td>
+             </tr>
+             <tr>
+                 <td>身份证号</td> <td><input type="text" value="" id="cardID"></td>
+             </tr>
+             <tr>
+                 <td>手机号</td> <td><input type="text" value="" id="tel"></td>
+             </tr>
+             <tr>
+                 <td>工作单位</td> <td><input type="text" value="" id="work"></td>
+             </tr>
+             <tr>
+                 <td>密码</td> <td><input type="password" value="" id="oldpass"></td>
+             </tr>
+
+
+
+         </table>
+            <button class="bgorange" onclick="save()">保存</button>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

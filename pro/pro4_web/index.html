@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>首页</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/css.css" />
+		<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+		<script type="text/javascript" src="js/interfaceURL.js" ></script>
+		<script type="text/javascript" src="js/url.js" ></script>
+		<script>
+
+
+		</script>
+	</head>
+	<body class="wrap" onload="index()">
+		<div class="wrapper">
+			<div class="header bggreen">
+				<div class="content">
+					<p class="top_title fl"><a href="index.html">欢迎登录体检录入系统</a></p>
+					<ul class="top_nav fr">
+						<li class="fr"><a href="javascript:;">退出</a></li>
+						<li class="fr"><a href="modify.html">修改个人信息</a></li>
+					</ul><!--头部信息栏-->
+
+				</div>
+			</div>
+			<div class="index_main clr">
+				<div class="index_main_left fl">
+					<p class="infor_title fontgreen">医生信息</p>
+					<div class="infor_box1 clr">
+						<img class="doctor_icon fl" src="images/doctor_icon.png" />
+						<div class="doctor_infor fr">
+							<p class="fontorange" id="username"></p>
+							<p>体检点：<span id="address"></span></p>
+							<ul class="forim">
+
+							</ul>
+						</div>
+					</div>
+				</div><!--左侧医生信息-->
+				<div class="index_main_right fr">
+					<p class="infor_title fontgreen">录入信息</p>
+					<div class="infor_box2">
+						<input class="student_num" type="text"  placeholder="输入体检学生考号" id="ksh"/>
+						<input class="student_num_btn bgorange" type="button" value="查找考生" onclick="ksEntry()" />
+					</div><!--录入信息end-->
+					<div class="infor_box2" style="margin-top: 20px;">
+						<div class="progress_infor clr">
+							<img class="fl" src="images/clock_icon.png" />
+							<ul class="fr" id="getstatic">
+								<li>体检人数：<span></span></li>
+								<li>已检人数：<span></span></li>
+								<li>未检人数：<span></span></li>
+							</ul>
+						</div>
+						<input class="student_num_btn bggreen" type="button" value="查看考生信息" onclick="window.location='show.html'"/>
+					</div><!--上传信息end-->
+				</div><!--左侧学生信息-->
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="render" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,minimal-ui,user-scalable=no">
+    <meta name="location" content="province=;city=">
+    <meta name="apple-touch-fullscreen" content="no">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta name="applicable-device" content="mobile">
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/maystar.css" />
+    <title>考试列表</title>
+    <script type="text/javascript" src='../js/zepto.js'></script>
+	<script type="text/javascript" src='../js/rem.js'></script>
+    <script>
+		$(function () {
+			$(".tiphide").click(function () {
+				$(".tipbox").show()
+			})
+			$(".tipbox").click(function () {
+				$(this).hide()
+			})
+		})
+    </script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="topbox clearfix">
+			<a href="../index.html" class="top_left_btn1 fleft"><img src="../img/top_left_icon2@2x.png"></a>
+			<div class="top_title"><p>成绩</p></div>
+		</header><!--头部条-->
+		<div class="white"></div>
+		<div class="content">
+			<section class="grade_bar" id="tab">
+				<a class="grade_select" href="grade-exam.html">2017年第二学期期中考试<span>>></span></a>
+			</section><!--tab栏-->
+			<section class="grade_all">
+				<a href="grade-all.html" class="clearfix">
+					<img class="grade_all_icon1 fleft" src="../img/grade_icon1@2x.png">
+					<p class="grade_all_text fleft">总分：660　班级名次：15名 </p>
+					<p class="grade_all_more fright">总分分析</p>
+				</a>
+			</section><!--总成绩-->
+			<table class="grade_all_table">
+				<thead> 
+					<tr> 
+						<th width="25%">科目</th> 
+						<th width="25%">成绩</th> 
+						<th width="25%">分析</th> 
+						<th width="25%">考试视频</th> 
+					</tr> 
+				</thead>
+				<tbody> 
+					<tr> 
+						<td>语文</td> 
+						<td><span>84</span></td> 
+						<td><a href="grade-alone.html" class="grade_table_btn1">查看分析</a></td> 
+						<td><a href="grade-video.html" class="grade_table_btn2"><img src="../img/grade_icon2@2x.png"/></a></td>
+					</tr> 
+					<tr> 
+						<td>数学</td> 
+						<td><span>108</span></td> 
+						<td><a href="grade-alone.html" class="grade_table_btn1">查看分析</a></td> 
+						<td><a href="grade-video.html" class="grade_table_btn2"><img src="../img/grade_icon2@2x.png"/></a></td>
+					</tr> 
+					<tr> 
+						<td>英语</td> 
+						<td><span>67</span></td> 
+						<td><a href="grade-alone.html" class="grade_table_btn1">查看分析</a></td> 
+						<td><a href="javascript:;" class="grade_table_btn2 tiphide" id=""><img src="../img/grade_icon2nor@2x.png"/></a></td><!--tiphide-->
+					</tr> 
+					<tr> 
+						<td>物理</td> 
+						<td><span>79</span></td> 
+						<td><a href="grade-alone.html" class="grade_table_btn1">查看分析</a></td> 
+						<td><a href="grade-video.html" class="grade_table_btn2"><img src="../img/grade_icon2@2x.png"/></a></td>
+					</tr> 
+					<tr> 
+						<td>思想品德</td> 
+						<td><span>92</span></td> 
+						<td><a href="grade-alone.html" class="grade_table_btn1">查看分析</a></td> 
+						<td><a href="javascript:;" class="grade_table_btn2 tiphide"><img src="../img/grade_icon2nor@2x.png"/></a></td>
+					</tr> 
+				</tbody>
+			</table><!--成绩单-->
+			<section class="grade_tip">
+				<p>成绩报告：</p>
+				<p>此次成绩相比于上次考试进步但英语成绩处于中等水平，望好好提高英语成绩！</p>
+			</section><!--成绩报告-->
+		</div><!--主内容-->
+		<div class="tipbox" id="tipbox">
+			<p>该科目试卷未录制视频</p>
+		</div><!--提示框-->
+	</div>
+</body>
+</html>

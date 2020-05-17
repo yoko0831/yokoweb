@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>仿腾讯视频</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+  <link rel="shortcut icon" href="favicon.ico" />
+  <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+  <link rel="stylesheet" href="css/index.css">
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!-- 展示代码 -->
+  <link rel="stylesheet" href="css/solarized-dark.css">
+  <script src="js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+  <!-- header start -->
+  <header class="container">
+    <div class="row">
+      <div class="col-xs-6 col-lg-3">
+        <a class="logo" href="index.html"><img src="images/logo.png" alt=""></a>
+      </div>
+      <div class="col-xs-6 col-lg-9">
+        <ul class="navbar clearfix">
+          <li><a href="#">About</a></li>
+          <li><a href="index.html" class="active">Work</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- header end -->
+
+  <!-- title start-->
+  <nav class="container-fluid pagenav title">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-8 col-lg-9">
+          <h2>仿腾讯视频首页</h2>
+          <div class="titleborder"></div>
+        </div>
+        <div class="col-xs-4 col-lg-3 text-right">
+          <a href="index.html" class="btn-bluea btn-xs" style="margin-top: 20px;">返回</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container pagecontent">
+    <div class="row">
+      <div class="col-lg-12">
+        <p class="introduce">此网站为个人JS特效练习作品，方便展示功能效果。</p>
+      </div>
+    </div>
+  </div>
+  <!-- title end -->
+  <div class="container main">
+    <div class="row">
+      <div class="col-lg-12 main-img">
+        <img src="images/web7-img1.png" alt="仿腾讯视频">
+      </div>
+    </div>
+    <div class="row page-section">
+      <div class="col-md-12 col-lg-12 main-title">
+        <h3>部分代码展示</h3>
+        <div class="titleborder"></div>
+      </div>
+      <!-- 一段演示代码 start -->
+      <div class="col-lg-12 main-code">
+        <h4>节目单</h4>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <pre>
+                  <h3 class="code-title">html</h3>
+                  <code class="html">
+&lt;!-- 默认显示部分 start -->
+&lt;div class="topmenu_show">
+  &lt;div class="topmenu_show_black">
+    &lt;a href="###"class="topmenu_show_title">我的追剧节目单&lt;i class="iconfont icon-xiangxiajiantou">&lt;/i>&lt;/a>
+  &lt;/div>
+  &lt;ul class="topmenu_show_pic clearfix">
+    &lt;li>&lt;img src="images/moviepic1.jpg"alt="">&lt;/li>
+    &lt;li>&lt;img src="images/moviepic2.jpg"alt="">&lt;/li>
+  &lt;/ul>
+&lt;/div>
+&lt;!-- 下拉部分 start -->
+&lt;div class="topmenu_pic clearfix">
+  &lt;p class="topmenu_title">也许你还喜欢看&lt;/p>
+  &lt;div class="scroll">
+    &lt;div class="scroll_left"id="LeftArr">&lt;i class="iconfont icon-xiangzuojiantou">&lt;/i>&lt;/div>
+    &lt;div class="pic"id="scrollPic">
+      &lt;ul class="topmenu_sild clearfix">
+        &lt;li class="top_movie">
+          &lt;div>
+            &lt;img src="images/moviepic1.jpg"alt="">
+            &lt;p>&lt;span>7.&lt;/span>6&lt;/p>
+          &lt;/div>
+          &lt;a href="###">战地枪王&lt;/a>
+          &lt;span>更新至35集&lt;/span>
+        &lt;/li>
+        &lt;li class="top_movie">
+          &lt;div>
+            &lt;img src="images/moviepic2.jpg"alt="">
+            &lt;p>&lt;span>7.&lt;/span>8&lt;/p>
+          &lt;/div>
+          &lt;a href="###">胜利之路&lt;/a>
+          &lt;span>全38集&lt;/span>
+        &lt;/li>
+      &lt;/ul>
+    &lt;/div>
+    &lt;div class="scroll_right"id="RightArr">&lt;i class="iconfont icon-xiangyoujiantou">&lt;/i>&lt;/div>
+  &lt;/div>
+&lt;/div>
+                  </code>
+                </pre>
+            </div>
+            <!-- html end -->
+            <div class="col-lg-6">
+              <pre>
+                  <h3 class="code-title">css</h3>
+                  <code class="css">
+.topmenu_show{
+  height: 40px;
+  position: relative;
+}
+.topmenu_show_black{
+  width: 100%;
+  height: 40px;
+  background: rgba(0,0,0,.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.topmenu_show_title{
+  color: #fff;
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  font-size: 14px;
+  height: 20px;
+  line-height: 20px;
+}
+.topmenu_show_pic{
+  width: 1368px;
+  height: 40px;
+  margin: 0 auto;
+}
+.topmenu_show_pic>li{
+  float: left;
+  width: 165px;
+  height: 40px;
+  overflow: hidden;
+  margin: 0 3px;
+  display:inline;
+}
+.topmenu_pic{
+  display: none;
+}
+.topmenu_title{
+  font-size: 18px;
+  color: #fff;
+  width: 1000px;
+  margin: 20px auto 10px;
+}
+.topmenu .scroll {
+  width: 1415px;
+  height: 285px;
+  margin: 0 auto;
+}
+.topmenu .topmenu_sild{
+  width: 1368px;
+  margin: 0 auto;
+  display:block;
+}
+.topmenu .scroll_left,.topmenu .scroll_right {
+  width:20px;
+  height:20;
+  background: rgba(0,0,0,.7);
+  color:#fff;
+  float:left;
+  line-height:20px;
+  text-align:center;
+  border-radius: 50%;
+  margin-top: 100px;
+}
+.topmenu .scroll_left .iconfont,.topmenu .scroll_right .iconfont{
+  font-size: 12px;
+}
+.topmenu .pic {
+  width:1368px;
+  float:left;
+}
+.top_movie{
+  float: left;
+  width: 165px;
+  margin: 0 3px;
+  display:inline;
+}
+.top_movie>div{
+  width: 165px;
+  height: 230px;
+  position: relative;
+}
+                  </code>
+                </pre>
+            </div>
+            <!-- Javascript end -->
+            <div class="col-lg-6">
+              <pre>
+                  <h3 class="code-title">Javascript</h3>
+                  <code class="javascript">
+$(".topmenu_show_title").click(function(){
+  $(".topmenu").animate({"height":"375px"},200);
+  $(".topmenu_show").slideUp(200);
+  $(".topmenu_pic").slideDown(200);
+})
+$(".arrow_top").click(function(){
+  $(".topmenu").animate({"height":"40px"},200);
+  $(".topmenu_show").slideDown(200);
+  $(".topmenu_pic").slideUp(200);
+})
+                  </code>
+                </pre>
+            </div>
+            <!-- javascript end -->
+            <div class="col-lg-6">
+              <pre>
+                  <h3 class="code-title">demo</h3>
+                  <code><img style="width:520px; margin-top: 75px" src="images/web7-code1.gif" alt=""></code>
+                </pre>
+            </div>
+            <!-- image end -->
+          </div>
+          <!-- row end -->
+        </div>
+        <!-- container end -->
+      </div>
+      <!-- 一段演示代码 end -->
+
+      <!-- 一段演示代码 start -->
+      <div class="col-lg-12 main-code">
+        <h4>轮播图</h4>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <pre>
+                  <h3 class="code-title">html</h3>
+                  <code class="html">
+&lt;div class="topbox_top w1200">
+  &lt;!-- 搜索框 -->
+  &lt;div class="search">
+    &lt;div class="searchbox clearfix">
+      &lt;input id="searchinp1" class="fl" type="text" placeholder="魔道祖师">
+      &lt;a href="###" class="fl">热搜榜&lt;/a>
+      &lt;button class="fl">&lt;i class="iconfont icon-sousuo">&lt;/i>全网搜&lt;/button>
+    &lt;/div>
+    &lt;div class="searchhot" id="searchhot1">
+      &lt;div class="searchhot_title clearfix">
+        &lt;p class="fl">热门搜索&lt;/p>
+        &lt;a class="fr" href="###">更多搜索&lt;i class="iconfont icon-xiangyoujiantou">&lt;/i>&lt;/a>
+      &lt;/div>
+      &lt;ul class="searchhot_list">
+        &lt;&lt;li>&lt;a href="###">&lt;span style="background: #FF0D29">1&lt;/span>如懿传&lt;/a>&lt;/li>
+        &lt;&lt;li>&lt;a href="###">&lt;span style="background: #FF920B">2&lt;/span>娘道&lt;/a>&lt;/li>
+        &lt;&lt;li>&lt;a href="###">&lt;span style="background: #FFC600">3&lt;/span>口红王子&lt;/a>&lt;/li>
+        &lt;&lt;li>&lt;a href="###">&lt;span>4&lt;/span>斗破苍穹&lt;/a>&lt;/li>
+      &lt;/ul>
+    &lt;/div>
+  &lt;/div>
+  &lt;!-- 搜索框 end-->
+  &lt;!-- 个人中心 start -->
+  &lt;&lt;div class="user clearfix">&lt;&lt;/div>
+  &lt;!-- 个人中心 end -->
+  &lt;!-- 剧列表 start -->
+  &lt;div class="tvlist">
+    &lt;ul>
+      &lt;li class="active">
+        &lt;a href="###">如懿传&lt;/a>
+        &lt;span>如懿下线,唯有容佩守护&lt;/span>
+      &lt;/li>
+      &lt;&lt;li>
+        &lt;a href="###">放大招&lt;/a>
+        &lt;span>携手BBC创新玩法&lt;/span>
+      &lt;/li>
+    &lt;/ul>
+  &lt;/div>
+  &lt;!-- 剧列表 end -->
+&lt;/div>
+&lt;!-- 固定层 end -->
+&lt;!-- 轮播图 start -->
+&lt;div class="flexslider">
+  &lt;ul class="slides">
+    &lt;li style="background:url(images/banner1.jpg) 50% 0 no-repeat;">&lt;/li>
+    &lt;li style="background:url(images/banner2.jpg) 50% 0 no-repeat;">&lt;/li>
+  &lt;/ul>
+&lt;/div>
+&lt;!-- 轮播图 end -->
+                  </code>
+                </pre>
+            </div>
+            <!-- html end -->
+            <div class="col-lg-6">
+              <pre>
+                  <h3 class="code-title">css</h3>
+                  <code class="css">
+.flexslider{
+  position:relative;
+  overflow:hidden;
+  background:url(../mages/loading.gif) 50% no-repeat;
+}
+.slides{
+  position:relative;
+  z-index:1;
+}
+.slides li{
+  height: 580px;
+}
+.flex-control-nav{
+  position:absolute;
+  bottom:10px;
+  z-index:2;
+  width:100%;
+  text-align:center;
+}
+.flex-control-nav li{
+  display:inline-block;
+  width:14px;
+  height:14px;
+  margin:0 5px;
+  *display:inline;
+  zoom:1;
+}
+.flex-control-nav a{
+  display:inline-block;
+  width:14px;
+  height:14px;
+  line-height:40px;
+  overflow:hidden;
+  background:url(../images/dot.png) right 0 no-repeat;
+  cursor:pointer;
+}
+.flex-control-nav .flex-active{
+  background-position:0 0;
+}
+
+.flex-direction-nav{
+  position:absolute;
+  z-index:3;
+  width:100%;
+  top:45%;
+}
+.flex-direction-nav li a{
+  display:block;
+  width:50px;
+  height:50px;
+  overflow:hidden;
+  cursor:pointer;
+  position:absolute;
+}
+.flex-direction-nav li a.flex-prev{
+  left:40px;
+  background:url(../images/prev.png) center center no-repeat;
+}
+.flex-direction-nav li a.flex-next{
+  right:40px;background:url(../images/next.png) center center no-repeat;
+}
+                  </code>
+                </pre>
+            </div>
+            <!-- Javascript end -->
+            <div class="col-lg-6">
+              <pre>
+                  <h3 class="code-title">Javascript</h3>
+                  <code class="javascript">
+//轮播图
+$('.flexslider').flexslider({
+  directionNav: true,
+  pauseOnAction: false,
+  slideshowSpeed: 3000
+});
+//搜索框
+$("#searchinp1").focus(function(){
+  $("#searchhot1").slideDown(200);
+}).blur(function(){
+  $("#searchhot1").slideUp(200);
+})
+//菜单选项卡
+$('.tvlist ul').find('li').mouseover(function(){
+  $(this).addClass("active").siblings().removeClass("active");
+})
+&lt;script src="js/jquery.flexslider-min.js">&lt;/script>
+                  </code>
+                </pre>
+            </div>
+            <!-- javascript end -->
+            <div class="col-lg-6">
+              <pre>
+                  <h3 class="code-title">demo</h3>
+                  <code><img style="width:520px; margin-top: 65px" src="images/web7-code2.gif" alt=""></code>
+                </pre>
+            </div>
+            <!-- image end -->
+          </div>
+          <!-- row end -->
+        </div>
+        <!-- container end -->
+      </div>
+      <!-- 一段演示代码 end -->
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="btn-link"><a href="pro/pro7_web/index.html" target="_blank" class="btn-bluea btn-lg"
+            data-wow-delay="0.8s">查看项目演示</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container page">
+    <div class="row">
+      <div class="col-xs-4 col-lg-4 text-left">
+        <a href="pro6.html"><i class="iconfont icon-cc-arrow-left"></i>Previous</a>
+      </div>
+      <div class="col-xs-4 col-lg-4 text-center">
+        <a href="javascript:;" class="backtop">Back to Top</a>
+      </div>
+      <div class="col-xs-4 col-lg-4 text-right">
+        <a href="pro8.html">Next<i class="iconfont icon-cc-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <p class="col-xs-12 col-lg-4 text-left"><a href="utils/resume.html" target="_blank">Resume</a> |
+          <a href="mailto:yoko0831@hotmail.com">yoko0831@hotmail.com</a></p>
+        <p class="col-xs-12 col-lg-4 text-center"><a target="_blank"
+            href="http://beian.miit.gov.cn">京ICP备19052358号-1</a></p>
+        <p class="col-xs-12 col-lg-4 text-right">© 2020 Yoko Yu All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/page.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

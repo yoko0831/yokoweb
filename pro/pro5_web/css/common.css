@@ -1,0 +1,91 @@
+*{margin: 0;padding: 0}
+body,html,button{ height:100%;
+    font-family: "microsoft yahei", "Roboto", "Segoe UI", sans-serif;
+    font-size:12px;color: #5B5B5B }
+.fleft{float: left}
+.fright{float: right}
+.wrap{width: 100%;position: relative;background-color: yellow}
+ul{list-style-type: none}
+/******************头部********************88*/
+.top{height: 45px;background-color: #3fb0f2; }
+.logo{display: inline-block;float: left;width: 193px;margin-top: 8px;margin-left: 10px}
+.logofont{color: white;font-weight: 900;font-size: 20px;line-height: 40px;float: left;}
+.num{float: left;height: 25px;margin-top: 10px;margin-left: 55px;color: white; font-size:14px; background:url(../images/main/logo2.png) 1px 0px no-repeat; padding-left:25px;}
+.num img{width: 20px;float: left;display: inline-block;}
+.num div{float: left;line-height: 25px;margin-left: 10px}
+.num1,.num2{background-color: white;border-radius: 14px;display: inline-block;width: 65px;
+    height: 25px;text-align: center;line-height: 25px;margin-left: 2px;}
+.num1 span,.num1{color:#3fb0f2 }
+.num2 span,.num2{color: #DF2625}
+.top_right{width:340px;}
+.btn_ul{width:110px; display:block;}
+.btn_ul li{ display:inline-block; width:30px; height:30px; cursor:pointer; text-indent:-9999em; border-radius:4px; margin:7px 0px 0px 3px;}
+.btn_ul li:hover{ background-color:#fff;}
+.enlarge{background:url(../images/main/btn.png) 4px 5px no-repeat #f0f9fe;}
+.narrow{background:url(../images/main/btn.png) 4px -35px no-repeat #f0f9fe;}
+.quit{background:url(../images/main/btn.png) 5px -74px no-repeat #f0f9fe;}
+.time{margin-right: 10px;background-color: #f0f9fe;width: 212px;height: 30px;margin-top: 7px;border-radius:30px;line-height: 28px;color: #DF2625; font-size:18px;}
+.time img{width: 20px;margin-left: 10px;margin-top: 5px;float: left}
+/*********************内容*************************/
+.content{background-color: #34495E;width: 100%;position: relative;overflow: hidden}
+/*左侧菜单*/
+.left_nav{width: 240px;background-color: white;position: absolute;left: 10px;top: 10px;}
+.leftitle{width: 90%;margin-left: 5%;text-align: center;margin-top: 10px;border-bottom:2px solid #F0F1F1;height: 95px; }
+.leftitle img{width: 66px;display: inline-block;}
+/*要求*/
+.leftreq {text-align: center; margin:5px 0; height:43px;}
+.red{color:#DF2625;display: block ;margin-bottom: 3px}
+.green{background-color: #76D790!important}
+.gray{background-color: #D6D7D9; }
+/*题*/
+.navwrap{overflow: auto;}
+.topic{margin-bottom:10px;overflow: hidden;width: 98% ;margin-left: 1% }
+.topic div{height: 24px;color: white;background-color: #6184AA;width: 95%;margin-left: 2%;line-height: 24px;text-indent: 10px;}
+.topic .toppic_one{height: 24px;color:white; font-weight:bold; background-color: #23b99c;width: 95%;margin-left: 2%;line-height: 24px;text-indent: 10px; margin-bottom:1px; font-size:14px;}
+.topic ul{width: 98%;margin-left: 2%; margin-top: 1px;clear: both;}
+.topic ul li{width: 25px;height: 25px;line-height: 25px; overflow:hidden; font-size:13px; text-align: center;background-color:#D6D7D9;margin-right: 3px;float: left;margin-top: 3px; cursor: pointer;}
+.topic ul li:hover{background-color: #76D790}
+/****************************************************************/
+.text{position: absolute;right: 10px;top: 10px;background-color: white;overflow: hidden}
+.textTop{border-bottom: 2px solid #dadada;width: 96%;position: absolute;left: 2%;height: 40px;line-height: 40px}
+.textTop h1{display: inline-block; font-weight:normal; font-size:16px;}
+.ci{width: 10px;height: 10px;border-radius: 10px;background-color:#3fb0f2;position: absolute;bottom: -5px }
+.textTop hr{width: 195px;border: 1px solid #3fb0f2;position: absolute;left: 5px;bottom: -1px }
+.scrlltext{position: absolute;top: 55px;width: 100%;overflow: auto}
+.cont{width: 96%;margin-left: 2%;margin-top: 10px;overflow: hidden}
+.cont_green{background-color: #3fb0f2!important;color: white!important;}
+
+.cont >span{float: left;width: 30px;height: 30px;background-color: #DADADA;line-height: 30px;text-align: center; font-size:14px;}
+.ti{border:2px solid #DADADA;float: left;}
+.ti_green{border:2px solid #3fb0f2!important;}
+.problem{margin: 10px; font-size:14px;}
+.ti hr{border:1px dashed #DADADA;width: 98%;margin-left: 1%;margin-top: 10px}
+.choice{position:relative;left: 10px}
+.choice .radio{position:relative;display:inline-block;font-weight:400;color:#0c4757;padding-left:25px;cursor:pointer;
+    width: 98%;line-height:20px;margin-top: 10px}
+.choice .radio input{position:absolute;left:-9999px}
+.choice .radio i{display:block;position:absolute;top:0px;left:0;width:15px;height:15px;outline:0;border:2px solid #9D9D9D;
+    line-height: 15px;
+    /*text-align: center;*/
+    background:white;border-radius:50%;transition:border-color .3s;
+-webkit-transition:border-color .3s;}
+.choice .radio input:checked+i{border-color:#3fb0f2;background-color:#3fb0f2;}
+.choice .radio input+i:after{position:absolute;content:'\221a';width:9px;height:9px;border-radius:50%;left: 2px;
+    color: white;
+    opacity:0;transition:opacity .1s;-webkit-transition:opacity .1s}
+.choice .radio input:checked+i:after{opacity:1}
+.answer{margin: 10px; }
+.answer span{color: #E64C3B;font-size: 18px;margin:0 15px; }
+.answer b{ color:#fff; background:#27ae60; padding:3px 29px; font-size:12px; font-weight:normal; }
+/*按钮*/
+.tbutton{position: absolute;height: 70px;bottom: 0;width: 510px;left: 50%;margin-left: -255px;}
+.tbutton button{outline: 0px;border: 0;width: 88px;height: 38px;border-radius: 6px;color: white;margin-left: 10px;margin-top: 10px; font-size:14px;
+                display:inline-block; cursor: pointer;}
+.tbutton .button1{background-color: #1abc9c; box-shadow: 0 2px 0 #16a085;}				
+.tbutton .button2{background-color: #F39C11; box-shadow: 0 2px 0 #ce860e;}	
+.tbutton .button3{background-color: #26bb65; box-shadow: 0 2px 0 #219451;}	
+.tbutton .button4{background-color: #95A6A6; box-shadow: 0 2px 0 #7e8c8c;}	
+.tbutton .button1:hover{background-color: #16a085; box-shadow: 0 2px 0 #138871;}
+.tbutton .button2:hover{background-color: #E67E22; box-shadow: 0 2px 0 #cc6e1b;}
+.tbutton .button3:hover{background-color: #219452; box-shadow: 0 2px 0 #1c7c45;}
+.tbutton .button4:hover{background-color: #7F8C8D; box-shadow: 0 2px 0 #677172;}

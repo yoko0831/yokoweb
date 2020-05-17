@@ -1,0 +1,96 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{ margin:0; padding:0;}
+image{border:0 none;vertical-align: top; display:block;}
+ul li{ list-style:none;}
+a{text-decoration: none; cursor:pointer; display:block;}
+a img{ border:0 none; display:block;}
+body,html{ width:100%; height:100%; background-color:#FFFFFF; font-family:"微软雅黑", Arial; color:#666; font-size:14px;}
+body{overflow-y:scroll;}
+html{ background-image: url(../images/mainbg.jpg); background-repeat:no-repeat; background-position:bottom; background-attachment:fixed;}
+.clear{clear:both;}
+/*top*/
+.top{ width:100%; height:120px; }
+.topbox{ width:1200px; height:120px; margin:0 auto; overflow:hidden; }
+.toplogo{ width:255px; height:69px; float:left; margin:24px 0 0 65px;}
+.topnav{ width:800px; height:60px; margin:40px 0 0 0; float:right; overflow:hidden;}
+.topnav li{ margin:0 12px; float:left; text-align:center;}
+.topnav li a{ font-size:14px; color:#666; line-height:25px; text-align:center;}
+.topnav li a span{ font-size:12px; color:#999; font-family:Arial, Helvetica, sans-serif;}
+.topnav li p{ color:#4f565f; font-size:8px; line-height:24px;}
+/*banner*/
+.bannerbox{ width:100%; height:497px; overflow:hidden;}
+.ck-slide { width: 1200px; height:497px; margin: 0 auto;}
+.ck-slide ul.ck-slide-wrapper { height:497px;}
+
+
+/*公用标题和按钮*/
+.big_title{ width:640px; background:url(../images/titlebg.png) no-repeat; margin:0 auto; text-align:center;}
+.big_title p{ color:#e9670e; font-size:24px; line-height:40px;}
+.big_title span{ color:#999; font-size:16px; line-height:30px;}
+.more_btn{ width:115px; height:34px; color:#e9670e; border:1px solid #e9670e; background-color:#FFF; line-height:34px; text-align:center; margin:0 auto;}
+
+
+/*尾部*/
+.footer{ width:100%; height:200px; background-color:#edece7; padding:10px 0 0 0;}
+.footer_main{ width:1200px; margin:0 auto; overflow:hidden;}
+.footer_1{ width:330px; height:160px; border-right:1px solid #dddddd; overflow:hidden; float:left; margin:15px 0 0 30px;}
+.footer_2{ width:200px; height:160px; border-right:1px solid #dddddd; overflow:hidden; float:left; margin:15px 0 0 20px;}
+.footer_4{ width:250px; height:160px; overflow:hidden; float:right; margin:10px 100px 0 0; text-align:center;}
+.footer_list dt{ font-size:14px; color:#666; line-height:40px; margin-top:10px;}
+.footer_list dd{ font-size:12px; color:#999; line-height:26px;}
+.footer_list dd a{ color:#999;}
+.footer_list dd a:hover{ color:#e9670e;}
+.footer_4 img{ width:92px; height:100px;}
+.footer_4 p{ font-size:12px; color:#666; text-align:center; line-height:22px; margin-top:10px;}
+
+/*返回顶部*/
+.izl-rmenu{position:fixed;right:20px; bottom:110px;background:url(../images/r_b.png) 0px bottom no-repeat; z-index:999; }
+.izl-rmenu .btn{width:70px; height:70px; margin-bottom:1px; cursor:pointer; position:relative;}
+.izl-rmenu a.btn-qq,.izl-rmenu a.btn-qq:visited{background:url(../images/r_qq.png) 0px 0px no-repeat; background-color:#6da9de; text-decoration:none; display:block;}
+.izl-rmenu .btn-wx{background:url(../images/r_wx.png) 0px 0px no-repeat; background-color:#78c340;}
+.izl-rmenu .btn-wx:hover{background-color:#58a81c;}
+.izl-rmenu .btn-wx .pic{position:absolute; left:-160px; top:0px; display:none;width:160px;height:160px;}
+.izl-rmenu .btn-phone{background:url(../images/r_phone.png) 0px 0px no-repeat; background-color:#fbb01f;}
+.izl-rmenu .btn-phone:hover{background-color:#ff811b;}
+.izl-rmenu .btn-phone .phone{background-color:#ff811b; position:absolute; width:160px; left:-160px; top:0px; line-height:70px; color:#FFF; font-size:18px; text-align:center; display:none;}
+.izl-rmenu .btn-qq{background:url(../images/r_qq.png) 0px 0px no-repeat; background-color:#6da9de;}
+.izl-rmenu .btn-qq:hover{background-color:#488bc7;}
+.izl-rmenu .btn-qq .qq{background-color:#488bc7; position:absolute; width:160px; left:-160px; top:0px; line-height:70px; color:#FFF; font-size:14px; text-align:center; display:none;}
+.izl-rmenu .btn-top{background:url(../images/r_top.png) 0px 0px no-repeat; background-color:#666666; display:none;}
+.izl-rmenu .btn-top:hover{background-color:#444;}
+
+/*分类选择*/
+.nav_list{ width:850px; margin:20px auto; overflow:hidden;}
+.nav_list li{ float:left; margin:0 5px;}
+.nav_list li p{ color:#e9670e; line-height:25px;}
+.nav_list li a{ width:75px; height:25px; text-align:center; line-height:25px; border:1px solid #d6d6d6; color:#666; background-color:#FFF; overflow:hidden;-moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; behavior:url(js/pie.htc); position:relative; }
+#cur_nav{ background-color:#e9670e; color:#FFF;}
+
+
+/*产品列表*/
+.list_ul{ width:990px; margin:10px auto; overflow:hidden; overflow:hidden; white-space:nowrap;}
+.list_ul li{ width:300px; float:left; margin:20px 15px 0 15px; text-align:center;}
+.list_ul li a{ width:100%; height:100%; text-align:center;}
+.listimg{ width:298px; height:210px; border:1px solid #d3d3d3; background-color:#FFF; text-align:center; line-height:210px;}
+.list_ul li a img{ max-width:200px; max-height:200px; margin:10px auto;}
+.list_ul li a p{ height:30px; padding:0 10px; line-height:30px; color:#666; margin-top:10px; white-space:nowrap;overflow:hidden;text-overflow:ellipsis; }
+.list_ul li a span{ color:#999;}
+
+/*分页*/
+.dashline{ width:990px; height:1px; border-bottom:1px dashed #d6d6d6; overflow:hidden; margin:30px auto 20px auto;}
+.number_box{ width:380px; height:27px; overflow:hidden; margin:30px auto 10px auto;}
+.number_box li{ float:left; margin-left:7px;}
+.number_box li a{ height:25px; border:1px solid #d4d4d4; color:#b1b1b1; font-size:14px; text-align:center; line-height:25px;}
+.number_box_1{ width:45px;}
+.number_box_2{ width:56px;}
+.number_box_3{ width:27px;}
+.number_box li a:hover{ color:#f8730d;}
+#number_box_cur{ border:1px solid #f8730d; background-color:#f8730d; color:#FFF;}
+.number_box2{ width:200px; margin:30px auto 0 auto; overflow:hidden;}
+.number_box2 a{width:75px; height:25px; text-align:center; line-height:25px; border:1px solid #d6d6d6; color:#666; background-color:#FFF; overflow:hidden;-moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; behavior:url(js/pie.htc); position:relative; float:left; margin:0 10px;}
+
+
+.main_box{ width:1158px; margin:30px auto; overflow:hidden;}
+.main_middle{ width:1158px; background:url(../images/mainmiddle.png) repeat-y; overflow:hidden; padding-bottom:30px;}

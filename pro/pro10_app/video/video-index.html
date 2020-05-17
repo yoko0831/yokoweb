@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="render" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,minimal-ui,user-scalable=no">
+    <meta name="location" content="province=;city=">
+    <meta name="apple-touch-fullscreen" content="no">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta name="applicable-device" content="mobile">
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/maystar.css" />
+    <title>提高</title>
+    <script type="text/javascript" src='../js/zepto.js'></script>
+    <link rel='stylesheet' href='../css/swiper.min.css'>
+    <script src="../js/swiper.min.js"></script>
+    <script type="text/javascript" src='../js/rem.js'></script>
+    <script>
+        //图片延迟加载
+        function getPos(obj){
+            var l=0,t=0;
+            while(obj){
+                l+=obj.offsetLeft;
+                t+=obj.offsetTop;
+                obj=obj.offsetParent;
+            }
+            return {left: l, top: t};
+        }
+        window.onresize=window.onscroll=loadImages;
+        //if(img.top<可视区底部){加载}
+        window.onload=function (){
+            loadImages();
+        };
+        function loadImages(){
+            var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+            var scrollBottom=scrollTop+document.documentElement.clientHeight;
+            var aImg=$(".img-Lay").find("img");
+            for(var i=0;i<aImg.length;i++){
+                var p=getPos(aImg[i]);
+                if(p.top<scrollBottom){
+                    aImg[i].src=aImg[i].getAttribute('_src');
+                }
+            }
+        }
+
+    </script>
+    <script>
+        $(function () {
+            var ulHeight=$(".video_list_ul").height()+210;
+            $(".video-height").height(ulHeight);
+
+        })
+    </script>
+</head>
+<body>
+<div class="wrapper">
+    <header class="topbox clearfix">
+        <a href="../index.html" class="top_left_btn1 fleft"><img src="../img/top_left_icon2@2x.png"></a>
+        <div class="top_title"><p>提高</p></div>
+    </header><!--头部条-->
+    <div class="white"></div>
+    <div class="content">
+        <div class="vider_bar" id="swiper-container1">
+            <ul class="swiper-wrapper  video_bar_ul">
+                <li class="swiper-slide video_bar_active" id="btn1" hidefocus="true">推荐</li>
+                <li class="swiper-slide" id="btn2" hidefocus="true">语文</li>
+                <li class="swiper-slide" id="btn3" hidefocus="true">数学</li>
+                <li class="swiper-slide" id="btn4" hidefocus="true">英语</li>
+                <li class="swiper-slide" id="btn5" hidefocus="true">物理</li>
+                <li class="swiper-slide" id="btn6" hidefocus="true">化学</li>
+                <li class="swiper-slide" id="btn7" hidefocus="true">政治</li>
+                <li class="swiper-slide" id="btn8" hidefocus="true">生物</li>
+                <li class="swiper-slide" id="btn9" hidefocus="true">地理</li>
+            </ul>
+        </div><!--tab栏-->
+        <!--</div>-->
+
+        <div class="swiper-container favor-list" id="swiper-container2">
+            <div class="swiper-wrapper video-height">
+                <div class="swiper-slide  video_list_ul2 clearfix" id="">
+                    <section >
+                        <!--轮播-->
+                        <div class="swiper-container" id="swiper-container4">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img data-src="../img/banner0@2x.png"  class="swiper-lazy"> <div class="swiper-lazy-preloader"></div></div>
+                                <div class="swiper-slide"><img data-src="../img/banner1@2x.png"  class="swiper-lazy"> <div class="swiper-lazy-preloader"></div></div>
+                                <div class="swiper-slide"><img data-src="../img/banner2@2x.png"  class="swiper-lazy"> <div class="swiper-lazy-preloader"></div></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+
+                        <!--轮播end-->
+                        <div class="video_list_title clearfix">
+                            <img class="video_icon1 fleft" src="../img/video_icon1@2x.png"/>
+                            <p class="fleft">最热视频</p>
+                            <a class="fright" href="javascript:;">换一批</a>
+                        </div><!--标题-->
+                        <ul class="video_list_ul clearfix img-Lay" >
+                            <li>
+                                <a href="video-main.html">
+                                    <img _src="../img/videoimg1@2x.png"/>
+                                    <p>历史鸦片战争讲堂历史鸦片战争讲堂</p>
+                                    <span>由研究院教授讲解由研究院教授讲解</span>
+                                </a>
+                            </li><!--一个视频-->
+                            <li>
+                                <a href="video-main.html">
+                                    <img _src="../img/videoimg1@2x.png"/>
+                                    <p>历史鸦片战争讲堂历史鸦片战争讲堂</p>
+                                    <span>由研究院教授讲解由研究院教授讲解</span>
+                                </a>
+                            </li><!--一个视频-->
+                            <li>
+                                <a href="video-main.html">
+                                    <img _src="../img/videoimg1@2x.png"/>
+                                    <p>历史鸦片战争讲堂历史鸦片战争讲堂</p>
+                                    <span>由研究院教授讲解由研究院教授讲解</span>
+                                </a>
+                            </li><!--一个视频-->
+                            <li>
+                                <a href="video-main.html">
+                                    <img _src="../img/videoimg1@2x.png"/>
+                                    <p>历史鸦片战争讲堂历史鸦片战争讲堂</p>
+                                    <span>由研究院教授讲解由研究院教授讲解</span>
+                                </a>
+                            </li><!--一个视频-->
+                            <li>
+                                <a href="video-main.html">
+                                    <img _src="../img/videoimg1@2x.png"/>
+                                    <p>历史鸦片战争讲堂历史鸦片战争讲堂</p>
+                                    <span>由研究院教授讲解由研究院教授讲解</span>
+                                </a>
+                            </li><!--一个视频-->
+                            <li>
+                                <a href="video-main.html">
+                                    <img _src="../img/videoimg1@2x.png"/>
+                                    <p>历史鸦片战争讲堂历史鸦片战争讲堂</p>
+                                    <span>由研究院教授讲解由研究院教授讲解</span>
+                                </a>
+                            </li><!--一个视频-->
+                            <li>
+                                <a href="video-main.html">
+                                    <img _src="../img/videoimg1@2x.png"/>
+                                    <p>历史鸦片战争讲堂历史鸦片战争讲堂</p>
+                                    <span>由研究院教授讲解由研究院教授讲解</span>
+                                </a>
+                            </li><!--一个视频-->
+                            <li>
+                                <a href="video-main.html">
+                                    <img _src="../img/videoimg1@2x.png"/>
+                                    <p>历史鸦片战争讲堂历史鸦片战争讲堂</p>
+                                    <span>由研究院教授讲解由研究院教授讲解</span>
+                                </a>
+                            </li><!--一个视频-->
+                        </ul>
+                    </section>
+                </div><!--推荐-->
+                <div class="swiper-slide">
+                	<ul class="video_knowledge clearfix">
+						<li class="video_knowledge_cur">全部</li>
+						<li>文言文</li>
+						<li>阅读</li>
+						<li>古诗词</li>
+						<li>作文</li>
+						<li>文言文</li>
+						<li>阅读</li>
+						<li>古诗词</li>
+						<li>作文</li>
+					</ul><!--知识点-->
+                    <section class="video_list">
+						<ul class="video_list_ul clearfix img-Lay" >
+                            <li>
+                                <a href="video-main.html">
+                                    <img _src="../img/videoimg2@2x.png"/>
+                                    <p>数学高一函数教程</p>
+                                    <span>著名高飞老师函数...</span>
+                                </a>
+                            </li><!--一个视频-->
+                        </ul>
+                    </section>
+                </div><!--科目-->
+                <div class="swiper-slide">
+                    <section class="video_list">
+						<ul class="video_list_ul clearfix img-Lay" >
+                            <li>
+                                <a href="video-main.html">
+                                    <img _src="../img/videoimg3@2x.png"/>
+                                    <p>高三数学难度讲解</p>
+                                    <span>高三数学高难度题库...</span>
+                                </a>
+                            </li><!--一个视频-->
+                        </ul>
+                    </section>
+                </div><!--科目-->
+                <div class="swiper-slide">
+                    <section class="video_list">
+
+                        <ul class="video_list_ul clearfix img-Lay" >
+                            <li>
+                                <a href="video-main.html">
+                                    <img _src="../img/videoimg4@2x.png"/>
+                                    <p>四级英语讲堂</p>
+                                    <span>英语老师全程授课...</span>
+                                </a>
+                            </li><!--一个视频-->
+                        </ul>
+                    </section>
+                </div><!--科目-->
+                <div class="swiper-slide">
+                    物理
+                </div><!--科目-->
+                <div class="swiper-slide">
+                    化学
+                </div><!--科目-->
+                <div class="swiper-slide">
+                    政治
+                </div><!--科目-->
+                <div class="swiper-slide">
+                    生物
+                </div><!--科目-->
+                <div class="swiper-slide">
+                    地理
+                </div><!--科目-->
+            </div>
+        </div><!--内容切换-->
+    </div><!--主内容-->
+</div>
+<script>
+//轮播
+    var mySwiper2 = new Swiper('#swiper-container4', {
+        loop: true,//循环
+        autoplay: 5000,//时间
+        autoplayDisableOnInteraction: false,//轮播
+        pagination: '.swiper-pagination',//圆点
+        preventClicks: false,//禁止点击
+        preloadImages:false,
+        lazyLoading: true
+    })
+
+//tab 滑动
+    var mySwiper1 = new Swiper('#swiper-container1', {
+        watchSlidesProgress: true,
+        watchSlidesVisibility: true,
+        slidesPerView:6,
+        onTap: function () {
+            mySwiper2.slideTo(mySwiper1.clickedIndex)
+        }
+    })
+    var mySwiper2 = new Swiper('#swiper-container2', {
+        autoHeight: true,
+        onSlideChangeStart: function () {
+            updateNavPosition()
+        }
+    })
+    function updateNavPosition() {
+        $('#swiper-container1 li').eq(mySwiper2.activeIndex).siblings().removeClass('video_bar_active')
+        var activeNav = $('#swiper-container1 li').eq(mySwiper2.activeIndex).addClass('video_bar_active');
+        mySwiper1.slideTo(activeNav.index()-5);
+    }
+</script>
+</body>
+</html>

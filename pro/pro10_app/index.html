@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="render" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,minimal-ui,user-scalable=no">
+    <meta name="location" content="province=;city=">
+    <meta name="apple-touch-fullscreen" content="no">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta name="applicable-device" content="mobile">
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/maystar.css"/>
+    <link rel='stylesheet' href='css/swiper.min.css'>
+    <title>首页</title>
+    <script type="text/javascript" src='js/zepto.js'></script>
+    <script src="js/swiper.min.js"></script>
+    <script type="text/javascript" src='js/rem.js'></script>
+    <!--rem.js-->
+    <script>
+//      banner.js
+		window.onload = function () {
+////            响应式
+            var oBanner1 = document.getElementById('swiper-container4');
+            var imgBanner = oBanner1.getElementsByTagName("img");
+            if (document.body.clientWidth >= 1024 && document.body.clientWidth < 1366) {//平板
+                for (var j = 0; j < imgBanner.length; j++) {
+                    imgBanner[j].setAttribute("src", "img/banner" + j + "@3x.png");
+                }
+            }
+            else if (document.body.clientWidth < 1024) {//手机
+                for (var j = 0; j < imgBanner.length-2; j++) {
+                    imgBanner[j].setAttribute("src", "img/banner" + j + "@2x.png");
+				}
+            }
+            else {//电脑
+                console.log("屏幕太大")
+            }
+		}
+
+	</script>
+</head>
+<body>
+<div class= wrapper" id="wrap">
+    <!--侧滑菜单-->
+    <div class="swiper-wrapper">
+    <div class="swiper-slide menu" id="menu">
+        <aside class="index_user_main" id="leftNave">
+            <section class="index_user_infor">
+            	<a href="user/user-infor.html"><img src="img/userphoto4@2x.png"/></a>
+                <a href="user/user-infor.html"><p>李晓明</p></a>
+                <a href="user/user-infor.html"><p>北京市海淀区第三中学初三6班</p></a>
+            </section>
+            <ul class="index_user_list">
+                <li><a href="user/user-package.html"><img src="img/user_icon1@2x.png"/>我的套餐</a></li>
+                <li><a href="user/user-video-record.html"><img src="img/user_icon2@2x.png"/>浏览记录</a></li>
+                <li><a href="user/user-video-collect.html"><img src="img/user_icon3@2x.png"/>我的收藏夹</a></li>
+                <li><a href="user/user-set.html"><img src="img/user_icon4@2x.png"/>设置</a></li>
+            </ul>
+            <input type="button" class="exit_btn" value="退出账号"  onclick="location.href='login/login.html'"/>
+        </aside>
+		<div id="hidediv"></div>
+    </div>
+    <!--侧滑菜单end-->
+    <div class="swiper-slide indexmain" id="indexmain">
+        <header class="topbox clearfix">
+            <a href="javascript:;" id="spanav" class="top_left_btn1 fleft"><img src="img/top_left_icon1@2x.png"></a>
+            <div class="top_title"><p>首页1</p></div>
+            <a href="bbs/bbs-index.html" class="top_right_btn1 fright">师生互动</a>
+        </header>
+        <!--头部条-->
+        <div class="white"></div>
+        <div class="content">
+            <div class="swiper-container" id="swiper-container4">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img data-src="img/banner0@2x.png"  class="swiper-lazy"><div class="swiper-lazy-preloader"></div></div>
+                    <div class="swiper-slide"><img data-src="img/banner1@2x.png"  class="swiper-lazy"> <div class="swiper-lazy-preloader"></div></div>
+                    <div class="swiper-slide"><img data-src="img/banner2@2x.png"  class="swiper-lazy"> <div class="swiper-lazy-preloader"></div></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <!--轮播end-->
+            <section class="index_menu" id="clickDiv">
+                <a href="grade/grade-index.html" class="index_menu_div menu_red">
+                    <div class="index_menu_text fleft">
+                        <p class="index_menu_title">成绩</p>
+                        <span>学生查询自己的考试成绩及名次</span>
+                    </div>
+                    <img class="index_menu_icon fright" src="img/icon1@2x.png"/>
+                </a><!--成绩-->
+                <a href="analyze/analyze-index.html" class="index_menu_div menu_green">
+                    <div class="index_menu_text fleft">
+                        <p class="index_menu_title">分析</p>
+                        <span>分析每次考试各科知识点记录</span>
+                    </div>
+                    <img class="index_menu_icon fright" src="img/icon2@2x.png"/>
+                </a><!--分析-->
+                <a href="question/question-index.html" class="index_menu_div menu_blue">
+                    <div class="index_menu_text fleft">
+                        <p class="index_menu_title">错题</p>
+                        <span>每次考试错题记录方便改正</span>
+                    </div>
+                    <img class="index_menu_icon fright" src="img/icon3@2x.png"/>
+                </a><!--错题-->
+                <a href="video/video-index.html" class="index_menu_div menu_yellow">
+                    <div class="index_menu_text fleft">
+                        <p class="index_menu_title">提高</p>
+                        <span>通过观看视频提高知识点</span>
+                    </div>
+                    <img class="index_menu_icon fright" src="img/icon4@2x.png"/>
+                </a><!--提高-->
+            </section>
+        </div>
+
+    </div>
+</div>
+</div>
+</body>
+</html>
+<!--<script type="text/javascript" src="js/banner.js"></script>-->
+<script>
+    <!-- 左侧菜单-->
+//轮播
+    var mySwiper2 = new Swiper('#swiper-container4', {
+//        loop: true,//循环
+        autoplay: 5000,//时间
+        autoplayDisableOnInteraction: false,//轮播
+        pagination: '.swiper-pagination',//圆点
+        preventClicks: false,//禁止点击
+        preloadImages:false,
+        lazyLoading: true
+    })
+
+    var toggleMenu = function(){
+            if (swiper.previousIndex == 0)
+                swiper.slidePrev()
+        }
+        ,menuButton=document.getElementById("spanav")
+        , swiper = new Swiper('#wrap', {
+            slidesPerView: 'auto'
+            , initialSlide: 1
+            , resistanceRatio: .00000000000001
+            , onSlideChangeStart: function(slider) {
+
+                if (slider.activeIndex == 0) {
+                    menuButton.classList.add('cross');
+                    menuButton.removeEventListener('click', toggleMenu, false);
+                    hidenCreate();
+                } else{
+                    menuButton.classList.remove('cross');
+                    setTimeout(hidenRemove,100);
+                }
+
+            }
+            , onSlideChangeEnd: function(slider) {
+                if (slider.activeIndex == 0){
+                    menuButton.removeEventListener('click', toggleMenu, false);
+                }
+                else{
+                    menuButton.addEventListener('click', toggleMenu, false)
+
+                }
+            }
+            , slideToClickedSlide: true
+        });
+
+    function hidenCreate(){
+        var rightDiv = document.getElementById('indexmain')
+        var hidDiv = document.createElement('div');
+        rightDiv.appendChild(hidDiv);
+        hidDiv.className = "hidden";
+        var odiv1 = document.getElementsByClassName('hidden');
+        var bodyHight= document.body.scrollHeight;
+        odiv1[0].style.height=bodyHight+"px";
+    }
+    function hidenRemove() {
+        var odiv1 = document.getElementsByClassName('hidden');
+        for (var i = 0; i < odiv1.length; i++) {
+            odiv1[i].remove();
+        }
+    }
+</script>

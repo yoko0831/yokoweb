@@ -1,0 +1,96 @@
+html{
+	background:#FFF;
+}
+body, div, dl, dt, dd, ul, ol, li,h1, h2, h3, h4, h5, h6, pre, code,form, fieldset, legend, input, button,textarea, p, blockquote, th, td {
+	margin: 0;
+	padding: 0;
+}
+fieldset, img{
+	border:0;
+}
+input,select,textarea,button{
+	outline:none;
+	border: 0 none;
+}
+textarea{
+	resize:none;
+}
+a,a:hover, a:active, a:visited, a:focus{
+	text-decoration:none;
+}
+
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+	font-style:normal;
+	font-weight:normal;
+}
+
+ol,
+ul {
+	list-style:none;
+}
+
+caption,
+th {
+	text-align:left;
+}
+/* 万能清除浮动*/
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.clearfix{
+	zoom:1;
+}
+.clearfix:after{
+    content: '';
+    display:block;
+    clear:both;
+    visibility: hidden;
+    height:0;
+}
+body {
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 24px;
+	height: 100%;
+	font-family: 'Dosis', sans-serif ,"Microsoft YaHei" ;
+	color: #747070;
+	letter-spacing: 0.75px;
+}
+
+.text-left{
+	text-align: left:
+}
+.text-right{
+	text-align: right:
+}
+.text-center{
+	text-align: center:
+}
+
+
+@media (min-width: 768px)/*  and (max-width: 992px)  */
+{
+	.display-lg-none { display:none; }
+	.display-lg-block { display:block; }
+}
+
+@media (max-width: 767px)
+{
+	.display-xs-none { display:none; }
+	.display-xs-block { display:block; }
+}

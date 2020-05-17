@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://D:/vue/my-project/src/App.vue" charset="UTF-8" />
+    <file url="file://D:/vue/my-project/src/components/Hello.vue" charset="UTF-8" />
+    <file url="file://D:/vue/my-project/src/components/HelloWorld.vue" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/controls.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/json/ysyj.json" charset="UTF-8" />
+  </component>
+</project>

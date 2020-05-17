@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>五岳鑫在线考试系统</title>
+    <link type="text/css" rel="stylesheet" href="css/text.css">
+    <script type="text/javascript" src="js/jquery-1.8.2.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+<div class="wrap">
+      <!-- 上部-->
+      <div class="top">
+          <div class="top_titlebg">
+              <div class="top_title">
+                  <img src="images/main/logo.png" class="logo">
+                  <div class="user"><img src="images/main/logo4.png">欢迎你,<span>考生</span></div>
+              </div>
+          </div>
+          <div class="top_nav">
+              <ul>
+                  <li><a href="index.html">首页</a></li>
+                  <li><a href="test.html">参加考试</a></li>
+                  <li><a href="result.html" class="top_nav_a">考试结果</a></li>
+                  <li><a href="information.html">个人信息</a></li>
+                  <li><a href="password.html">修改密码</a></li>
+                  <li><a href="exit.html" onClick="removeElement('bar1')">退出系统</a></li>
+              </ul>
+          </div>
+            <div class="top_cont"> </div>
+      </div>
+      <!--下部-->
+      <div class="bottom">
+          <div class="bottom_tab">
+              <div class="sele"><img src="images/main/tab1.png"><span>查询</span></div>
+              <div class="scrll">
+              <table border="0" cellpadding="0" cellspacing="0" class="tab">
+                <tr><th width="3%">序号</th><th width="9%">考试名称</th><th width="8%">试卷名称</th>
+                    <th width="8%">考试科目</th><th width="13%">试卷类别</th><th width="11%">考试时长（分）</th><th width="8%">考试次序</th>
+                    <th width="7%">题数</th><th width="6%">得分</th><th width="9%">通过</th><th width="18%">操作</th>
+                </tr>
+                  <tbody>
+                      <tr><td>1</td><td>期末考试</td><td>测试卷</td>
+                          <td>数学</td><td>高中学测</td><td>120分钟</td>
+                          <td>1</td><td>23</td><td>23</td><td>...</td>
+                          <td><a href="#">查看试卷</a> <a href="#">再考一次</a></td>
+
+                      </tr>
+                      <tr><td>2</td><td>期末考试</td><td>测试卷</td>
+                           <td>数学</td><td>高中学测</td><td>120分钟</td>
+                          <td>1</td><td>23</td><td>23</td><td>...</td>
+                          <td><a href="#">查看试卷</a> <a href="#">再考一次</a></td>
+
+                      </tr>
+                      <tr><td>3</td><td>期末考试</td><td>测试卷</td>
+                           <td>数学</td><td>高中学测</td><td>120分钟</td>
+                          <td>1</td><td>23</td><td>23</td><td>...</td>
+                          <td><a href="#">查看试卷</a> <a href="#">再考一次</a></td>
+
+                      </tr>
+                      <tr><td>4</td><td>期末考试</td><td>测试卷</td>
+                           <td>数学</td><td>高中学测</td><td>120分钟</td>
+                          <td>1</td><td>23</td><td>23</td><td>...</td>
+                          <td><a href="#">查看试卷</a> <a href="#">再考一次</a></td>
+
+                      </tr>
+                      <tr><td>5</td><td>期末考试</td><td>测试卷</td>
+                          <td>数学</td><td>高中学测</td><td>120分钟</td>
+                          <td>1</td><td>23</td><td>23</td><td>...</td>
+                          <td><a href="#">查看试卷</a> <a href="#">再考一次</a></td>
+
+                      </tr>
+                      <tr><td>6</td><td>期末考试</td><td>测试卷</td>
+                           <td>数学</td><td>高中学测</td><td>120分钟</td>
+                          <td>1</td><td>23</td><td>23</td><td>...</td>
+                          <td><a href="#">查看试卷</a> <a href="#">再考一次</a></td>
+
+                      </tr>
+                      <tr><td>7</td><td>期末考试</td><td>测试卷</td>
+                           <td>数学</td><td>高中学测</td><td>120分钟</td>
+                          <td>1</td><td>23</td><td>23</td><td>...</td>
+                          <td><a href="#">查看试卷</a> <a href="#">再考一次</a></td>
+
+                      </tr>
+                      <tr><td>9</td><td>期末考试</td><td>测试卷</td>
+                           <td>数学</td><td>高中学测</td><td>120分钟</td>
+                          <td>1</td><td>23</td><td>23</td><td>...</td>
+                          <td><a href="#">查看试卷</a> <a href="#">再考一次</a></td>
+
+                      </tr>
+                      <tr><td>10</td><td>期末考试</td><td>测试卷</td>
+                          <td>数学</td><td>高中学测</td><td>120分钟</td>
+                          <td>1</td><td>23</td><td>23</td><td>...</td>
+                          <td><a href="#">查看试卷</a> <a href="#">再考一次</a></td>
+
+                      </tr>
+                      <tr><td>11</td><td>期末考试</td><td>测试卷</td>
+                           <td>数学</td><td>高中学测</td><td>120分钟</td>
+                          <td>1</td><td>23</td><td>23</td><td>...</td>
+                          <td><a href="#">查看试卷</a> <a href="#">再考一次</a></td>
+
+                      </tr>
+                      <tr><td>12</td><td>期末考试</td><td>测试卷</td>
+                          <td>数学</td><td>高中学测</td><td>120分钟</td>
+                          <td>1</td><td>23</td><td>23</td><td>...</td>
+                          <td><a href="#">查看试卷</a> <a href="#">再考一次</a></td>
+
+                      </tr>
+                      <tr><td>13</td><td>期末考试</td><td>测试卷</td>
+                          <td>数学</td><td>高中学测</td><td>120分钟</td>
+                          <td>1</td><td>23</td><td>23</td><td>...</td>
+                          <td><a href="#">查看试卷</a> <a href="#">再考一次</a></td>
+
+                      </tr>
+                      <tr><td>14</td><td>期末考试</td><td>测试卷</td>
+                           <td>数学</td><td>高中学测</td><td>120分钟</td>
+                          <td>1</td><td>23</td><td>23</td><td>...</td>
+                          <td><a href="#">查看试卷</a> <a href="#">再考一次</a></td>
+
+                      </tr>
+                      <tr><td>15</td><td>期末考试</td><td>测试卷</td>
+                          <td>数学</td><td>高中学测</td><td>120分钟</td>
+                          <td>1</td><td>23</td><td>23</td><td>...</td>
+                          <td><a href="#">查看试卷</a> <a href="#">再考一次</a></td>
+
+                      </tr>
+                      <tr><td>16</td><td>期末考试</td><td>测试卷</td>
+                          <td>数学</td><td>高中学测</td><td>120分钟</td>
+                          <td>1</td><td>23</td><td>23</td><td>...</td>
+                          <td><a href="#">查看试卷</a> <a href="#">再考一次</a></td>
+
+                      </tr>
+                     <tr><td>17</td><td>期末考试</td><td>测试卷</td>
+                           <td>数学</td><td>高中学测</td><td>120分钟</td>
+                          <td>1</td><td>23</td><td>23</td><td>...</td>
+                          <td><a href="#">查看试卷</a> <a href="#">再考一次</a></td>
+
+                      </tr>
+                  </tbody>
+
+              </table>
+              </div>
+              <div class="tabfooter">
+                  <div>
+                      共<span class="red">1156</span>记录，当前<span class="red">1/17</span>页
+                  <select>
+                      <option>1</option>
+                      <option>2</option>
+                  </select>
+
+                      <span class="cit">&lt</span>
+                      <span class="cit">&gt</span>
+                      <span class="cit"><img src="images/main/tab2.png"></span>
+                  </div>
+              </div>
+          </div>
+          <div class="bfooter">版权所有Copyright©五岳鑫技术股份有限公司</div>
+      </div>
+</div>
+
+<!--弹出框-->
+<div class="tck_main" style="width:400px; height:220px; position:absolute; top:20%; left:40%; display:none;">
+    <div class="tck_top">
+        <div class="t_t_title">查 询</div>
+        <div class="t_gb">
+          <input type="submit" name="button" id="button" value=" " />
+        </div>
+    </div>
+<div class="tck_box">
+  <table width="97%" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+      <td height="45" align="right" valign="middle">考试名称：</td>
+      <td height="45" valign="middle">
+        <input type="text" name="textfield" id="textfield" class="tck_twxt" />       
+        </td>
+      </tr>
+    <tr>
+      <td height="45" align="right" valign="middle">考试科目：</td>
+      <td height="45" valign="middle"><input type="text" name="textfield2" id="textfield2" class="tck_twxt" /></td>
+    </tr>
+    <tr>
+      <td height="45" align="right">&nbsp;</td>
+      <td height="45">
+        <input type="submit" name="button2" id="button2" value="确定" class="tck_tj family" />
+        <input type="submit" name="button3" id="button3" value="取消"  class="tck_qx family" /></td>
+    </tr>
+  </table>
+</div>
+</div>
+<!--弹出框结束-->
+  <div class="test_main"  style="display:none;">
+      <br><br><br>
+      用户姓名：10156987<br><br>
+      语文期末考试 <b>96</b>  
+  </div>
+
+
+</body>
+</html>

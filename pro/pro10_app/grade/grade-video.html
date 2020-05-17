@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="render" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,minimal-ui,user-scalable=no">
+    <meta name="location" content="province=;city=">
+    <meta name="apple-touch-fullscreen" content="no">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta name="applicable-device" content="mobile">
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/maystar.css" />
+    <title>考题视频</title>
+    <script type="text/javascript" src='../js/zepto.js'></script>
+    <script src="../js/idangerous.swiper.min.js"></script>
+	<script type="text/javascript" src='../js/rem.js'></script>
+    <script>//图片延迟加载
+	    function getPos(obj){
+			var l=0,t=0;
+	
+	      	while(obj){
+	        	l+=obj.offsetLeft;
+	        	t+=obj.offsetTop;
+				obj=obj.offsetParent;
+	      	}
+			return {left: l, top: t};
+	    }
+
+	    window.onresize=window.onscroll=loadImages;
+	//if(img.top<可视区底部){加载}
+	window.onload=function (){
+		loadImages("video_list_ul");
+	};
+		function loadImages(a){
+	      	var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+	      	var scrollBottom=scrollTop+document.documentElement.clientHeight;
+			var oUl=document.getElementById(a)
+			var aImg=oUl.getElementsByTagName('img');
+			for(var i=0;i<aImg.length;i++){
+	        	var p=getPos(aImg[i]);
+				if(p.top<scrollBottom){
+	          		aImg[i].src=aImg[i].getAttribute('_src');
+	        	}
+	     	}
+	    }
+    </script> 
+</head>
+<body>
+	<div class="wrapper">
+		<header class="topbox clearfix">
+			<a href="grade-index.html" class="top_left_btn1 fleft"><img src="../img/top_left_icon2@2x.png"></a>
+			<div class="top_title"><p>考题视频</p></div>
+			<a href="../video/video-index.html" class="top_right_btn1 fright">更多视频</a>
+		</header><!--头部条-->
+		<div class="white"></div>
+		<div class="content">
+			<section class="video_list">
+				<ul class="video_list_ul clearfix" id="video_list_ul" style="margin-top: 0.1rem;">
+					<li>
+						<a href="javascript:;">
+							<img _src="../img/videoimg1@2x.png">
+							<p>历史鸦片战争讲堂历史鸦片战争讲堂</p>
+							<span>由研究院教授讲解由研究院教授讲解</span>
+						</a>
+					</li><!--一个视频-->
+					<li>
+						<a href="javascript:;">
+							<img _src="../img/videoimg2@2x.png">
+							<p>数学高一函数教程</p>
+							<span>著名高飞老师函数...</span>
+						</a>
+					</li><!--一个视频-->
+					<li>
+						<a href="javascript:;">
+							<img _src="../img/videoimg3@2x.png">
+							<p>高三数学难度讲解</p>
+							<span>高三数学高难度题库...</span>
+						</a>
+					</li><!--一个视频-->
+					<li>
+						<a href="javascript:;">
+							<img _src="../img/videoimg4@2x.png">
+							<p>四级英语讲堂</p>
+							<span>英语老师全程授课...</span>
+						</a>
+					</li><!--一个视频-->
+				</ul>
+			</section><!--视频列表-->
+		</div><!--主内容-->
+	</div>
+	
+</body>
+</html>

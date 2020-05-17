@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/css.css"/>
+    <script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+    <script type="text/javascript" src="js/style.js"></script>
+    <script type="text/javascript" src="js/interfaceURL.js" ></script>
+    <script type="text/javascript" src="js/url.js" ></script>
+    <script type="text/javascript" src="js/controls.js" ></script>
+
+</head>
+<body class="wrap" onload="ksShow(),ysyjadd()">
+<div class="wrapper" >
+    <div class="header bggreen">
+        <div class="content">
+            <p class="top_title fl"><a href="index.html">欢迎登录体检录入系统</a></p>
+            <ul class="top_nav fr">
+                <li class="fr"><a href="javascript:;">退出</a></li>
+                <li class="fr"><a href="modify.html">修改个人信息</a></li>
+            </ul>
+            <!--头部信息栏-->
+
+        </div>
+    </div>
+    <!-- 学生体检信息信息-->
+    <div class="index_main">
+        <!-- 学生个人信息-->
+        <div class="user-div">
+            <h1 class="fontgreen entry-text">考生信息</h1>
+            <div class="user-inf">
+                <div class="tx">
+                    <span class="wutx">无头像</span>
+                    <img src="images/touxiang.png" id="ksImg">
+                </div>
+                <span class="fontorange" id="ksname">王小明</span>
+                <p class="user-num" id="ksh"></p>
+                <p>性别：<span id="sex"></span></p>
+                <p>区县：<span class="cityname"></span></p>
+                <p>中学：<span id="schoolname"></span></p>
+            </div>
+        </div>
+
+        <!-- 医生录入信息-->
+        <div class="entry-div">
+            <div class="column" id="ks" >
+
+            </div>
+            <button class="bggreen save-button" onclick="savebutton()">保存</button>
+        </div>
+
+    </div>
+
+
+</div>
+
+</body>
+</html>
+<script>
+
+    updateqx()
+
+</script>
+
+
+

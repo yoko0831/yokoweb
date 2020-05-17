@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>天津高考报名系统</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link type="text/css" rel="stylesheet" href="css/usercommon.css">
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script>
+
+        $(function () {
+//        下拉展示
+//        点击空白处下拉选项收起
+            $(document).click(function () {
+                $(".selectdiv ul").hide();
+                $(".selectdiv i").addClass("select-i-bottom");
+                $(".selectdiv i").removeClass("select-i-top");
+            })
+//        下拉选项事件
+            $(".selectdiv div").click(function (e) {
+                if (e && e.stopPropagation) {
+                    e.stopPropagation();
+
+                } else {
+                    window.event.cancelBubble = true;
+                }
+                var ulshow = $(this).next();
+                if (ulshow.is(':hidden')) {
+                    $(this).next().show();
+                    $(this).children("i").removeClass("select-i-bottom");
+                    $(this).children("i").addClass("select-i-top");
+//                点击一个其他关闭
+                    $(".selectdiv ul").not($(this).next()).hide();
+                    $(".selectdiv i").not($(this).children("i")).addClass("select-i-bottom");
+                    $(".selectdiv i").not($(this).children("i")).removeClass("select-i-top");
+
+                }
+                else {
+                    $(this).next().hide();
+                    $(this).children("i").addClass("select-i-bottom");
+                    $(this).children("i").removeClass("select-i-top")
+                }
+            })
+
+            $(".selectdiv ul li").click(function () {
+                var par = $(this).parent();
+                par.hide();
+                var liText = $(this).text();
+                par.prev().find("span").text(liText);
+
+            })
+//        单选按钮样式切换
+            $(".check-group label").click(function () {
+                var laClass = $(this).attr("class");
+                if (laClass == "radio2") {
+                    $(this).addClass("radio1");
+                    $(this).removeClass("radio2");
+                    $(this).parent().siblings("div").children("label").removeClass("radio1");
+                    $(this).parent().siblings("div").children("label").addClass("radio2");
+                }
+            })
+        })
+
+
+    </script>
+</head>
+<body style="background: #eeeeee">
+<div class="enroll-wrap">
+    <div class="header">
+        <h1>天津高考网上报名系统</h1>
+
+        <div>
+            <span>欢迎，<b>张珊</b></span>
+            <span>退出</span>
+        </div>
+    </div>
+
+    <!-- 考生信息-->
+    <div class="info">
+        <div class="info-header">考生信息</div>
+        <div class="info-tab">
+            <table cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                    <td class="width100">
+                        <small class="font-color-orange ">*</small>
+                        <b>姓名</b></td>
+                    <td colspan="3">
+                        <input type="text" style="width: 140px"><span class="font-color-gray  "><i class="icon1"></i>请填写你的名字</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class=" width100">
+                        <small class="font-color-orange ">*</small>
+                        <b>民族</b></td>
+                    <td class="inputwidth">
+                        <div class="selectdiv ">
+                            <div><span>汉族</span><i class="select-i-bottom"></i></div>
+                            <ul>
+                                <li>汉族</li>
+                                <li>满族</li>
+                                <li>蒙古族</li>
+                                <li>回族</li>
+                                <li>乌兹别克族</li>
+                            </ul>
+                        </div>
+                        <span class="font-color-gray"><i class="icon1"></i>请选择</span>
+                    </td>
+                    <td class=" tdback width100">
+                        <small class="font-color-orange ">*</small>
+                        <b>性别</b></td>
+                    <td>
+                        <div class="check-group">
+                            <input type="radio" value="1" id="radioOne1" name="sex" class="radioOne"/>
+                            <label for="radioOne1" class="radio1"></label><span>男</span>
+                        </div>
+                        <div class="check-group">
+                            <input type="radio" value="1" id="radioOne2" name="sex" class="radioOne"/>
+                            <label for="radioOne2" class="radio2"></label><span>女</span>
+                        </div>
+                        <span class="font-color-green"><i class="icon2"></i>信息通过验证</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <small class="font-color-orange ">*</small>
+                        <b>外语语种</b>
+                    </td>
+                    <td colspan="3">
+                        <div class="selectdiv">
+                            <div><span>英语</span><i class="select-i-bottom"></i></div>
+                            <ul>
+                                <li>英语</li>
+                                <li>法语</li>
+                                <li>朝鲜语</li>
+                                <li>韩语</li>
+                                <li>斯瓦希里语</li>
+                            </ul>
+                        </div>
+                        <span class="font-color-gray  "><i class="icon1"></i>请选择语言</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <small class="font-color-orange ">*</small>
+                        <b>学校</b>
+                    </td>
+                    <td colspan="3">
+                        <div class="selectdiv ">
+                            <div><span>第一中学</span><i class="select-i-bottom"></i></div>
+                            <ul>
+                                <li>第二中学</li>
+                                <li>第三中学</li>
+                                <li>第三中学第三中学第三中学第三中学第三中学123</li>
+                                <li>第三中学</li>
+                                <li>第三中学</li>
+                            </ul>
+                        </div>
+                        <span class="font-color-gray  "><i class="icon1"></i>请选择语言</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <small class="font-color-orange ">*</small>
+                        <b>考籍号</b></td>
+                    <td colspan="3"><input type="text" style="width: 500px"><span class="font-color-gray  "><i
+                            class="icon1"></i>请填写你的考籍号</span></td>
+                </tr>
+                <tr>
+                    <td>
+                        <small class="font-color-orange ">*</small>
+                        <b>身份证号</b></td>
+                    <td colspan="3"><input type="text" style="width: 500px" value="123456789011234567"><span
+                            class="font-color-green"><i class="icon2"></i>信息通过验证</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <small class="font-color-orange ">*</small>
+                        <b>出生日期</b></td>
+                    <td colspan="3">
+                        <img src="images/reli.png" class="dataimg"><span class="dataspan" style="width: 111px">2017-09-04</span>
+                        <span class="font-color-gray"><i class="icon1"></i>请选择时间</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <small class="font-color-orange ">*</small>
+                        <b>录取通知书邮寄地址</b>
+                    </td>
+                    <td colspan="3">
+                        <input type="text" style="width: 500px"><span class="font-color-red "><i class="icon3"></i>信息填写错误</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <small class="font-color-orange ">*</small>
+                        <b>是否参加外语口试</b>
+                    </td>
+                    <td>
+
+                        <div class="check-group">
+                            <input type="radio" value="1" id="yes1" name="yes" class="radioOne"/>
+                            <label for="yes1" class="radio1"></label><span>是</span>
+                        </div>
+                        <div class="check-group">
+                            <input type="radio" value="1" id="yes2" name="yes" class="radioOne"/>
+                            <label for="yes2" class="radio2"></label><span>否</span>
+                        </div>
+
+                    </td>
+                    <td class="tdback">
+                        <small class="font-color-orange ">*</small>
+                        <b>是否采用EMS邮寄</b>
+                    </td>
+                    <td>
+                        <div class="check-group">
+                            <input type="radio" value="1" id="yes3" name="yes2" class="radioOne"/>
+                            <label for="yes3" class="radio1"></label><span>是</span>
+                        </div>
+                        <div class="check-group">
+                            <input type="radio" value="1" id="yes4" name="yes2" class="radioOne"/>
+                            <label for="yes4" class="radio2"></label><span>否</span>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+    <!-- 家庭信息-->
+    <div class="info">
+        <div class="info-header">家庭信息</div>
+        <div class="info-tab">
+            <table cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                    <td class=" width100">
+                        <small class="font-color-orange ">*</small>
+                        <b>户口类型</b>
+                    </td>
+                    <td class="inputwidth">
+                        <div class="selectdiv width40">
+                            <div><span>农业户口</span><i class="select-i-bottom"></i></div>
+                            <ul style="height: 72px">       <!--户口栏专用固定高度 -->
+                                <li>农业户口</li>
+                                <li>非农业户口</li>
+                            </ul>
+                        </div>
+                        <span class="font-color-gray"><i class="icon1"></i>请选择</span>
+                    </td>
+                    <td class="width100">
+                        <small class="font-color-orange ">*</small>
+                        <b>区县</b>
+                    </td>
+                    <td>
+                        <div class="selectdiv width40">
+                            <div><span>和平区</span><i class="select-i-bottom"></i></div>
+                            <ul>
+                                <li>和平区</li>
+                                <li>河西区北区</li>
+                                <li>南开区</li>
+                                <li>河东区</li>
+                                <li>河北区</li>
+                            </ul>
+
+                        </div>
+                        <span class="font-color-gray"><i class="icon1"></i>请选择</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <small class="font-color-orange ">*</small>
+                        <b>户口所在地</b>
+                    </td>
+                    <td colspan="3">
+                        <input type="text" style="width:500px"> <span class="font-color-gray  "><i class="icon1"></i>请填写户口所在地址</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <small class="font-color-orange ">*</small>
+                        <b>父亲姓名</b></td>
+                    <td><input type="text" style="width: 143px">
+                        <span class="font-color-gray"><i class="icon1"></i>请填写</span>
+                    </td>
+                    <td>
+                        <small class="font-color-orange ">*</small>
+                        <b>工作单位</b></td>
+                    <td><input type="text" style="width:270px "></td>
+                </tr>
+                <tr>
+                    <td>
+                        <small class="font-color-orange ">*</small>
+                        <b>母亲姓名</b></td>
+                    <td><input type="text" style="width: 143px">
+                        <span class="font-color-gray"><i class="icon1"></i>请填写</span>
+                    </td>
+                    <td>
+                        <small class="font-color-orange ">*</small>
+                        <b>工作单位</b></td>
+                    <td><input type="text" style="width:270px "></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- 学习信息-->
+    <div class="info">
+        <div class="info-header">学习信息</div>
+        <div class="info-tab">
+            <table cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                    <td class="width100">
+                        <small class="font-color-orange ">*</small>
+                        <b>职位</b>
+                    </td>
+                    <td class="inputwidth">
+                        <input type="text" style="width: 143px">
+                        <span class="font-color-gray"><i class="icon1"></i>请填写</span>
+                    </td>
+                    <td class="width100">
+                        <small class="font-color-orange ">*</small>
+                        <b>工作或学习单位</b>
+                    </td>
+                    <td><input type="text" style="width:143px ">
+                        <span class="font-color-gray"><i class="icon1"></i>请填写</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <small class="font-color-orange ">*</small>
+                        <b>起始时间</b>
+                    </td>
+                    <td>
+                        <img src="images/reli.png" class="dataimg"><span class="dataspan"
+                                                                         style="width:113px">2017-09-04</span>
+                        <span class="font-color-gray"><i class="icon1"></i>请选择起始时间</span>
+                    </td>
+
+                    <td>
+                        <small class="font-color-orange ">*</small>
+                        <b class="font-tab">结束时间</b>
+                    </td>
+                    <td>
+                        <img src="images/reli.png" class="dataimg"><span class="dataspan"
+                                                                         style="width:113px">2017-09-04</span>
+                        <span class="font-color-gray"><i class="icon1"></i>请选择结束时间</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <small class="font-color-orange ">*</small>
+                        <b>证明人</b>
+                    </td>
+                    <td>
+                        <input type="text" style="width: 143px">
+                        <span class="font-color-gray"><i class="icon1"></i>请填写</span>
+                    </td>
+                    <td>
+                        <small class="font-color-orange ">*</small>
+                        <b>证明人手机号</b>
+                    </td>
+                    <td>
+                        <input type="text" style="width: 143px">
+                        <span class="font-color-gray"><i class="icon1"></i>请正确手机号</span>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+    <!-- 信息long-table-->
+    <div class="info">
+        <div class="info-header">学习信息</div>
+        <div class="info-tab long-table">
+            <table cellpadding="0" cellspacing="0" width="100%"  >
+                <tr>
+                    <td  width="250px" >
+                        <small class="font-color-orange ">*</small>
+                        <b>艺术艺术类美术及设计学类专业艺术</b>
+                    </td>
+                    <td  width="100px">
+
+                        <div class="check-group">
+                            <input type="radio" value="1" id="yes5" name="yes" class="radioOne"/>
+                            <label for="yes5" class="radio1"></label><span>是</span>
+                        </div>
+                        <div class="check-group">
+                            <input type="radio" value="1" id="yes6" name="yes" class="radioOne"/>
+                            <label for="yes6" class="radio2"></label><span>否</span>
+                        </div>
+
+                    </td>
+                    <td > <span class="font-color-gray " ><i class="icon1" ></i>
+                       报考艺术类美术及设计学类专业的考生，须参加全市统一组织的美术及设计学类专业市级统考。报考其他专业的考生无需缴纳此费用。收费90元
+                        </span></td>
+                </tr>
+                <tr>
+                    <td width="250px" >
+                        <small class="font-color-orange ">*</small>
+                        <b>艺术类戏剧与影视学类专业学类专业</b>
+                    </td>
+                    <td  width="100px">
+
+                        <div class="check-group">
+                            <input type="radio" value="1" id="yes7" name="yes" class="radioOne"/>
+                            <label for="yes7" class="radio1"></label><span>是</span>
+                        </div>
+                        <div class="check-group">
+                            <input type="radio" value="1" id="yes8" name="yes" class="radioOne"/>
+                            <label for="yes8" class="radio2"></label><span>否</span>
+                        </div>
+
+                    </td>
+                    <td >   <span class="font-color-gray " ><i class="icon1"></i>
+                        报考艺术类戏剧与影视学类专业（不含播音与主持艺术专业）的考生，须参加全市统一组织的戏剧与影视学类专业市级统考。报考其他专业的考生无需缴纳此费用。收费90元
+
+                        </span></td>
+                </tr>
+                <tr>
+                    <td width="250px" >
+                        <small class="font-color-orange ">*</small>
+                        <b>艺术类舞蹈学类和体育舞蹈专业</b>
+                    </td>
+                    <td  width="100px">
+
+                        <div class="check-group">
+                            <input type="radio" value="1" id="yes9" name="yes" class="radioOne"/>
+                            <label for="yes9" class="radio1"></label><span>是</span>
+                        </div>
+                        <div class="check-group">
+                            <input type="radio" value="1" id="yes10" name="yes" class="radioOne"/>
+                            <label for="yes10" class="radio2"></label><span>否</span>
+                        </div>
+
+                    </td>
+                    <td>   <span class="font-color-gray " ><i class="icon1"></i>
+                      报考艺术类舞蹈学类或体育舞蹈专业的考生，须参加全市统一组织的舞蹈学类或体育舞蹈专业市级统考。报考其他专业的考生无需缴纳此费用。收费90元
+
+
+                        </span></td>
+                </tr>
+                <tr>
+                    <td width="250px" >
+                        <small class="font-color-orange ">*</small>
+                        <b>体育类专业考试学类专业</b>
+                    </td>
+                    <td  width="100px">
+
+                        <div class="check-group">
+                            <input type="radio" value="1" id="yes11" name="yes" class="radioOne"/>
+                            <label for="yes1" class="radio1"></label><span>是</span>
+                        </div>
+                        <div class="check-group">
+                            <input type="radio" value="1" id="yes2" name="yes" class="radioOne"/>
+                            <label for="yes2" class="radio2"></label><span>否</span>
+                        </div>
+
+                    </td>
+                    <td>   <span class="font-color-gray " ><i class="icon1" style="    margin-top: 4px;"></i>
+                       报考体育类专业的考生，须参加全市统一组织的体育类
+
+                        </span></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="info-button">
+        <a class="button-orange">重置信息</a> <a class="button-blue" href="infoSelect.html">保存信息</a>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    $(function () {
+//        $(".selectdiv").width( $(".selectdiv").children("ul").width());
+//        alert($(".selectdiv").children("ul").width());
+        $(".selectdiv").each(function (i) {
+            var ulwidth = $(this).children("ul").width();
+            $(this).width(ulwidth)
+        })
+
+
+    })
+</script>

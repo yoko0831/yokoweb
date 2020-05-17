@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="render" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,minimal-ui,user-scalable=no">
+    <meta name="location" content="province=;city=">
+    <meta name="apple-touch-fullscreen" content="no">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta name="applicable-device" content="mobile">
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/maystar.css" />
+    <title>错题列表</title>
+    <script type="text/javascript" src='../js/zepto.js'></script>
+	<script type="text/javascript" src='../js/rem.js'></script>
+    <script>
+    	//图片延迟加载
+		function getPos(obj){
+			var l=0,t=0;
+			while(obj){
+		    	l+=obj.offsetLeft;
+		    	t+=obj.offsetTop;
+				obj=obj.offsetParent;
+		  	}
+			return {left: l, top: t};
+		}
+	    window.onresize=window.onscroll=loadImages;
+	    //if(img.top<可视区底部){加载}
+	    window.onload=function (){
+	      	loadImages();
+	    };
+		function loadImages(){
+		  	var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+		  	var scrollBottom=scrollTop+document.documentElement.clientHeight;
+			var oUl=document.getElementById('question_list')
+			var aImg=oUl.getElementsByTagName('img');
+			for(var i=0;i<aImg.length;i++){
+		    	var p=getPos(aImg[i]);
+				if(p.top<scrollBottom){
+		      		aImg[i].src=aImg[i].getAttribute('_src');
+		    	}
+		 	}
+		}
+	</script> 
+</head>
+<body>
+	<div class="wrapper">
+		<header class="topbox clearfix">
+			<a href="question-index.html" class="top_left_btn1 fleft"><img src="../img/top_left_icon2@2x.png"></a>
+			<div class="top_title"><p>错题列表</p></div>
+			<a href="question-search.html" class="top_right_btn3 fright"><img class="top_right_icon3" src="../img/search_icon1@2x.png"></a>
+			</header><!--头部条-->
+		<div class="white"></div>
+		<div class="content">
+			<ul class="question_list" id="question_list">
+				<li class="clearfix">
+					<a href="question-main.html">
+						<section class="question_list_img fleft"><img _src="../img/question1@2x.png" /></section><!--图片空间-->
+						<section class="question_list_main fright">
+							<section class="question_list_main_time clearfix">
+								<img class="fleft" _src="../img/time_icon1@2x.png" />
+								<p class="fleft">收藏时间    <span>2017-03-09</span></p>
+							</section><!--时间-->
+							<p class="question_list_main_know">高三数学函数二次函数知识点是很主要的知识数学函数二次函数知识</p><!--知识点-->
+							<p class="question_list_main_tip">描述：“12v”“6w”的灯泡在2200米高的地方</p>
+						</section>
+					</a>
+				</li><!--一个错题-->
+				<li class="clearfix">
+					<a href="question-main.html">
+						<section class="question_list_img fleft"><img _src="../img/question1@2x.png" /></section><!--图片空间-->
+						<section class="question_list_main fright">
+							<section class="question_list_main_time clearfix">
+								<img class="fleft" _src="../img/time_icon1@2x.png" />
+								<p class="fleft">收藏时间    <span>2017-03-09</span></p>
+							</section><!--时间-->
+							<p class="question_list_main_know">高三数学函数二次函数知识点是很主要的知识数学函数二次函数知识</p><!--知识点-->
+							<p class="question_list_main_tip">描述：“12v”“6w”的灯泡在2200米高的地方</p>
+						</section>
+					</a>
+				</li><!--一个错题-->
+				<li class="clearfix">
+					<a href="question-main.html">
+						<section class="question_list_img fleft"><img _src="../img/question1@2x.png" /></section><!--图片空间-->
+						<section class="question_list_main fright">
+							<section class="question_list_main_time clearfix">
+								<img class="fleft" _src="../img/time_icon1@2x.png" />
+								<p class="fleft">收藏时间    <span>2017-03-09</span></p>
+							</section><!--时间-->
+							<p class="question_list_main_know">高三数学函数二次函数知识点是很主要的知识数学函数二次函数知识</p><!--知识点-->
+							<p class="question_list_main_tip">描述：“12v”“6w”的灯泡在2200米高的地方</p>
+						</section>
+					</a>
+				</li><!--一个错题-->
+				<li class="clearfix">
+					<a href="question-main.html">
+						<section class="question_list_img fleft"><img _src="../img/question1@2x.png" /></section><!--图片空间-->
+						<section class="question_list_main fright">
+							<section class="question_list_main_time clearfix">
+								<img class="fleft" _src="../img/time_icon1@2x.png" />
+								<p class="fleft">收藏时间    <span>2017-03-09</span></p>
+							</section><!--时间-->
+							<p class="question_list_main_know">高三数学函数二次函数知识点是很主要的知识数学函数二次函数知识</p><!--知识点-->
+							<p class="question_list_main_tip">描述：“12v”“6w”的灯泡在2200米高的地方</p>
+						</section>
+					</a>
+				</li><!--一个错题-->
+				<li class="clearfix">
+					<a href="question-main.html">
+						<section class="question_list_img fleft"><img _src="../img/question1@2x.png" /></section><!--图片空间-->
+						<section class="question_list_main fright">
+							<section class="question_list_main_time clearfix">
+								<img class="fleft" _src="../img/time_icon1@2x.png" />
+								<p class="fleft">收藏时间    <span>2017-03-09</span></p>
+							</section><!--时间-->
+							<p class="question_list_main_know">高三数学函数二次函数知识点是很主要的知识数学函数二次函数知识</p><!--知识点-->
+							<p class="question_list_main_tip">描述：“12v”“6w”的灯泡在2200米高的地方</p>
+						</section>
+					</a>
+				</li><!--一个错题-->
+				<li class="clearfix">
+					<a href="question-main.html">
+						<section class="question_list_img fleft"><img _src="../img/question1@2x.png" /></section><!--图片空间-->
+						<section class="question_list_main fright">
+							<section class="question_list_main_time clearfix">
+								<img class="fleft" _src="../img/time_icon1@2x.png" />
+								<p class="fleft">收藏时间    <span>2017-03-09</span></p>
+							</section><!--时间-->
+							<p class="question_list_main_know">高三数学函数二次函数知识点是很主要的知识数学函数二次函数知识</p><!--知识点-->
+							<p class="question_list_main_tip">描述：“12v”“6w”的灯泡在2200米高的地方</p>
+						</section>
+					</a>
+				</li><!--一个错题-->
+			</ul><!--错题列表-->
+		</div>
+	</div>
+</body>
+</html>

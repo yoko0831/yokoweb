@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>天津高考报名系统</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <link type="text/css" rel="stylesheet" href="css/usercommon.css">
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script>
+        function payShow(){
+            location.href="payhiden.html"
+        }
+    </script>
+    <script>
+        $(window).load(function () {
+//    表格各行换色
+            $(".ifs-tab tr:odd").css({background:"#ffffff"});
+            $(".ifs-tab tr:even").css({background:"#D8E2EB"});
+
+        });
+    </script>
+</head>
+<body style="background: #eeeeee">
+<div class="enroll-wrap">
+    <div class="header">
+        <h1>天津高考网上报名系统</h1>
+
+        <div>
+            <span>欢迎，<b>张珊</b></span>
+            <span>退出</span>
+        </div>
+    </div>
+
+        <h2 class="in-title">信息确认</h2>
+    <div class="info-header">考生信息</div>
+    <div class="info-tab1">
+        <table cellpadding="0" cellspacing="0" class="ifs-tab">
+            <tr>
+                <td><span>姓名：</span><strong>张珊</strong></td>
+                <td><span>考籍号：</span><strong>121314151617181910</strong></td>
+
+            </tr>
+            <tr>
+                <td><span>性别：</span><strong>男</strong></td>
+                <td><span>身份证号：</span><strong>123456789123456789</strong></td>
+            </tr>
+            <tr>
+                <td><span>民族：</span><strong>汉族</strong></td>
+                <td><span>出生日期：</span><strong>1999-09-09</strong></td>
+            </tr>
+            <tr>
+                <td colspan="2"><span>录取通知书邮寄地址：</span><strong>北京市海淀区海淀小区</strong></td>
+
+            </tr>
+            <tr>
+                <td><span>是否参加外语口试：</span><strong>是</strong></td>
+                <td><span>是否采用EMS邮寄：</span><strong>1是</strong></td>
+            </tr>
+        </table>
+        </div>
+    <div class="info-header">家庭信息</div>
+    <div class="info-tab1">
+        <table cellpadding="0" cellspacing="0" class="ifs-tab">
+            <tr>
+                <td><span>区县：</span><strong>河西区</strong></td>
+                <td><span>报名点：</span><strong>招生办</strong></td>
+            </tr>
+
+
+            <tr>
+                <td><span>父亲姓名：</span><strong>张起</strong></td>
+                <td><span>工作单位：</span><strong>某某单位</strong></td>
+            </tr>
+            <tr>
+                <td><span>母亲姓名：</span><strong>单礼</strong></td>
+                <td><span>工作单位：</span><strong>某某单位</strong></td>
+            </tr>
+
+        </table>
+    </div>
+    <div class="info-header">学习信息</div>
+    <div class="info-tab1">
+        <table cellpadding="0" cellspacing="0" class="ifs-tab">
+
+            <tr>
+                <td><span>简历1其实时间：</span><strong>2016-09-07</strong></td>
+                <td><span>简历1结束时间：</span><strong>2017-09-07</strong></td>
+            </tr>
+            <tr>
+                <td colspan="2"><span>思想品德考核：</span><strong>xxxxxxxxxxxxxxxxxxxxxxxx</strong></td>
+
+            </tr>
+        </table>
+    </div>
+        <div class="info-button">
+            <a class="button-orange" href="enrolling.html">修改信息</a>      <a class="button-blue" onclick="payShow()">网上支付</a>
+        </div>
+
+</div>
+
+</body>
+</html>

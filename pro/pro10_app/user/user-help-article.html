@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="render" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,minimal-ui,user-scalable=no">
+    <meta name="location" content="province=;city=">
+    <meta name="apple-touch-fullscreen" content="no">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta name="applicable-device" content="mobile">
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/maystar.css" />
+    <title>帮助与反馈</title>
+    <script type="text/javascript" src='../js/zepto.js'></script>
+	<script type="text/javascript" src='../js/rem.js'></script>
+    <script>
+    	//已解决未解决
+    	$(function(){
+
+				$(".good_icon").click(function () {
+					var goodClass=$(this).hasClass("good_icon2");
+					if(goodClass){
+						$(this).removeClass('good_icon2');
+						$(this).find("img").attr("src","../img/help_icon1@2x.png");
+					}
+					else{
+						if($(".bad_icon").hasClass("bad_icon2")==false){
+							$(this).addClass('good_icon2');
+							$(this).find("img").attr("src","../img/help_icon3@2x.png");
+
+						}
+					}
+				});
+				$(".bad_icon").click(function () {
+					var badClass=$(this).hasClass("bad_icon2");
+					if(badClass){
+						$(this).removeClass('bad_icon2');
+						$(this).find("img").attr("src","../img/help_icon2@2x.png");
+					}
+					else{
+						if($(".good_icon").hasClass("good_icon2")==false){
+							$(this).addClass('bad_icon2');
+							$(this).find("img").attr("src","../img/help_icon4@2x.png");
+						}
+
+					}
+				})
+    	})
+    </script>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="topbox clearfix">
+			<a href="user-help.html" class="top_left_btn1 fleft"><img src="../img/top_left_icon2@2x.png"></a>
+			<div class="top_title"><p>帮助与反馈</p></div>
+		</header><!--头部条-->
+		<div class="white"></div>
+		<div class="content">
+			<section class="user_help_article">
+				<p class="user_help_title">如何收藏视频</p>
+				<article>平台将实现老师组卷阅卷、成绩查询及统计分析、布置个性化作业；学生学情分析、收录错题、针对性题库、名师微讲解等多重实用功能。平台在打造闭环教育生态圈的同时，提供将一系列数据接口，形成开放式学习体系，促进新型教育服务模式推广。</article>
+				<section class="video_main_content_btn clearfix">
+					<div class="fleft clearfix good_icon"><img src="../img/help_icon1@2x.png"/>已解决</div>
+					<div class="fright clearfix bad_icon"><img src="../img/help_icon2@2x.png"/>未解决</div>
+				</section><!--赞踩-->
+			</section>
+		</div><!--主内容-->
+	</div>
+</body>
+</html>

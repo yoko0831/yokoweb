@@ -1,0 +1,68 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin: 0;padding: 0;}
+img{border:0 none;vertical-align: top; }
+ul li{ list-style:none;}
+a{text-decoration: none; cursor:pointer; outline:none}
+a{ border:0 none; color:#666;}
+a:active{star:expression(this.onFocus = this.blur());}
+body,html{ background-color:#34495e; height:100%; font-family: "microsoft yahei", "Roboto", "Segoe UI", sans-serif; font-size:12px; color:#666; overflow-y:hidden; }
+/*top*/
+.top{width:100%; height:45px; background:#3fb0f2; overflow:hidden;}
+.logo1{margin:7px 0 0 10px; width:300px; height:33px; float:left; }
+.userright{ float:right; width:500px; color:#effaff; padding-top:13px; text-align:right;}
+.userright a{color:#effaff; margin-right:10px;}
+.userright a:hover{color:#fff; text-decoration:underline;}
+/*left*/
+#LeftDiv{ width:200px; height:100%;float: left;  position: relative;overflow: hidden; background:#fff;left:10px;top:10px;}
+#LeftDiv .LogoBox{ width:200px; height:90px; background-color:#233646; overflow:hidden;}
+#LeftDiv .adminBox{ width:200px; height:135px; overflow:hidden; text-align:center;}
+#LeftDiv .adminphoto{  margin:16px auto 0 auto; display:block;}
+#LeftDiv .UserId{ height:30px; color:#3fb0f2; text-align:center; display:inline-block;}
+#LeftDiv .Logo{ width:165px; height:38px; margin:27px auto 0 auto;}
+#LeftDiv .LeftMenu{ width:200px; margin-top: 6px;}
+#LeftDiv .LeftMenu dl{width:197px; background-color: #e8e8e8; border-left:3px solid #3fb0f2;}
+#faq span{ width:197px; height:65px; overflow:hidden; cursor:pointer;display: block;  border-left:3px solid #fff;}
+#faq .ico1,#faq .ico2,#faq .ico3,#faq .ico4,#faq .ico5,#faq .ico6{ width:25px; height:25px; float:left; margin-left:23px; margin-top:20px;
+ background-image:url(../images/main/btn_1.png); background-repeat:no-repeat;}
+#faq .ico1{background-position:0px -2px; }
+#faq .ico2{background-position: 0px -33px;}
+#faq .ico3{background-position: 0px -64px; }
+#faq .ico4{background-position: 0px -95px; }
+#faq .ico5{background-position: 0px -123px; }
+#faq .ico6{background-position: 0px -153px;}
+#LeftDiv #faq .menu{width:130px; float:left; padding-left:12px; line-height:65px; font-size:14px; background:url(../images/main/btn_2.png) 146px -23px no-repeat; }
+.addleftnav{background-color: #293846;color: #ffffff;width: 100%}
+/*right*/
+.right_nav{
+    position: absolute;
+    top: 0;
+    z-index: 10}
+.right_nav dl{position: absolute;width: 130px;font-size: 12px;overflow: hidden;background-color: #2F4050;border-radius:0px 5px 5px 0px;line-height: 25px;display: none}
+.right_nav dd a{color: #A7B1C2; padding:10px 10px 10px 15px;}
+.right_nav dd:hover a{background-color: #293846;color: #ffffff}
+/*faq*/
+#faq dd{  height:40px; line-height:40px; font-size:12px; padding-left:60px; background:url(../images/main/list.png) 30px 15px no-repeat;}
+.LeftMenu dd a{ color:#666; }
+#faq dd a:hover{ text-decoration:underline;color: #000;}
+.LeftMenu_cur{ border-left:5px solid #19aa8d!important; background: #293846 url(../images/main/btn_2.png) 181px 23px no-repeat !important;}
+.adminBox2{display: none;width:100%; height:100px; background:url(../images/main/adminbg.gif) 100%; overflow:hidden;font-size: 35px;text-align: center;line-height: 100px;color: white}
+.adminBox2 img{ width:70px; height:70px; margin:20px auto 0 auto;}
+.usernav{opacity:0;width: 150px;background-color: white;border-radius: 5px;position: absolute;left: 225px;z-index: 2}
+.usernav li{color: #66696B;height: 40px;line-height: 40px;}
+.usernav li:hover{background-color: #F3F3F4;border-radius: 5px}
+.usernav li a{margin-left: 35px}
+.usernav a{color: #66696B}
+/*RightDiv*/
+#RightDiv{ height:auto; background-color:#f7f8fa;float:left; left:20px; position: relative;top:10px;}
+#RightDiv .Top{ width:100%; height:55px; background:url(../images/main/topbg.jpg) repeat-x; overflow:hidden; position: relative;}
+.showbtn{ width:30px; height:25px; float:left; margin:13px 5px 0 15px;-moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; background-color:#1ab394;}
+.showbtn:hover{ background-color:#18a689;}
+.logo{ width:120px; height:25px; margin:15px auto 0 auto;}
+#RightDiv .Top_btn{ height:18px; float:right; overflow:hidden; margin-top:17px; margin-right:10px;}
+#RightDiv .Top_btn li{ width:45px; height:18px; float:left; margin-right:5px;}
+.Top_btn li a{ background-color:#f8ac59;-moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; color:#FFF; text-align:center;}
+.Top_btn li a:hover{ background-color:#fbbe7b;}
+
+
+

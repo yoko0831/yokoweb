@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Article</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" type="text/css" href="../css/iconfont.css">
+  <link rel="shortcut icon" href="../favicon.ico" />
+  <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/article.css">
+  <script type="text/javascript" src="../js/jquery.min.js"></script>
+</head>
+
+<body>
+  <!-- header start -->
+  <header class="container">
+    <div class="row">
+      <div class="col-xs-6 col-lg-3">
+        <a class="logo" href="../index.html"><img src="../images/logo.png" alt=""></a>
+      </div>
+      <div class="col-xs-6 col-lg-9">
+        <ul class="navbar clearfix">
+          <li><a href="../articlelist.html" class="active">Article</a></li>
+          <li><a href="../index.html">Work</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- header end -->
+
+  <!-- title start-->
+  <nav class="container-fluid pagenav title">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-8 col-lg-9">
+          <h2>jquery基础</h2>
+          <div class="titleborder"></div>
+        </div>
+        <div class="col-xs-4 col-lg-3 text-right">
+          <a href="../articlelist.html" class="btn-bluea btn-xs" style="margin-top: 20px;">返回</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- title end -->
+  <div class="container main">
+    <div class="row">
+      <div class="col-xs-12 col-lg-9 article-list">
+        <article class="article-item">
+          <h4>一、jquery选择器</h4>
+          <ul>
+            <li>1.元素选择器 $("p") $(".class") $("#id")</li>
+            <li>2.属性选择器 $("[herf]")</li>
+            <li>3.Css选择器 $("p").css("")</li>
+          </ul>
+          <h4>二、事件</h4>
+          <ul>
+            <li>1.Click 触发或将函数绑定在元素上的点击事件</li>
+            <li>2.Focus 获取焦点事件</li>
+            <li>3.Mouseover 鼠标悬停事件</li>
+          </ul>
+          <h4>三、获取内容</h4>
+          <ul>
+            <li>1.text() 设置或返回所选元素文本内容</li>
+            <li>2.html() 设置或返回所选元素的内容</li>
+            <li>3.val() 设置或返回表单字段的值</li>
+          </ul>
+          <h4>四、设置内容</h4>
+          <ul>
+            <li>1.attr() 设置或改变属性值</li>
+          </ul>
+          <h4>五、添加</h4>
+          <ul>
+            <li>1.append() 在结尾插入</li>
+            <li>2.prepend() 在开头插入</li>
+            <li>3.after() 在被选元素之后插入</li>
+            <li>4.before() 在被选元素之前插入</li>
+          </ul>
+          <h4>六、删除</h4>
+          <ul>
+            <li>1.remove() 删除备选元素及其子元素</li>
+            <li>2.empty() 从被选元素中删除子元素</li>
+          </ul>
+          <h4>七、操作css</h4>
+          <ul>
+            <li>1.addClass() 添加类</li>
+            <li>2.removeClass() 删除类</li>
+            <li>3.toggleClass() 添加/删除类的切换操作</li>
+            <li>4.css() 设置或返回样式属性</li>
+          </ul>
+          <h4>八、尺寸</h4>
+          <ul>
+            <li>1.width() 设置或返回元素宽（不包含内边距、边框、外边距）</li>
+            <li>2.height()</li>
+            <li>3.innerWidth() 设置或返回元素宽（包含内边距）</li>
+            <li>4.innerHeight()</li>
+            <li>5.outerWidth() （包含内边距、边框）</li>
+            <li>6.outerHeight()</li>
+          </ul>
+        </article>
+      </div>
+      <!-- 全部列表 end -->
+      <div class="col-lg-1">
+      </div>
+      <ul class="col-xs-12 col-lg-2 article-classify">
+        <li class="tab-item">全部</li>
+        <li class="tab-item">javascript基础</li>
+        <li class="tab-item active">jquery基础</li>
+        <li class="tab-item">ES6研习</li>
+        <li class="tab-item">Vue研习笔记</li>
+        <li class="tab-item">NodeJs研习</li>
+        <li class="tab-item">微信小程序研习</li>
+        <li class="tab-item">干货</li>
+        <li class="tab-item">其他</li>
+      </ul>
+      <!-- 右侧菜单 end -->
+    </div>
+
+  </div>
+
+  <div class="container page">
+    <div class="row">
+      <div class="col-xs-4 col-lg-4 text-left">
+        <a href="#"><i class="iconfont icon-cc-arrow-left"></i>Previous</a>
+      </div>
+      <div class="col-xs-4 col-lg-4 text-center">
+        <a href="javascript:;" class="backtop">Back to Top</a>
+      </div>
+      <div class="col-xs-4 col-lg-4 text-right">
+        <a href="#">Next<i class="iconfont icon-cc-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <p class="col-xs-12 col-lg-4 text-left"><a href="../utils/resume.html" target="_blank">Resume</a> |
+          <a href="mailto:yoko0831@hotmail.com">yoko0831@hotmail.com</a></p>
+        <p class="col-xs-12 col-lg-4 text-center"><a target="_blank"
+            href="http://beian.miit.gov.cn">京ICP备19052358号-1</a></p>
+        <p class="col-xs-12 col-lg-4 text-right">© 2020 Yoko Yu All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/page.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

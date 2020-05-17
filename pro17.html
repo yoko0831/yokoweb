@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>cnodeVue</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+  <link rel="shortcut icon" href="favicon.ico" />
+  <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+  <link rel="stylesheet" href="css/index.css">
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!-- 展示代码 -->
+  <link rel="stylesheet" href="css/solarized-dark.css">
+  <script src="js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+  <!-- header start -->
+  <header class="container">
+    <div class="row">
+      <div class="col-xs-6 col-lg-3">
+        <a class="logo" href="index.html"><img src="images/logo.png" alt=""></a>
+      </div>
+      <div class="col-xs-6 col-lg-9">
+        <ul class="navbar clearfix">
+          <li><a href="#">About</a></li>
+          <li><a href="index.html" class="active">Work</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- header end -->
+
+  <!-- title start-->
+  <nav class="container-fluid pagenav title">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-8 col-lg-9">
+          <h2>cnode社区app</h2>
+          <div class="titleborder"></div>
+        </div>
+        <div class="col-xs-4 col-lg-3 text-right">
+          <a href="index.html" class="btn-bluea btn-xs" style="margin-top: 20px;">返回</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container pagecontent">
+    <div class="row">
+      <div class="col-lg-12">
+        <p class="introduce">该项目是参照cnode社区网站做的App，其中参数接口来源cnode社区，运用Vue+Scss+flex搭建完成，webpack打包。</p>
+      </div>
+    </div>
+  </div>
+  <!-- title end -->
+  <div class="container main">
+    <div class="row">
+      <div class="col-lg-12 main-img">
+        <img src="images/app4-img1.png" alt="cnode社区">
+      </div>
+    </div>
+    <div class="row page-section">
+      <div class="col-md-12 col-lg-12 main-title">
+        <h3>动态展示</h3>
+        <div class="titleborder"></div>
+      </div>
+      <div class="col-lg-12 main-code">
+        <div class="gifshow">
+          <img src="images/app4-code1.gif" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="row page-section">
+      <div class="col-md-12 col-lg-12 main-title">
+        <h3>部分代码展示</h3>
+        <div class="titleborder"></div>
+      </div>
+      <div class="col-lg-12 main-code">
+        <!-- <h4>登陆验证</h4> -->
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <pre>
+                  <h3 class="code-title">配置路由</h3>
+                  <code class="javascript">
+import Vue from 'vue'
+import Router from 'vue-router'
+import Index from '@/components/Index'
+import Code from '@/components/Code'
+import User from '@/components/User'
+// 引入主题相关的组件
+import All from '@/components/topics/All'
+import Good from '@/components/topics/Good'
+import Share from '@/components/topics/Share'
+import Weex from '@/components/topics/Weex'
+import Ask from '@/components/topics/Ask'
+import Job from '@/components/topics/Job'
+Vue.use(Router)
+
+export default new Router({
+  routes: [
+    {
+      path: '/index',
+      name: 'Index',
+      component: Index,
+      // 配二级路由
+      children:[
+        {
+          path: '/',
+          component:All
+        },
+        {
+          path: 'good',
+          component:Good
+        },
+        {
+          path: 'weex',
+          component:Weex
+        },
+        {
+          path: 'share',
+          component:Share
+        },
+        {
+          path: 'ask',
+          component:Ask
+        },
+        {
+          path: 'job',
+          component:Job
+        }
+      ]
+    },
+    {
+      path: '/code',
+      name: 'Code',
+      component: Code
+    },
+    {
+      path: '/user',
+      name: 'User',
+      component: User
+    },
+    // 路由跳转
+    {
+      path:'*',
+      redirect:'/index'
+    }
+  ]
+})
+                  </code>
+                </pre>
+            </div>
+            <!-- html end -->
+            <div class="col-lg-6">
+              <pre>
+                  <h3 class="code-title">获取相关数据</h3>
+                  <code class="javascript">
+//引入axios模块(封装的ajax)
+import axios from 'axios';
+
+var $http = axios.create({
+  baseURL: 'https://www.vue-js.com/api/v1',
+  timeout: 5000,
+  headers: {'X-Custom-Header':'foobar'}
+});
+
+// 请求主题列表的方法
+function getTopics(options){
+  //默认参数
+  var newsOptions = Object.assign({
+    tab:'all',
+    limit:20,//后台默认20条
+    page:1,
+  },options);
+
+  return $http({
+    url: '/topics',
+    //参数
+    params:newsOptions,
+  });
+}
+
+// 暴露取数据的模块
+export {getTopics}
+                  </code>
+                </pre>
+            </div>
+            <!-- Javascript end -->
+            <div class="col-lg-6">
+              <pre>
+                  <h3 class="code-title">列表页面</h3>
+                  <code class="javascript">
+&lt;template>
+  &lt;div class="all">
+    &lt;!-- 主题列表 -->
+    &lt;topic-list :items="items"></topic-list>
+    &lt;!-- 加载图标 -->
+    &lt;infinite-loading v-if="isShow" @infinite="infiniteHandler">&lt;/infinite-loading>
+  &lt;/div>
+&lt;/template>
+
+&lt;script>
+//引入主题列表组件
+import topicList from '@/components/topics/List';
+//引入取数据的模块
+import {getTopics} from '@/getdata/getTopic.js';
+//引入分页滑动组件
+import InfiniteLoading from 'vue-infinite-loading';
+
+export default {
+  name: 'All',
+  data () {
+    return {
+      //主题列表
+      items:[],
+      //默认显示第一页
+      page:1,
+      // 用变量标记是否显示隐藏 loading图标
+      isShow:true
+    }
+  },
+  //钩子函数
+  mounted:function(){
+    //查询全部主题数据
+    getTopics({tab:'all',limit:10,page:this.page}).then((response)=>{
+      // console.log(response);
+      //把查询到的数据放到items里
+      this.items = response.data.data;
+    })
+  },
+
+  methods:{
+    infiniteHandler($state){
+      setTimeout(()=>{
+        //查询全部主题数据
+        getTopics({tab:'all',limit:10,page:++this.page}).then((response)=>{
+          //把查询到的数据追加到items里  concat连接
+          this.items = this.items.concat(response.data.data);
+          // 判断下一页还有没有数据 如果没有数据 就是0 直接结束
+          if(response.data.data.length == 0){
+            this.isShow = false;
+            return;
+          }
+          $state.loaded();
+        })
+        //为了防止一次性加载，时间设置
+      },1000);
+    },
+  },
+  //加载组件
+  components:{
+    topicList,InfiniteLoading
+  },
+}
+&lt;/script>
+                  </code>
+                </pre>
+            </div>
+            <!-- php end -->
+            <div class="col-lg-6">
+              <pre>
+                  <h3 class="code-title">部分Scss</h3>
+                  <code class="css">
+// 主题列表样式
+ul.items{
+  width: rem(710px);
+  margin: 0 auto;
+  .item{
+    display: flex;
+    align-items:center;
+    height: rem(100px);
+    border-bottom: 1px solid #f0f0f0;
+    img{
+      height: rem(60px);
+      width: rem(60px);
+      border-radius: rem(10px);
+    }
+    .tab{
+      margin: 0 rem(10px) 0 rem(20px);
+      div{
+        font-size: rem(22px);
+        width:rem(65px);
+        height: rem(40px);
+        text-align: center;
+        line-height: rem(40px);
+        border-radius: rem(5px);
+        background: #e5e5e5;
+        color: #999;
+      }
+    }
+    .title{
+      flex:1;
+      color: #333;
+      font-size: rem(30px);
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow:ellipsis;
+    }
+  }
+}
+                  </code>
+                </pre>
+            </div>
+            <!-- image end -->
+          </div>
+          <!-- row end -->
+        </div>
+        <!-- container end -->
+      </div>
+      <!-- 一段演示代码 end -->
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="btn-link"><a href="pro/pro17_app/index.html" target="_blank" class="btn-bluea btn-lg"
+            data-wow-delay="0.8s">查看项目演示</a></div>
+        <p class="text-center" style="margin-top: -20px;">请在浏览器中按下F12打开控制台，再按Ctrl+Shift+M切换成手机模式</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container page">
+    <div class="row">
+      <div class="col-xs-4 col-lg-4 text-left">
+        <a href="pro3.html"><i class="iconfont icon-cc-arrow-left"></i>Previous</a>
+      </div>
+      <div class="col-xs-4 col-lg-4 text-center">
+        <a href="javascript:;" class="backtop">Back to Top</a>
+      </div>
+      <div class="col-xs-4 col-lg-4 text-right">
+        <a href="pro4.html">Next<i class="iconfont icon-cc-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <p class="col-xs-12 col-lg-4 text-left"><a href="utils/resume.html" target="_blank">Resume</a> |
+          <a href="mailto:yoko0831@hotmail.com">yoko0831@hotmail.com</a></p>
+        <p class="col-xs-12 col-lg-4 text-center"><a target="_blank"
+            href="http://beian.miit.gov.cn">京ICP备19052358号-1</a></p>
+        <p class="col-xs-12 col-lg-4 text-right">© 2020 Yoko Yu All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/page.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

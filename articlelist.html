@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Article</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="shortcut icon" href="favicon.ico" />
+  <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/article.css">
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+</head>
+
+<body>
+  <!-- header start -->
+  <header class="container">
+    <div class="row">
+      <div class="col-xs-6 col-lg-3">
+        <a class="logo" href="index.html"><img src="images/logo.png" alt=""></a>
+      </div>
+      <div class="col-xs-6 col-lg-9">
+        <ul class="navbar clearfix">
+          <li><a href="articlelist.html" class="active">Article</a></li>
+          <li><a href="index.html">Work</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- header end -->
+
+  <!-- title start-->
+  <div class="title container display-xs-none">
+    <h2>Article</h2>
+    <div class="titleborder"></div>
+  </div>
+  <!-- title end -->
+
+
+  <div class="container article-group">
+    <div class="row">
+      <div class="col-xs-12 col-lg-9 article-list">
+        <ul class="list selected">
+          <li>
+            <a href="article/article02.html">javascript基础</a>
+            <p>javascript基础</p>
+          </li>
+          <li>
+            <a href="article/article01.html">Vue基础研习（一）</a>
+            <p>ES6 新增了let命令，用来声明变量。它的用法类似于var，但是所声明的变量，只在let命令所在的代码块内有效。</p>
+          </li>
+        </ul>
+        <!-- 全部列表 end-->
+        <ul class="list">
+          <li>
+            <a href="article/article02.html">javascript基础</a>
+            <p>javascript基础</p>
+          </li>
+        </ul>
+        <!-- javascript基础列表 end-->
+        <ul class="list">
+          <li>
+            <a href="article/article02.html">jQuery基础</a>
+            <p>jQuery基础学习</p>
+          </li>
+        </ul>
+        <!-- jquery基础列表 end-->
+      </div>
+      <!-- 全部列表 end -->
+      <div class="col-lg-1">
+      </div>
+      <ul class="col-xs-12 col-lg-2 article-classify">
+        <li class="tab-item active">全部</li>
+        <li class="tab-item">javascript基础</li>
+        <li class="tab-item">jquery基础</li>
+        <li class="tab-item">ES6研习</li>
+        <li class="tab-item">Vue研习</li>
+        <li class="tab-item">NodeJs研习</li>
+        <li class="tab-item">微信小程序研习</li>
+        <li class="tab-item">干货</li>
+        <li class="tab-item">其他</li>
+      </ul>
+      <!-- 右侧菜单 end -->
+    </div>
+  </div>
+  <!-- main end -->
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <p class="col-xs-12 col-lg-4 text-left"><a href="utils/resume.html" target="_blank">Resume</a> |
+          <a href="mailto:yoko0831@hotmail.com">yoko0831@hotmail.com</a></p>
+        <p class="col-xs-12 col-lg-4 text-center"><a target="_blank"
+            href="http://beian.miit.gov.cn">京ICP备19052358号-1</a></p>
+        <p class="col-xs-12 col-lg-4 text-right">© 2020 Yoko Yu All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"> </script>
+
+  <script type="text/javascript">
+    $(function () {
+      $(".tab-item").click(function () {
+        $(this).addClass("active").siblings().removeClass("active");
+        $(".list").eq($(this).index()).show().siblings().hide();
+      })
+    })
+  </script>
+</body>
+
+</html>

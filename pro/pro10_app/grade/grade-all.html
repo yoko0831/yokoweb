@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="render" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,minimal-ui,user-scalable=no">
+    <meta name="location" content="province=;city=">
+    <meta name="apple-touch-fullscreen" content="no">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta name="applicable-device" content="mobile">
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/maystar.css" />
+    <script type="text/javascript" src="../js/common.js"></script>
+    <title>总体分析</title>
+    <script type="text/javascript" src='../js/zepto.js'></script>
+	<script type="text/javascript" src='../js/rem.js'></script>
+    <script src="../js/Chart-1.0.1-beta.4.js"></script><!--图表插件-->
+
+    <script>
+    	window.onload=function(){
+    		//显示提示框
+    		alertbox('share_btn','blackhide3');
+    		$(function(){
+				var oHeight=document.body.scrollHeight;
+				$('.blackhide').css('height',oHeight)
+			})
+    	}
+    </script>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="topbox clearfix">
+			<a href="grade-index.html" class="top_left_btn1 fleft"><img src="../img/top_left_icon2@2x.png"></a>
+			<div class="top_title"><p>总体分析</p></div>
+			<a href="javascript:;" class="top_right_btn2 fright" id="share_btn"><img class="top_right_icon2" src="../img/share_icon1@2x.png">分享</a>
+		</header><!--头部条-->
+		<div class="white"></div>
+		<div class="content">
+			<section class="analyze_bar clearfix">
+				<p class="grade_all_text fleft">第二学期期中考试 总体分析</p>
+			</section><!--总成绩-->
+			<section class="chartbox">
+				<section class="lineChart">
+					<p>曲线图（Line charts）</p>
+					<canvas id="lineChartCanvas"></canvas><!--曲线图-->
+            	</section>
+				<section class="barChart">
+					<p>柱状图（Bar charts）</p>
+					<canvas id="barChartCanvas"></canvas><!--柱状图-->
+            	</section>
+            	<section class="pieChart">
+					<p>饼图（Pie charts）</p>
+					<canvas id="pieChartCanvas"></canvas><!--饼图-->
+            	</section>
+            	<section class="doughnutChart">
+					<p>环形图（Doughnut charts）</p>
+					<canvas id="doughnutChartCanvas"></canvas><!--环形图-->
+            	</section>
+            	<section class="radarChart">
+					<p>雷达图（Radar charts）</p>
+					<canvas id="radarChartCanvas"></canvas><!--雷达图-->
+            	</section>
+				<script>
+					//曲线图
+					(function (){
+				     	var lineChartData = {
+				            labels : ["January2","February","March","April","May"],
+				            datasets : [
+				                {
+				                    fillColor : "rgba(220,220,220,0.5)",
+				                    strokeColor : "rgba(220,220,220,1)",
+				                    pointColor : "rgba(220,220,220,1)",
+				                    pointStrokeColor : "#fff",
+				                    data : [65,59,90,81,56]
+				                },
+				                {
+				                    fillColor : "rgba(151,187,205,0.5)",
+				                    strokeColor : "rgba(151,187,205,1)",
+				                    pointColor : "rgba(151,187,205,1)",
+				                    pointStrokeColor : "#fff",
+				                    data : [28,48,40,19,96]
+				                }
+				            ]
+				        };
+				        var ctx = document.getElementById("lineChartCanvas").getContext("2d");
+				        new Chart(ctx).Line(lineChartData);
+				    })();
+				    //柱状图
+					(function (){
+				     	var barChartData = {
+				            labels : ["January1","February","March","April","May"],
+				            datasets : [
+				                {
+				                    fillColor : "rgba(220,220,220,0.5)",
+				                    strokeColor : "rgba(220,220,220,1)",
+				                    data : [65,59,90,81,56]
+				                },
+				                {
+				                    fillColor : "rgba(151,187,205,0.5)",
+				                    strokeColor : "rgba(151,187,205,1)",
+				                    data : [28,48,40,19,96]
+				                }
+				            ]
+				
+				        };
+				        var ctx = document.getElementById("barChartCanvas").getContext("2d");
+            			new Chart(ctx).Bar(barChartData);
+				    })();
+				    //饼图
+					(function (){
+				     	var pieChartData = [
+				            {
+				                value: 30,
+				                color:"#F38630"
+				            },
+				            {
+				                value : 200,
+				                color : "#E0E4CC"
+				            },
+				            {
+				                value : 100,
+				                color : "#69D2E7"
+				            }
+				
+				        ];
+				        var ctx = document.getElementById("pieChartCanvas").getContext("2d");
+            			new Chart(ctx).Pie(pieChartData);
+				    })();
+				    //环形图
+					(function (){
+				     	var doughnutChartData = [
+				            {
+				                value: 30,
+				                color:"#F7464A"
+				            },
+				            {
+				                value : 50,
+				                color : "#46BFBD"
+				            },
+				            {
+				                value : 100,
+				                color : "#FDB45C"
+				            },
+				            {
+				                value : 40,
+				                color : "#949FB1"
+				            },
+				            {
+				                value : 120,
+				                color : "#4D5360"
+				            }
+				
+				        ];
+				        var ctx = document.getElementById("doughnutChartCanvas").getContext("2d");
+            			new Chart(ctx).Doughnut(doughnutChartData);
+				    })();
+				    //雷达图
+					(function (){
+				     	var radarChartData = {
+				            labels : ["A","B","C","D","E","F","G"],
+				            datasets : [
+				                {
+				                    fillColor : "rgba(220,220,220,0.5)",
+				                    strokeColor : "rgba(220,220,220,1)",
+				                    pointColor : "rgba(220,220,220,1)",
+				                    pointStrokeColor : "#fff",
+				                    data : [65,59,90,81,56,55,40]
+				                },
+				                {
+				                    fillColor : "rgba(151,187,205,0.5)",
+				                    strokeColor : "rgba(151,187,205,1)",
+				                    pointColor : "rgba(151,187,205,1)",
+				                    pointStrokeColor : "#fff",
+				                    data : [28,48,40,19,96,27,100]
+				                }
+				            ]
+				
+				        };
+				        var ctx = document.getElementById("radarChartCanvas").getContext("2d");
+            			new Chart(ctx).Radar(radarChartData);
+				    })();
+				</script>
+			</section><!--图表区-->
+		</div><!--主内容-->
+		<div class="blackhide" id="blackhide3">
+			<div class="share_box">
+				<ul class="clearfix">
+					<li>
+						<a href="javascript:;">
+							<img src="../img/share_logo1@2x.png" />
+							<p>微信</p>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img src="../img/share_logo2@2x.png" />
+							<p>朋友圈</p>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img src="../img/share_logo3@2x.png" />
+							<p>QQ</p>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img src="../img/share_logo4@2x.png" />
+							<p>新浪微博</p>
+						</a>
+					</li>
+				</ul><!--社交框-->
+				<input type="button" class="share_btn" value="取消" />
+			</div>
+		</div><!--分享提示框-->
+	</div>
+</body>
+</html>

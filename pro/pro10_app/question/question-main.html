@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="render" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,minimal-ui,user-scalable=no">
+    <meta name="location" content="province=;city=">
+    <meta name="apple-touch-fullscreen" content="no">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta name="applicable-device" content="mobile">
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/maystar.css" />
+    <title>错题详情</title>
+    <script type="text/javascript" src='../js/zepto.js'></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src='../js/rem.js'></script>
+   
+    <script>
+    	window.onload=function(){
+    		//显示提示框
+    		alertbox('delect_btn','blackhide')
+    		
+    	}
+    </script>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="topbox clearfix">
+			<a href="question-list.html" class="top_left_btn1 fleft" id="delect_btn2"><img src="../img/top_left_icon2@2x.png"></a>
+			<div class="top_title"><p>错题详情</p></div>
+			<a href="javascript:;" class="top_right_btn3 fright" id="delect_btn"><img class="top_right_icon3" src="../img/delete_icon1@2x.png"></a>
+		</header><!--头部条-->
+		<div class="white"></div>
+		<div class="content">
+			<section class="question_main_box">
+				<p class="question_main_box_p1">试题</p>
+				<img src="../img/question2@2x.png" />
+			</section><!--试题-->
+			<section class="question_main_box">
+				<p class="question_main_box_p1">我的答案</p>
+				<img src="../img/question3@2x.png" />
+			</section><!--我的答案-->
+			<section class="question_main_box">
+				<p class="question_main_box_p2">标准答案</p>
+				<img src="../img/question4@2x.png" />
+			</section><!--标准答案-->
+			<section class="question_main_box">
+				<p class="question_main_box_p2">解析</p>
+				<img src="../img/question4@2x.png" />
+			</section><!--解析-->
+			<div class="white"></div>
+			<div class="footer_fixed">
+				<a href="javascript:;" class="question_btn1 fleft qusetion_gray">上一题</a>
+				<span class="question_btn_line fleft"></span>
+				<a href="javascript:;" class="question_btn1 fright">下一题</a>
+			</div><!--底部固定区 试题标答解析-->
+		</div><!--主内容-->
+		<div class="blackhide" id="blackhide">
+			<div class="alert_box">
+				<p class="alert_box_text">是否确定移除此错题</p>
+				<section class="alert_box_btn">
+					<a href="javascript:;" class="fleft">取消</a>
+					<a href="javascript:;" class="fright">确定</a>
+				</section>
+			</div>
+		</div><!--提示框-->
+	</div>
+</body>
+</html>

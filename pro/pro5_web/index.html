@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>五岳鑫在线考试系统</title>
+    <link type="text/css" rel="stylesheet" href="css/text.css">
+    <script type="text/javascript" src="js/jquery-1.8.2.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+<div class="wrap">
+      <!-- 上部-->
+      <div class="top">
+      <div class="top_titlebg">
+          <div class="top_title">
+              <img src="images/main/logo.png" class="logo">
+              <div class="user"><img src="images/main/logo4.png">欢迎你,<span>考生</span></div>
+          </div>
+          </div>
+          <div class="top_nav">
+              <ul>
+                  <li><a href="index.html"  class="top_nav_a">首页</a></li>
+                  <li><a href="test.html">参加考试</a></li>
+                  <li><a href="result.html">考试结果</a></li>
+                  <li><a href="information.html">个人信息</a></li>
+                  <li><a href="password.html">修改密码</a></li>
+                  <li><a href="exit.html" onClick="removeElement('bar1')">退出系统</a></li>
+              </ul>
+          </div>
+          <div class="top_cont"> </div>
+      </div>
+      <!--下部-->
+      <div class="bottom">
+          <div class="bottom_tab">
+                  <div class="inf" style="margin-top:10%;">
+                  	<div class="fleft"><img src="images/main/img.png"></div>
+                          <div class="new_test"><br><br>
+                          <p>欢迎你，<b>101100876</b><br>
+                          欢迎使用在线考试系统</p>
+                          用户编号 ：1021789658<br>
+                          用户姓名：102796355<br>
+                          所属单位：测试学校 
+                          </div>
+                    </div>
+          </div>
+          <div class="bfooter">版权所有Copyright©五岳鑫技术股份有限公司</div>
+      </div>
+</div>
+
+<!--弹出框-->
+<div class="tck_main" style="width:400px; position:absolute; top:20%; left:40%; display:none;">
+    <div class="tck_top">
+        <div class="t_t_title">查 询</div>
+        <div class="t_gb">
+        <input type="submit" name="button" id="button" value=" " />
+        </div>
+    </div>
+<div class="tck_box">
+  <table width="97%" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+      <td height="45" align="right" valign="middle">考试名称：</td>
+      <td height="45" valign="middle">
+        <input type="text" name="textfield" id="textfield" class="tck_twxt" />       
+        </td>
+      </tr>
+    <tr>
+      <td height="45" align="right" valign="middle">考试科目：</td>
+      <td height="45" valign="middle"><input type="text" name="textfield2" id="textfield2" class="tck_twxt" /></td>
+    </tr>
+    <tr>
+      <td height="45" align="right">&nbsp;</td>
+      <td height="45">
+        <input type="submit" name="button2" id="button2" value="确定" class="tck_tj family" />
+        <input type="submit" name="button3" id="button3" value="取消"  class="tck_qx family" /></td>
+    </tr>
+  </table>
+</div>
+</div>
+
+</body>
+</html>

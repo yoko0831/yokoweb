@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="render" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,minimal-ui,user-scalable=no">
+    <meta name="location" content="province=;city=">
+    <meta name="apple-touch-fullscreen" content="no">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta name="applicable-device" content="mobile">
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/maystar.css" />
+    <title>注册</title>
+    <script type="text/javascript" src='../js/zepto.js'></script>
+    <script type="text/javascript" src='../js/rem.js'></script>
+    <script>
+    	//密码显示隐藏
+		$(function(){
+			$(".input_block>img").click(function(){
+				var v=$(this).prev().attr("type")
+				if(v=="password"){
+					$(this).attr("src","../img/eye_icon2@2x.png");
+				   $(this).prev().attr("type","text");
+				}
+				else{
+					$(this).attr("src","../img/eye_icon3@2x.png");
+				    $(this).prev().attr("type","password");
+				}
+			})
+		})
+    </script>
+</head>
+<body>
+	<div class="wrapper">
+		<section class="login_header"></section><!--大背景图-->
+		<p class="login_title1">Registered</p>
+		<p class="login_title2">注册</p>
+		<dl class="login_form">
+			<dd class="input_block" id="psw_invisible">
+				<section><img src="../img/login_icon2@2x.png" /></section>
+				<input type="password" placeholder="请设置8-12位的登录密码"/><!--input_invisible-->
+				<img class="eye_switch" id=""  src="../img/eye_icon3@2x.png"><!--visible-->
+			</dd>
+			<dd class="input_block" id="psw_invisible1">
+				<section><img src="../img/login_icon2@2x.png" /></section>
+				<input type="password"  placeholder="确认密码"/>
+				<img class="eye_switch" id="visible"  src="../img/eye_icon3@2x.png">
+			</dd>
+		</dl><!--表单-->
+		<a href="login.html" class="regist_btn">完成</a>
+	</div>
+	
+</body>
+</html>

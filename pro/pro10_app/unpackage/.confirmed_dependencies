@@ -1,0 +1,135 @@
+{
+	"index.html": {
+		"resources": [
+			"img/userphoto4@2x.png",
+			"js/banner.js",
+			"img/user_icon1@2x.png",
+			"img/top_right_btn@2x.png",
+			"css/maystar.css",
+			"img/icon2@2x.png",
+			"js/zepto.js",
+			"img/user_icon2@2x.png",
+			"img/top_left_btn@2x.png",
+			"img/icon3@2x.png",
+			"img/banner0@2x.png",
+			"img/top_left_icon1@2x.png",
+			"img/user_icon4@2x.png",
+			"img/icon1@2x.png",
+			"img/user_icon3@2x.png",
+			"img/icon4@2x.png",
+			"css/common.css",
+			"img/banner2@2x.png",
+			"img/banner1@2x.png",
+			"video/video-index.html",
+			"bbs/bbs-index.html",
+			"grade/grade-index.html",
+			"analyze/analyze-index.html"
+		],
+		"refer": [
+			"video/video-index.html",
+			"bbs/bbs-index.html",
+			"grade/grade-index.html",
+			"analyze/analyze-index.html"
+		]
+	},
+	"video/video-index.html": {
+		"resources": [
+			"img/videoimg4@2x.png",
+			"img/top_left_icon2@2x.png",
+			"img/videoimg2@2x.png",
+			"img/video_icon1@2x.png",
+			"video/video-main.html",
+			"img/videoimg1@2x.png",
+			"img/videoimg3@2x.png",
+			"css/common.css",
+			"css/maystar.css",
+			"index.html",
+			"js/idangerous.swiper.min.js",
+			"css/swiper.min.css",
+			"js/swiper.min.js",
+			"img/banner2@2x.png",
+			"img/banner1@2x.png",
+			"img/banner0@2x.png",
+			"js/banner.js"
+		],
+		"refer": [
+			"video/video-main.html",
+			"index.html"
+		]
+	},
+	"video/video-main.html": {
+		"resources": [
+			"vid/高中数学_二次函数及幂函数_二次函数的应用.mp4",
+			"img/help_icon1@2x.png",
+			"img/message_icon@2x.png",
+			"img/eye_icon@2x.png",
+			"img/top_left_btn2@2x.png",
+			"img/top_right_btn4@2x.png",
+			"img/clock_icon@2x.png",
+			"img/userphoto1.png",
+			"img/warning_icon@2x.png",
+			"img/share_icon1@2x.png",
+			"img/collect_icon1@2x.png",
+			"img/help_icon2@2x.png",
+			"img/share_logo1@2x.png",
+			"img/videoimg2@2x.png",
+			"js/common.js",
+			"img/share_logo2@2x.png",
+			"video/video-index.html",
+			"img/share_logo3@2x.png",
+			"img/share_logo4@2x.png",
+			"css/common.css"
+		],
+		"refer": [
+			"video/video-index.html"
+		]
+	},
+	"bbs/bbs-index.html": {
+		"resources": [
+			"img/top_right_btn2@2x.png",
+			"img/userphoto1@2x.png",
+			"js/idangerous.swiper.min.js",
+			"img/top_left_icon2@2x.png",
+			"img/userphoto3@2x.png",
+			"css/swiper.min.css",
+			"img/top_right_icon1@2x.png",
+			"js/swiper.min.js",
+			"img/userphoto2@2x.png",
+			"css/common.css",
+			"index.html",
+			"css/maystar.css",
+			"bbs/bbs-main.html"
+		],
+		"refer": [
+			"index.html",
+			"bbs/bbs-main.html"
+		]
+	},
+	"grade/grade-index.html": {
+		"resources": [
+			"img/grade_icon2nor@2x.png",
+			"index.html",
+			"img/grade_icon1@2x.png",
+			"img/top_left_icon2@2x.png",
+			"img/arrow_right1@2x.png",
+			"img/grade_icon2@2x.png"
+		],
+		"refer": [
+			"index.html"
+		]
+	},
+	"bbs/bbs-main.html": {
+		"resources": [
+			"img/question3@2x.png",
+			"img/message_icon@2x.png",
+			"css/common.css",
+			"img/userphoto1.png",
+			"bbs/bbs-index.html",
+			"img/userphoto2.png",
+			"img/userphoto3.png"
+		],
+		"refer": [
+			"bbs/bbs-index.html"
+		]
+	}
+}

@@ -1,0 +1,359 @@
+/*公共样式*/
+body{
+	font-size: 12px;
+	font-family: arial,'Microsoft YaHei';
+}
+.area{
+	width: 980px;
+	margin: 0 auto;
+}
+.area2{
+	width: 1226px;
+	margin: 0 auto;
+}
+.area3{
+	width: 920px;
+	margin: 0 auto;
+}
+a{
+	color: #989898;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.iconfont{
+
+	padding: 0 2px;
+}
+/*头部链接样式*/
+/*头部链接*/
+.header-wrap{
+	width: 100%;
+	height:40px;
+	background: #333333;
+}
+.header{
+
+}
+.header .fl{
+	height: 40px;
+	line-height: 40px;
+}
+.header .fl a,.header .fl span{
+	float: left;
+}
+.header .fl a:hover,.header .fr a:hover{
+	color: #fff;
+}
+.header .fl span,.header .fr span{
+	color: #666;
+	padding: 0 6px;
+}
+.header .fr{
+	height: 40px;
+	line-height: 40px;
+}
+
+/*nav样式*/
+.nav-wrap{
+	height: 66px;
+	margin: 10px auto 5px;
+}
+.nav-logo{
+	margin-top: 10px;
+}
+.dong{
+	width: 163px;
+	height: 63px;
+	margin:2px 0 0 15px;
+}
+.nav{
+
+}
+.nav li{
+	float: left;
+}
+.nav li a{
+	color: #333333;
+	font: 14px/66px 'Microsoft YaHei';
+	padding:0 6px;
+	display: block;
+}
+.nav li a:hover{
+	color: #F60;
+}
+.xianshi:hover .hidden-wrap{
+	display: block;
+}
+
+/*搜索框*/
+
+.search-form{
+	width:236px;
+	height:40px;
+	border:1px solid #ccc;
+	margin-top:10px;
+}
+.search-form .keys{
+	border:0;
+	width:60px;
+	height:40px;
+	padding-left:10px;
+}
+.search-form a{
+	background: #eee;
+    padding:2px;
+}
+.search-form a:hover{
+	background: #f60;
+	color:#fff;
+
+}
+.search-form button{
+	float:right;
+	width:40px;
+	height:40px;
+	border:0;
+	border-left:1px solid #ccc;
+	background: #fff;
+}
+
+/*footer*/
+
+/*conE样式*/
+.conE{
+	width: 1226px;
+	height: 65px;
+	margin: 0 auto;
+	overflow: hidden;
+	border-bottom: 1px solid #E0E0E0;
+}
+.col10{
+	width: 242px;
+	height: 65px;
+	line-height: 65px;
+	text-align: center;
+	font-size: 14px;
+}
+.col10 a{
+	color: #616161;
+}
+.col10 a:hover{
+	color: #ff6700;
+}
+
+.line{
+	color: #E0E0E0;
+	line-height: 65px;
+	display: block;
+}
+
+/*conF样式*/
+
+.conF{
+	width: 1226px;
+	height: 145px;
+	margin: 12px auto 0;
+	overflow: hidden;
+}
+.footer-list{
+	width: 960px;
+}
+.footer-list dl{
+	float: left;
+	width: 160px;
+}
+.footer-list dl dt{
+	height: 50px;
+	line-height: 50px;
+	color: #424242;
+	font-size: 14px;
+}
+.footer-list dl dd{
+	height: 28px;
+	line-height: 28px;
+}
+.footer-list dl dd a{
+	color: #757575;	
+}
+.footer-list dl dd a:hover{
+	color: #ff6700;
+}
+.line2{
+	width: 1px;
+	background: #E0E0E0;
+	display: block;
+	overflow: hidden;
+	height: 90px;
+	margin-top: 25px;
+}
+.tel{
+	width: 228px;
+	height: 100px;
+	text-align: center;
+	margin-top: 20px;
+}
+.tel h1{
+	color: #ff6700;
+	font-size:22px;
+	font-weight: normal;
+}
+.tel p{
+	color: #616161;
+	line-height: 20px;
+	margin-top: 4px;	
+}
+.tel a{
+	width: 94px;
+	height: 22px;
+	color: #ff6700;
+	border: 1px solid #ff6700;
+	display: block;
+	margin: 7px auto 0;
+	line-height: 22px;
+}
+.tel a:hover{
+	color: #fff;
+	background: #ff6700;
+	border: 1px solid #ff6700;
+}
+
+/*footer样式*/
+.footer{
+	width: 1226px;
+	height: 90px;
+	margin: 20px auto 0;
+}
+.fooer-logo {
+	width: 45px;
+	height: 45px;
+	display: block;
+}
+.footer-text{
+	margin-left: 10px;
+	height: 45px;
+}
+.footer-text ul{
+}
+.footer-text ul li{
+	float: left;
+	color: #b0b0b0;
+	padding: 0 2px;
+	line-height: 16px;
+}
+.footer-text ul li a{
+	color: #757575;
+}
+.footer-text ul li a:hover{
+	color: #ff6700;
+}
+.footer-text p{
+	color: #b0b0b0;
+	line-height: 16px;
+}
+.footer-com{
+	margin-top: 10px;
+}
+.footer-com li{
+	float: left;
+	width: 70px;
+}
+.footer-com li img{
+	width: 100%;
+}
+.footer-tip{
+	width: 215px;
+	height: 20px;
+	display: block;
+	margin: 20px auto;
+}
+/*带背景色大板块*/
+.wrap{
+	width: 100%;
+	background: #F5F5F5;
+	overflow: hidden;
+}
+.wrap2{
+	width: 100%;
+	background: #fafafa;
+}
+
+.no-bor-bottom{
+	border-bottom: 0 none!important;
+}
+.no-mar-right{
+	margin-right: 0!important;
+}
+.no-mar-bottom{
+	margin-bottom: 0!important;
+}
+
+
+/*遮罩层*/
+.col-mark{
+	position: absolute;
+	bottom: -70px;
+	left: 0;
+	width: 187px;
+	height: 70px;
+	color: #fff;
+	background: rgba(255,103,0,0.8);
+	transition: all .2s linear;
+}
+.col-mark p{
+	color: #fff;
+	line-height: 20px;
+	width: 157px;
+	margin: 5px auto 0;
+	height: 40px;
+}
+.col-mark span{
+	display: block;
+	color: #FFC299;
+	line-height: 20px;
+	width: 157px;
+	margin:0 auto;
+}
+.col5:hover .col-mark{
+	bottom: 0px;
+}
+/*鼠标滑过阴影*/
+
+.col2:hover{
+	box-shadow: 5px 10px 20px rgba(0,0,0,0.2);
+	transition: all .2s linear;
+}
+/*.col4 a:hover{
+	transform: translateY(-2px);
+	box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+	transition: all .2s linear;
+}
+.col7:hover{
+	transform: translateY(-2px);
+	box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+	transition: all .2s linear;
+}
+.col8:hover{
+	transform: translateY(-2px);
+	box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+	transition: all .2s linear;
+}
+.col9:hover{
+	transform: translateY(-2px);
+	box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+	transition: all .2s linear;
+}
+.con-list-main:hover{
+	transform: translateY(-2px);
+	box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+	transition: all .2s linear;
+}
+*/
+.shandow-box:hover{
+	transform: translateY(-2px);
+	box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+	transition: all .2s linear;
+}

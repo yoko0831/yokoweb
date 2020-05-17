@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Article</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="shortcut icon" href="../favicon.ico" />
+  <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/article.css">
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+</head>
+
+<body>
+  <!-- header start -->
+  <header class="container">
+    <div class="row">
+      <div class="col-xs-6 col-lg-3">
+        <a class="logo" href="../index.html"><img src="../images/logo.png" alt=""></a>
+      </div>
+      <div class="col-xs-6 col-lg-9">
+        <ul class="navbar clearfix">
+          <li><a href="../articlelist.html" class="active">Article</a></li>
+          <li><a href="../index.html">Work</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- header end -->
+
+  <!-- title start-->
+  <nav class="container-fluid pagenav title">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-8 col-lg-9">
+          <h2>Vue基础研习（一）</h2>
+          <div class="titleborder"></div>
+        </div>
+        <div class="col-xs-4 col-lg-3 text-right">
+          <a href="../articlelist.html" class="btn-bluea btn-xs" style="margin-top: 20px;">返回</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container article-group">
+    <div class="row">
+      <div class="col-xs-12 col-lg-9 article-list">
+        <article class="article-item">
+          <h4>一、准备工作</h4>
+          <p>下载VSCode编辑器。</p>
+          <p>1.安装插件。live Sever，一个具有实施加载功能的小型服务器，安装后可直接右键选择Open with Live Sever,就可以在浏览器中直接浏览网页了；vetur，可以识别vue文件，方便编写代码。
+          </p>
+          <p>2.配置setting.json。</p>
+          <img src="images/article01-1.png" alt="">
+
+          <h4>二、起步</h4>
+        </article>
+      </div>
+      <!-- 全部列表 end -->
+      <div class="col-lg-1">
+      </div>
+      <ul class="col-xs-12 col-lg-2 article-classify">
+        <li class="tab-item">全部</li>
+        <li class="tab-item">javascript基础</li>
+        <li class="tab-item">jquery基础</li>
+        <li class="tab-item">ES6研习</li>
+        <li class="tab-item active">Vue研习笔记</li>
+        <li class="tab-item">NodeJs研习</li>
+        <li class="tab-item">微信小程序研习</li>
+        <li class="tab-item">干货</li>
+        <li class="tab-item">其他</li>
+      </ul>
+      <!-- 右侧菜单 end -->
+    </div>
+  </div>
+  <!-- main end -->
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <p class="col-xs-12 col-lg-4 text-left"><a href="utils/resume.html" target="_blank">Resume</a> |
+          <a href="mailto:yoko0831@hotmail.com">yoko0831@hotmail.com</a></p>
+        <p class="col-xs-12 col-lg-4 text-center"><a target="_blank"
+            href="http://beian.miit.gov.cn">京ICP备19052358号-1</a></p>
+        <p class="col-xs-12 col-lg-4 text-right">© 2020 Yoko Yu All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="js/index.js"></script>
+  <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"> </script>
+
+  <script type="text/javascript">
+    $(function () {
+      $(".tab-item").click(function () {
+        $(this).addClass("active").siblings().removeClass("active");
+        $(".list").eq($(this).index()).show().siblings().hide();
+      })
+    })
+  </script>
+</body>
+
+</html>

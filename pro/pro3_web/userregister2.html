@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>天津高考报名系统</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link type="text/css" rel="stylesheet" href="css/usercommon.css">
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+</head>
+<body style="background: #eeeeee">
+<div class="enroll-wrap">
+    <div class="header">
+        <h1>天津高考网上报名系统</h1>
+    </div>
+
+    <div class="r-password">
+        <h2>市高招办提示</h2>
+
+        <div class="word2">
+            <p>
+                《中华人民共和国刑法修正案（九）》于2015年11月1日实施，其中规定：在普通高考中组织作弊的，为他人实施考试作弊行为提供作弊
+                器材或者其他帮助的，为实施考试作弊行为向他人非法出售或提供考试试题，答案的，处三年以下有期徒刑或者拘役；代替他人或者让他
+                人代替自己参加考试的，处拘役或者管制等。
+            </p>
+
+            <div>
+                <b>诚信考试</b><b>拒绝作弊</b>
+                <b>洁身自好</b><b>知法守法</b>
+            </div>
+            <div>
+                    <input type="checkbox" value="1" id="check1"/>
+                <span>我已阅读已上说明</span>
+            </div>
+        </div>
+        <div class="u2">
+            <button class="success-button" onclick="agreed()">我已知晓</button>
+        </div>
+        <script>
+            function agreed(){
+                if(document.getElementById("check1").checked){
+                    location.href="userregister.html"
+                }
+            }
+
+        </script>
+
+    </div>
+</div>
+</body>
+</html>

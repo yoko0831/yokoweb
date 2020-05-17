@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>电影微信小程序</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+  <link rel="shortcut icon" href="favicon.ico" />
+  <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+  <link rel="stylesheet" href="css/index.css">
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!-- 展示代码 -->
+  <link rel="stylesheet" href="css/solarized-dark.css">
+  <script src="js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+  <!-- header start -->
+  <header class="container">
+    <div class="row">
+      <div class="col-xs-6 col-lg-3">
+        <a class="logo" href="index.html"><img src="images/logo.png" alt=""></a>
+      </div>
+      <div class="col-xs-6 col-lg-9">
+        <ul class="navbar clearfix">
+          <li><a href="#">About</a></li>
+          <li><a href="index.html" class="active">Work</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- header end -->
+
+  <!-- title start-->
+  <nav class="container-fluid pagenav title">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-8 col-lg-9">
+          <h2>电影微信小程序</h2>
+          <div class="titleborder"></div>
+        </div>
+        <div class="col-xs-4 col-lg-3 text-right">
+          <a href="index.html" class="btn-bluea btn-xs" style="margin-top: 20px;">返回</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container pagecontent">
+    <div class="row">
+      <div class="col-lg-12">
+        <p class="introduce">
+          该小程序为展示数据类型，包含热门电影、热门电视剧、热门综艺，页面有首页、列表页、内容详情页、评论详情页、搜索页面。调用了豆瓣电视的数据接口Api。将搜索框、电影列表、评分、评论封装成组件调用。由于个人账号无法发布文娱资讯类项目，目前只有测试版。如需预览请联系我，我会将您的微信号添加至体验成员。
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- title end -->
+  <div class="container main">
+    <div class="row">
+      <div class="col-lg-12 main-img">
+        <img src="images/app5-img1.png" alt="电影评分微信小程序">
+      </div>
+    </div>
+    <div class="row page-section">
+      <div class="col-xs-12 col-lg-12 main-title">
+        <h3>页面展示</h3>
+        <div class="titleborder"></div>
+      </div>
+      <div class="col-xs-6 col-lg-3 main-img">
+        <img src="images/app5-mock1.png" alt="电影评分微信小程序">
+      </div>
+      <div class="col-xs-6 col-lg-3 main-img">
+        <img src="images/app5-mock2.png" alt="电影评分微信小程序">
+      </div>
+      <div class="col-xs-6 col-lg-3 main-img">
+        <img src="images/app5-mock3.png" alt="电影评分微信小程序">
+      </div>
+      <div class="col-xs-6 col-lg-3 main-img">
+        <img src="images/app5-mock4.png" alt="电影评分微信小程序">
+      </div>
+    </div>
+    <div class="row page-section">
+      <div class="col-md-12 col-lg-12 main-title">
+        <h3>部分代码展示</h3>
+        <div class="titleborder"></div>
+      </div>
+      <div class="col-lg-12 main-code">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <pre>
+                  <h3 class="code-title">接口地址文件 urls.js</h3>
+                  <code class="javascript">
+const globalUrls = {
+  // 列表页url
+  movieList: "https://m.douban.com/rexxar/api/v2/subject_collection/movie_hot/items",
+  tvList: "https://m.douban.com/rexxar/api/v2/subject_collection/tv_hot/items",
+  showList: "https://m.douban.com/rexxar/api/v2/subject_collection/tv_variety_show/items",
+  // 详情页url
+  movieDetail:"https://m.douban.com/rexxar/api/v2/movie/",
+  tvDetail: "https://m.douban.com/rexxar/api/v2/tv/",
+  showDetail: "https://m.douban.com/rexxar/api/v2/tv/",
+  // 标签url 把id变成参数
+  movieTags: function(id){
+    return "https://m.douban.com/rexxar/api/v2/movie/"+ id + "/tags?count=8"
+  },
+  tvTags: function(id){
+    return "https://m.douban.com/rexxar/api/v2/tv/" + id + "/tags?count=8"
+  },
+  showTags: function(id){
+    return this.tvTags(id)
+  },
+  // 短评url  三个参数 id start count 不传值默认从0开始3个
+  movieComments: function(id,start=0,count=3){
+    return "https://m.douban.com/rexxar/api/v2/movie/" + id + "/interests?count=" + count + "&start=" + start;
+  },
+  tvComments: function (id, start=0, count=3) {
+    return "https://m.douban.com/rexxar/api/v2/tv/" + id + "/interests?count=" + count + "&start=" + start;
+  },
+  showComments: function (id, start=0, count=3){
+    return this.tvComments(id,start,count);
+  },
+  // 搜索url
+  searchUrl: function(q){
+    return "https://m.douban.com/rexxar/api/v2/search?type=movie&q="+ q
+  }
+}
+export {globalUrls}
+                  </code>
+                </pre>
+            </div>
+            <!-- html end -->
+            <div class="col-lg-6">
+              <pre>
+                  <h3 class="code-title">网络请求文件 network.js</h3>
+                  <code class="javascript">
+import { globalUrls } from "urls.js";
+const network = {
+  // 电影列表
+  getMovieList: function (params) {
+    params.type = "movie";
+    this.getItemList(params);
+  },
+  // 电视剧列表
+  getTvList: function (params) {
+    params.type = "tv";
+    this.getItemList(params);
+  },
+  // 综艺列表
+  getShowList: function (params) {
+    params.type = "show";
+    this.getItemList(params);
+  },
+  // 获取item列表
+  getItemList: function(params){
+    var url = "";
+    if(params.type === 'movie'){
+      url = globalUrls.movieList;
+    }else if(params.type === 'tv'){
+      url = globalUrls.tvList;
+    }else{
+      url = globalUrls.showList;
+    }
+    // 如果传了count参数就使用，否则就默认=7
+    var count = params.count ? params.count : 7;
+
+    wx.request({
+      url: url,
+      data: {
+        count: count
+      },
+      success(res) {
+        var items = res.data.subject_collection_items;
+        // 列表数据余两个时补一个。迎合flex布局的between产生的问题
+        var itemsCount = items.length;
+        var left = itemsCount%3;  //对3取余
+        if(left === 2){
+          items.push(null);
+        }
+        if (params && params.success) {
+          params.success(items);
+        }
+      }
+    })
+  },
+  // 获取详情
+  getItemDetail:function(params){
+    var type = params.type;
+    var id = params.id;
+    var url = "";
+    if(type === 'movie'){
+      url = globalUrls.movieDetail + id;
+    }else if(type === 'tv'){
+      url = globalUrls.tvDetail + id;
+    }else{
+      url = globalUrls.showDetail + id;
+    }
+    wx.request({
+      url: url,
+      success:function(res){
+        var item = res.data;
+        if(params.success){
+          params.success(item);
+        }
+      }
+    })
+  },
+  // 获取item上的tags的网络请求函数
+  getItemTags: function(params){
+    var type = params.type;
+    var id = params.id;
+    var url = "";
+    if(type === 'movie'){
+      url = globalUrls.movieTags(id);
+    }else if(type === 'tv'){
+      url = globalUrls.tvTags(id);
+    }else{
+      url = globalUrls.showTags(id);
+    }
+    wx.request({
+      url: url,
+      success :function(res){
+        var tags = res.data.tags;
+        if(params.success){
+          params.success(tags)
+        }
+      }
+    })
+  },
+  // 获取评论网络请求接口
+  getItemComments: function(params){
+    var type = params.type;
+    var id = params.id;
+    var start = params.start?params.start:0;
+    var count = params.count?params.count:3;
+    var url = '';
+    if(type === 'movie'){
+      url = globalUrls.movieComments(id,start,count);
+    }else if(type === 'tv'){
+      url = globalUrls.tvComments(id,start,count);
+    }else{
+      url = globalUrls.showComments(id,start,count);
+    }
+    wx.request({
+      url: url,
+      success: function(res){
+        var data = res.data;
+        if(params.success){
+          params.success(data);
+        }
+      }
+    })
+  },
+  // 获取搜索item
+  getSearch: function (params) {
+    var q = params.q;
+    var url = globalUrls.searchUrl(q);
+    wx.request({
+      url: url,
+      success: function (res) {
+        var subjects = res.data.subjects;
+        if (params.success) {
+          params.success(subjects);
+        }
+      }
+    })
+  }
+}
+export { network }
+                  </code>
+                </pre>
+            </div>
+            <!-- Javascript end -->
+          </div>
+        </div>
+        <h4>搜索功能</h4>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <pre>
+                  <h3 class="code-title">搜索组件 searchbar.js</h3>
+                  <code class="javascript">
+Component({
+  //组件的属性列表
+  properties: {
+    isnavigator:{
+      type: Boolean,
+      value: false
+    }
+  },
+  //组件的方法列表
+  methods: {
+    onInputEvent: function(event){
+      var value = event.detail.value;
+      var detail = {"value":value};
+      var options = {};
+      // 触发事件 在外面监听事件
+      this.triggerEvent("searchinput",detail,options);
+    }
+  }
+})
+
+                  </code>
+                </pre>
+            </div>
+            <!-- js end -->
+            <div class="col-lg-6">
+              <pre>
+                  <h3 class="code-title">搜索组件 searchbar.wxml</h3>
+                  <code class="html">
+&lt;view class="searchbar">
+  &lt;navigator wx:if="{{isnavigator}}" url='/pages/search/search' class="search-navigator">&lt;/navigator>
+  &lt;view wx:else class="search-input-group">
+    &lt;input class="search-input" placeholder="搜索" bindinput="onInputEvent">&lt;/input>
+  &lt;/view>
+&lt;/view>
+                  </code>
+                </pre>
+            </div>
+            <!-- html end -->
+            <div class="col-lg-6">
+              <pre>
+                  <h3 class="code-title">搜索页面 search.js</h3>
+                  <code class="javascript">
+import {network} from "../../utils/network.js";
+Page({
+  //生命周期函数--监听页面加载
+  onLoad: function (options) {
+    var that = this;
+    // 获取缓存数据 显示出来 异步
+    wx.getStorage({
+      key: 'searched',
+      success: function(res) {
+        var data = res.data;
+        that.setData({
+          histories: data
+        })
+      },
+    })
+  },
+  // 搜索
+  onSearchInputEvent: function(event){
+    var that = this;
+    var value = event.detail.value;
+    // 如果没有value或者value为空 不发送网络请求
+    if(!value || value === ""){
+      that.setData({
+        subjects: null
+      });
+      return;
+    }
+    network.getSearch({
+      q: value,
+      success: function (subjects) {
+        that.setData({
+          subjects: subjects
+        })
+      }
+    })
+  },
+  // 搜索结果跳转详情页
+  onItemTapEvent: function(event){
+    var that = this;
+    var id = event.currentTarget.dataset.id;
+    var title = event.currentTarget.dataset.title;
+    // 获取之前的缓存数据
+    var histories = that.data.histories;
+    var isExisted = false;
+    if(histories){
+      for (var index = 0; index <= histories.length; index++) {
+        var movie = histories[index];
+        if (movie.id === id) {
+          isExisted = true;
+          break;
+        }
+      }
+    };
+    if (!isExisted){
+      if(!histories){
+        histories = [];
+      }
+      histories.push({title: title, id: id});
+      // 历史记录 数据缓存 异步
+      wx.setStorage({
+        key: 'searched',
+        data: histories,
+        success: function () {
+          console.log("保存成功")
+        }
+      })
+    };
+    wx.navigateTo({
+      url: "/pages/detail/detail?type=movie&id=" + id,
+    });
+  }
+})
+                  </code>
+                </pre>
+            </div>
+            <!-- js end -->
+            <div class="col-lg-6">
+              <pre>
+                  <h3 class="code-title">搜索页面 search.wxml</h3>
+                  <code class="html">
+&lt;searchbar bindsearchinput="onSearchInputEvent">&lt;/searchbar>
+<!-- 没有subjects并且histories有值才显示 -->
+&lt;view wx:if="{{histories && !subjects}}" class="history-list-group">
+  &lt;view class="history-title">
+    &lt;view class="title">历史记录&lt;/view>
+    &lt;view class="clear" bindtap="onClearEvent">清除&lt;/view>
+  &lt;/view>
+  &lt;navigator wx:for="{{histories}}" wx:key="{{item.id}}" url="/pages/detail/detail?type=movie&id={{item.id}}" class="history-group">{{item.title}}&lt;/navigator>
+&lt;/view>
+&lt;view class="item-list-group">
+  &lt;view class="item-group" wx:for="{{subjects}}" wx:key="{{item.id}}" bindtap="onItemTapEvent" data-id="{{item.id}}" data-title="{{item.title}}">
+    &lt;image class="thumbnail" src="{{item.pic.normal}}">&lt;/image>
+    &lt;view class="info-group">
+      &lt;view class="title">{{item.title}}&lt;/view>
+      &lt;view class="rate-year">{{item.rating.value}}分/{{item.year}}&lt;/view>
+    &lt;/view>
+  &lt;/view>
+&lt;/view>
+                  </code>
+                </pre>
+            </div>
+            <!-- html end -->
+          </div>
+          <!-- row end -->
+        </div>
+        <!-- container end -->
+      </div>
+      <!-- 一段演示代码 end -->
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="btn-link"><a href="#" target="_blank" class="btn-bluea btn-lg" data-wow-delay="0.8s">查看项目演示</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container page">
+    <div class="row">
+      <div class="col-xs-4 col-lg-4 text-left">
+        <a href="pro16.html"><i class="iconfont icon-cc-arrow-left"></i>Previous</a>
+      </div>
+      <div class="col-xs-4 col-lg-4 text-center">
+        <a href="javascript:;" class="backtop">Back to Top</a>
+      </div>
+      <div class="col-xs-4 col-lg-4 text-right">
+        <a href="pro1.html">Next<i class="iconfont icon-cc-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <p class="col-xs-12 col-lg-4 text-left"><a href="utils/resume.html" target="_blank">Resume</a> |
+          <a href="mailto:yoko0831@hotmail.com">yoko0831@hotmail.com</a></p>
+        <p class="col-xs-12 col-lg-4 text-center"><a target="_blank"
+            href="http://beian.miit.gov.cn">京ICP备19052358号-1</a></p>
+        <p class="col-xs-12 col-lg-4 text-right">© 2020 Yoko Yu All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/page.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
